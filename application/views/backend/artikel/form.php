@@ -1,22 +1,23 @@
-<h4>Tambah Data Artikel</h4>
+<h4><?= $title ?></h4>
 <hr>
-<form action="<?= base_url('add/artikel') ?>" method="post" enctype="multipart/form-data">
+<form action="<?= base_url($form_action) ?>" method="post" enctype="multipart/form-data">
 	<div class="row">	
+		<input type="hidden" name="tanggal" value="<?= date('Y-m-d H:i:s') ?>">
 		<div class="col-md-6">
 			Judul Artikel : 
-			<input type="text" class="form-control" name="judul" value="<?= $input['judul'] ?>">
+			<input type="text" class="form-control" name="judul" value="<?= $input['judul'] ?>" required>
 		</div>
 		<div class="col-md-6">
 			Keyword : 
-			<input type="text" class="form-control" name="keyword" value="<?= $input['keyword'] ?>">
+			<input type="text" class="form-control" name="keyword" value="<?= $input['keyword'] ?>" required>
 		</div>
 		<div class="col-md-12">
 			Excerpt (Kutipan) 
-			<textarea name="excerpt" class="form-control"><?= $input['excerpt'] ?></textarea>
+			<textarea name="excerpt" class="form-control" required><?= $input['excerpt'] ?></textarea>
 		</div>
 		<div class="col-md-12">
 			Isi Artikel 
-			<textarea name="isi" class="form-control"><?= $input['isi'] ?></textarea>
+			<textarea name="isi" class="form-control" required><?= $input['isi'] ?></textarea>
 		</div>
 		<div class="col-md-6">
 			Kategori Artikel 
@@ -24,13 +25,13 @@
 		</div>
 		<div class="col-md-6">
 			Cover 
-			<input type="file" class="form-control" name="keyword">
+			<input type="file" class="form-control" name="img">
 		</div>
 
 		<div class="col-md-12" align="right">
 		<br>
-			<input type="checkbox" value="1" name="stat" checked="true"> Langsung tampilkan artikel
-			<input type="submit" class="btn btn-lg" value="Simpan" name="simpan">
+			<input type="checkbox" name="stat" checked="true" value="1"> Langsung tampilkan artikel
+			<input type="submit" class="btn btn-lg" value="Simpan">
 		</div>	
 	</div>
 </form>

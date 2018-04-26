@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="<?= base_url('assets/font-awesome/css/font-awesome.min.css') ?>">
     <!-- CKEDITOR -->
     <script src="<?= base_url('assets/ckeditor/ckeditor.js') ?>"></script>
+    <script src="<?= base_url('assets/js/jquery-3.2.1.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
   </head>
 
   <body>
