@@ -12,21 +12,21 @@ class Crud extends CI_Controller
 		redirect('backend/artikel');
 	}
 
-	public function artikel(){
+	//artikel
+	public function artikel_add(){
 		$this->login_model->cek_login();
 		
 		$laman = [
 			'content' => 'backend/artikel/form',
 			'title' => 'Add Artikel',
 			'menu' => 2,
-			'form_action' => 'crud/artikel'
+			'form_action' => 'crud/artikel_add'
 		];
 		
 		if(!$_POST){
-			$laman['input'] = (array) $this->backend->defaultArtikel('img');
+			$laman['input'] = (array) $this->backend->defaultArtikel();
 		} else {
-			$upload = $this->backend->upload_cover();
-      
+      		$upload = $this->backend->upload_cover('./upload/artikel/');
 		    if($upload['result'] == "success"){ 
 		    	$this->backend->insert_artikel($upload);
 		    	$resize = $this->backend->do_resize('img', "./upload/artikel/".$upload['file']['file_name']);
@@ -34,16 +34,18 @@ class Crud extends CI_Controller
 		        $this->session->set_flashdata('success', 'Data artikel berhasil ditambah');
 		        redirect('backend/artikel'); 
 		    }else{ 
+		    	$laman['input'] = (array) $this->input->post();
 		        $this->session->set_flashdata('danger', 'Terjadi kesalahan saat menyimpan data');
-		        redirect('backend/artikel');  
 		    }
-
 		}
+
 
 		$this->load->view('backend/template', $laman);
 	}
 
 	public function artikel_edit($id_artikel){
+		$this->login_model->cek_login();
+
 		$laman = [
 			'content' => 'backend/artikel/form',
 			'title' => 'Edit Artikel',
@@ -72,9 +74,51 @@ class Crud extends CI_Controller
 	}
 
 	public function artikel_hapus($id_artikel){
+		$this->login_model->cek_login();
 		$this->backend->change_stat($id_artikel);
 		$this->session->set_flashdata("success", "Data berhasil dihapus");
 		redirect('backend/artikel');
+	}
+
+	//slideshow
+	public function slideshow_add(){
+		$this->login_model->cek_login();
+
+		$laman = [
+			'content' => 'backend/slideshow/form',
+			'title' => 'Add Slideshow',
+			'menu' => 3,
+			'form_action' => 'crud/slideshow_add'
+		];
+
+		if(!$_POST){
+			$laman['input'] = (array) $this->backend->default_slideshow();
+		} else {
+			$upload = $this->backend->upload_cover('./upload/slideshow/');
+		    if($upload['result'] == "success"){ 
+		    	$this->backend->insert_slideshow($upload);
+		    	$resize = $this->backend->do_resize('img', "./upload/slideshow/".$upload['file']['file_name'], './upload/slideshow/thumbs/');
+		        $this->session->set_flashdata('success', 'Data Slideshow berhasil ditambah');
+		        redirect('backend/slideshow'); 
+		    }else{ 
+		    	$laman['input'] = (array) $this->input->post();
+		        $this->session->set_flashdata('danger', 'Terjadi kesalahan saat menyimpan data');
+		    }
+		}
+
+		$this->load->view('backend/template', $laman);
+	}
+
+	public function disable_slide($id){
+		$this->db->where('id_slideshow', $id)->set('stat', 0)->update('slideshow');
+		$this->session->set_flashdata('success','Slideshow di non aktifkan');
+		redirect('backend/slideshow');
+	}
+
+	public function enable_slide($id){
+		$this->db->where('id_slideshow', $id)->set('stat', 1)->update('slideshow');
+		$this->session->set_flashdata('success','Slideshow di aktifkan');
+		redirect('backend/slideshow');
 	}
 }
 

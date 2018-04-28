@@ -16,7 +16,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="anggota.php">
+            <a class="nav-link <?php if($menu == 3) echo "active" ?>" href="<?= base_url('backend/slideshow') ?>">
               <i class="fa fa-image"></i> &nbsp;
               Slideshow
             </a>
@@ -28,7 +28,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="angsuran.php">
+            <a class="nav-link <?php if($menu == 5) echo "active" ?>" href="<?= base_url('raw') ?>">
               <i class="fa fa-database"></i>&nbsp; 
               Raw Data
             </a>

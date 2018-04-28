@@ -20,10 +20,11 @@ class Backend_model extends CI_Model
 		];
 	}
 
-	public function upload_cover(){
-		$config['upload_path'] = './upload/artikel/';
+	public function upload_cover($path){
+		$config['upload_path'] = $path;
 		$config['allowed_types'] = 'jpg|jpeg|png';
 		$config['remove_space'] = true;
+		$config['overwrite'] = true;
 
 		$this->load->library('upload', $config);
 
@@ -37,26 +38,18 @@ class Backend_model extends CI_Model
 	}
 
 	public function insert_artikel($upload){
-		$data = array(
-			'tanggal' => $this->input->post('tanggal'),
-			'judul' => $this->input->post('judul'),
-			'link' => strtolower(str_replace(" ", "-", $this->input->post('judul'))),
-			'keyword' => $this->input->post('keyword'),
-			'excerpt' => $this->input->post('excerpt'),
-			'isi' => $this->input->post('isi'),
-			'id_kategori' => $this->input->post('id_kategori'),
-			'img' => $upload['file']['file_name'],
-			'stat' => $this->input->post('stat'),
-			);
+		$data = $this->input->post();
+		$data['link'] = strtolower(str_replace(" ", "-", $this->input->post('judul')));
+		$data['img'] = $upload['file']['file_name'];
 
 		$this->db->insert('artikel', $data);
 	}
 
-	public function do_resize($field, $source_path){
+	public function do_resize($field, $source_path, $new_path){
 		$config = [
 			'image_library' => 'gd2',
 			'source_image' => $source_path,
-			'new_image' => './upload/artikel/thumbs/',
+			'new_image' => $new_path,
 			'maintain_ratio' => true,
 			'width' => 200
 		];
@@ -100,12 +93,47 @@ class Backend_model extends CI_Model
 			'id_kategori' => $this->input->post('id_kategori'),
 			'stat' => $this->input->post('stat'),
 			);
+
 		return $this->db->where('id_artikel', $id_artikel)->update('artikel', $data);
 	}
 
 	public function change_stat($id_artikel){
 		return $this->db->set('stat', 0)->where('id_artikel', $id_artikel)->update('artikel');
 	}
+
+	public function get_blocked_user(){
+		return $this->db->where('stat', 0)->get('user')->result_array();
+	}
+
+	public function do_unblocking($username){
+		$unblock = $this->db->set('stat', 1)->where('username', $username)->update('user');
+		$del_log = $this->db->where('username', $username)->delete('login_log');
+	}
+
+	public function get_slideshow(){
+		return $this->db->get('slideshow')->result_array();
+	}
+
+	public function default_slideshow(){
+		return [
+			'tanggal' => '',
+			'judul' => '',
+			'url' => '',
+			'img' => '',
+			'z-index' => '',
+			'stat' => '',
+			
+		];
+	}
+
+	public function insert_slideshow($upload){
+		$data = $this->input->post();
+		$data['img'] = $upload['file']['file_name'];
+
+		$this->db->insert('slideshow', $data);
+	}
+
+
 }
 
  ?>

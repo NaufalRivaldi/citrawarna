@@ -47,6 +47,25 @@ class Backend extends CI_Controller
 		redirect('backend');
 	}
 
+	public function secret(){
+		$this->login_model->cek_login();
+
+		$laman = [
+			'content' => 'backend/secret',
+			'title' => 'User Security',
+			'menu' => 0
+		];
+		$laman['blocked'] = $this->backend->get_blocked_user();
+
+		$this->load->view('backend/template', $laman);
+	}
+	public function unblock($username){
+		$this->login_model->cek_login();
+		$data = $this->backend->do_unblocking($username);
+		$this->session->set_flashdata('success', 'User berhasil di unblock, mohon himbau user tersebut agar tidak salah login lebih dari 3x');
+		redirect('backend/secret');
+	}
+
 	public function dashboard(){
 		$this->login_model->cek_login();
 
@@ -58,6 +77,7 @@ class Backend extends CI_Controller
 
 		$this->load->view('backend/template', $laman);
 	}
+
 
 	public function artikel(){
 		$this->login_model->cek_login();
@@ -71,6 +91,17 @@ class Backend extends CI_Controller
 
 		$this->load->view('backend/template', $laman);
 
+	}
+
+	public function slideshow(){
+		$this->login_model->cek_login();
+		$laman = [
+			'content' => 'backend/slideshow/index',
+			'title' => 'Slideshow ',
+			'menu' => 3
+		];
+		$laman['slideshow'] = $this->backend->get_slideshow();
+		$this->load->view('backend/template', $laman);
 	}
 }
 

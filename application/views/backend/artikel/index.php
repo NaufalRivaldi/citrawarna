@@ -1,5 +1,5 @@
 <h3>Data Artikel</h3>
-<a href="<?= base_url('crud/artikel') ?>" class="btn btn-primary">Tambah Artikel</a>
+<a href="<?= base_url('crud/artikel_add') ?>" class="btn btn-primary">Tambah Artikel</a>
 <br><br>
 <table class="table table-sm">
 	<tr>
