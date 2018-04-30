@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Apr 2018 pada 09.44
+-- Generation Time: 26 Apr 2018 pada 07.13
 -- Versi Server: 10.1.10-MariaDB
 -- PHP Version: 7.0.3
 
@@ -45,7 +45,9 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id_artikel`, `tanggal`, `judul`, `link`, `keyword`, `excerpt`, `isi`, `id_kategori`, `img`, `stat`, `click`) VALUES
-(1, '2018-04-24 12:25:46', 'Artikel Percobaan', 'artikel-percobaan', 'Artikel Percobaan gan', 'Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan', 'Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan ', 1, 'null.jpg', 1, 1);
+(1, '2018-04-24 12:25:46', 'Artikel Percobaan', 'artikel-percobaan', 'Artikel Percobaan gan', 'Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan', 'Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan ', 1, 'null.jpg', 1, 1),
+(17, '2018-04-26 11:29:22', 'aaa bbb ccc ddd', 'aaa-bbb-ccc-ddd', 'aaa bbb', 'aaa', '<p>aaa</p>\r\n', 1, '1r.png', 1, 0),
+(18, '2018-04-26 12:07:29', 'Minami Hamabe', 'minami-hamabe', 'Minami Hamabe', 'Minami Hamabe', '<p>Minami Hamabe</p>\r\n', 2, '1.jpg', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -136,7 +138,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `kategori`
 --

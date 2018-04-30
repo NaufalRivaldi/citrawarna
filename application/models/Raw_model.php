@@ -33,7 +33,7 @@ class Raw_model extends CI_Model
 		$this->db->set("value", $now)->where("param", "last_raw_upload")->update('setting');
 	}
 
-	public function unLinkFile(){
+	public function flush(){
 		$tgl_upload = $this->get_setting('last_raw_upload');
 		$tgl_update = $this->get_setting('last_raw_update');
 		$a = strtotime($tgl_upload['value']);
