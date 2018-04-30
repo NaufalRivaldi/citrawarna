@@ -13,16 +13,14 @@ class Raw extends CI_Controller
 		$data['menu'] = 5;
 		$data['content'] = 'backend/raw_data';
 		$data['title'] = 'Upload Raw Data';
+		$data['get_last_upload'] = $this->raw_model->get_setting('last_raw_upload');
+		$data['get_last_update'] = $this->raw_model->get_setting('last_raw_update');
 		if($_POST){
 			$upload = $this->raw_model->upload_csv('./upload/raw/');
 			if($upload['result'] == "success"){ 
-				//print_r($upload['file']['file_name']);
-				include APPPATH.'third_party/PHPExcel/PHPExcel.php';
-
-				$csv_reader = PHPExcel_IOFactory::createReader('CSV');
-				$load_csv = $csv_reader->load('upload/raw/'.$upload['file']['file_name']);
-				$sheet = $load_csv->getActiveSheet()->getRowIterator();
-				$data['sheet'] = $sheet;
+				$this->raw_model->updateLastUpload();
+				echo "<script>alert('Berhasil mengupload raw data'); location.href ='raw'; </script>";
+				
 			} else {
 				echo "<script>alert('Upload data gagal')</script>";
 			}
@@ -30,6 +28,14 @@ class Raw extends CI_Controller
 		
 		$this->load->view('backend/template', $data);
 	}
+
+	public function flush(){
+		$this->raw_model->flush();
+		$this->session->set_flashdata('success','Berhasil menghapus old raw');
+		redirect('raw');
+	}
+
+
 }
 
  ?>
