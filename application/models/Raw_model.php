@@ -51,7 +51,6 @@ class Raw_model extends CI_Model
 
 			}
 		}
-
 	}
 }
 
