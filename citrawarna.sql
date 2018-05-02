@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 30 Apr 2018 pada 11.10
+-- Generation Time: 02 Mei 2018 pada 10.10
 -- Versi Server: 10.1.10-MariaDB
 -- PHP Version: 7.0.3
 
@@ -88,9 +88,11 @@ CREATE TABLE `login_log` (
 
 CREATE TABLE `raw` (
   `id` int(11) NOT NULL,
-  `nim` int(11) NOT NULL,
+  `nis` int(11) NOT NULL,
   `nama` varchar(10) NOT NULL,
-  `jurusan` varchar(30) NOT NULL
+  `jk` varchar(30) NOT NULL,
+  `telp` varchar(15) NOT NULL,
+  `alamat` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -101,8 +103,8 @@ CREATE TABLE `raw` (
 
 CREATE TABLE `setting` (
   `param` varchar(30) NOT NULL,
-  `value` varchar(30) NOT NULL,
-  `description` varchar(50) NOT NULL
+  `value` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -110,8 +112,11 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`param`, `value`, `description`) VALUES
+('description', 'Citra Warna adalah toko cat terbesar di Bali yang menyediakan segala jenis cat dan keperluan pengecatan berkualitas dengan harga terjangkau.', 'Citra Warna adalah toko cat terbesar di Bali yang menyediakan segala jenis cat dan keperluan pengecatan berkualitas dengan harga terjangkau.'),
+('keywords', 'toko cat, toko cat bali, toko cat denpasar, toko cat ubud, cat tembok, weldon, harga cat, jual cat', 'kata kunci sebagai meta '),
 ('last_raw_update', '2018-04-30 14:27:41', 'Waktu Terakhir RAW File diupdate'),
-('last_raw_upload', '2018-04-30 16:45:50', 'Waktu Terakhir RAW File diupload');
+('last_raw_upload', '2018-05-01 14:18:54', 'Waktu Terakhir RAW File diupload'),
+('title', 'Toko Cat Citra Warna', 'Nama Website');
 
 -- --------------------------------------------------------
 
