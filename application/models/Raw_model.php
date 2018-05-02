@@ -15,6 +15,7 @@ class Raw_model extends CI_Model
 		$config['allowed_types'] = 'csv';
 		$config['remove_space'] = true;
 		$config['overwrite'] = true;
+		$config['max_size'] = 5000;
 		$config['file_name'] = date('YmdHis');
 
 		$this->load->library('upload', $config);
@@ -50,6 +51,38 @@ class Raw_model extends CI_Model
 				unlink("upload/raw/$newName");
 
 			}
+		}
+	}
+
+	public function import($fileName, $field){
+
+		$reader = new PhpOffice\PhpSpreadsheet\Reader\Csv();
+		$spreadsheet = $reader->load('upload/raw/'.$fileName);
+		$worksheet = $spreadsheet->getActiveSheet();
+		$highestRow = $worksheet->getHighestRow(); // e.g. 10
+		$highestColumn = $worksheet->getHighestColumn(); // e.g 'F'
+		$highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn); // e.g. 5
+		
+		$query = "insert into raws values('', ";
+
+		$iterator = 0;
+		foreach ($worksheet->getRowIterator() as $row) {
+		    $cellIterator = $row->getCellIterator();
+		    $cellIterator->setIterateOnlyExistingCells(true);
+		    foreach ($cellIterator as $cell) {
+		    	$val = $cell->getValue();
+		        if ($iterator > $field) {
+		        	if ($iterator % $field === 0) {
+		        		$query .= "'$val')";
+		        		$this->db->query($query);
+						$query = "insert into raws values('',";
+		        	}else{
+	        			$query .= " '$val',";
+		        		
+		        	}
+		        }
+		        $iterator++;
+		    }
 		}
 	}
 }

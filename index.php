@@ -1,5 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Makassar");
+ini_set('max_execution_time', 300);
 /**
  * CodeIgniter
  *

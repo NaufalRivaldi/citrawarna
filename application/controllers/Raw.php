@@ -49,30 +49,11 @@ class Raw extends CI_Controller
 		$change2 = str_replace(" ", "", $change1);
 		$change3 = str_replace(":", "", $change2);
 		$newName = $change3.".csv";
+		$rowData = array();
 
 		
-		$reader = new PhpOffice\PhpSpreadsheet\Reader\Csv();
-		$spreadsheet = $reader->load('upload/raw/'.$newName);
-		$worksheet = $spreadsheet->getActiveSheet();
-		$highestRow = $worksheet->getHighestRow(); // e.g. 10
-		$highestColumn = $worksheet->getHighestColumn(); // e.g 'F'
-		$highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn); // e.g. 5
-		echo '<table border="1">';
-		for ($row = 1; $row <= $highestRow; ++$row) {
-		    echo '<tr>';
-		    for ($col = 1; $col <= $highestColumnIndex; ++$col) {
-		        $value = $worksheet->getCellByColumnAndRow($col, $row)->getValue();
-		        echo "<td>$value</td>";
-
-		        // $ins =   "'".$value. "',";
-		        // echo $ins;
-		        //$this->db->query("INSERT INTO raw (id, nis, nama, jk, telp, alamat) VALUES(null,$ins  )");
-		  
-		    }
-		    
-		    echo '</tr>';
-		}
-		echo '</table>';
+		
+		$this->raw_model->import($newName, 10);
 	}
 
 
