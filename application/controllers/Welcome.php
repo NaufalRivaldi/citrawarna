@@ -20,6 +20,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$title = $this->db->where('param', 'title')->get('setting')->row_array();
+		$description = $this->db->where('param', 'description')->get('setting')->row_array();
+		$keywords = $this->db->where('param', 'keywords')->get('setting')->row_array();
+		$data['title'] = $title['value'];
+		$data['description'] = $description['value'];
+		$data['keywords'] = $keywords['value'];
+		$this->load->view('index', $data);
 	}
 }

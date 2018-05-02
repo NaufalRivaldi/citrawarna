@@ -1,3 +1,20 @@
-.ket{
-	background:orange; border-radius:10px; font-size:12px;
+.brand {
+	width: 110px;
+	position: absolute;
+	top: 0;
+}
+
+.bg-red {
+	background-color:#ff0000;
+}
+
+.navbar-nav .nav-item .nav-link {
+	color:white;
+	position: relative;
+	left: 130px;
+}
+
+.navbar-nav .nav-item .active {
+	color:yellow;
+	background-color: grey;
 }

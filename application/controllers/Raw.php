@@ -63,11 +63,13 @@ class Raw extends CI_Controller
 		    for ($col = 1; $col <= $highestColumnIndex; ++$col) {
 		        $value = $worksheet->getCellByColumnAndRow($col, $row)->getValue();
 		        echo "<td>$value</td>";
+
 		        // $ins =   "'".$value. "',";
 		        // echo $ins;
 		        //$this->db->query("INSERT INTO raw (id, nis, nama, jk, telp, alamat) VALUES(null,$ins  )");
 		  
 		    }
+		    
 		    echo '</tr>';
 		}
 		echo '</table>';
