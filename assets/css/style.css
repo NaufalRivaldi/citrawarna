@@ -1,3 +1,6 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
 .brand {
 	width: 110px;
 	position: absolute;
@@ -11,10 +14,63 @@
 .navbar-nav .nav-item .nav-link {
 	color:white;
 	position: relative;
-	left: 130px;
+	left: 110px;
 }
 
-.navbar-nav .nav-item .active {
-	color:yellow;
-	background-color: grey;
+@media only screen and (min-width: 320px) {
+    /* For phone: */
+    .navbar-nav .nav-item .nav-link {
+		color:white;
+		position: relative;
+		display: inline-block;
+		left: 0px;
+	}
+}
+
+
+.kat {
+	color:black;
+	list-style: none;
+	height: auto;
+	list-style: none;
+	margin-left: 20px;
+	padding : 9px 0;
+	position: relative;
+	top: 0;
+
+}
+
+ .kat:hover {
+	color:red;
+	background-color: white;
+}
+
+.dropdown:hover{
+	height: 100px;
+	background-color: red;
+}
+
+.dropdown ul {
+	display: none;
+}
+
+.dropdown ul a:hover {
+	display: block;
+	z-index: 10;
+}
+
+.about {
+	text-align:center;
+	text-align: justify;
+}
+
+.nav-break {
+	padding-top:57px;
+}
+
+@media only screen and (max-width: 320px) {
+    /* For phone: */
+    .nav-break {
+		padding-top:180px;
+	}
 }
