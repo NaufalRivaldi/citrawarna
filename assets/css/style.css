@@ -74,3 +74,7 @@ body {
 		padding-top:180px;
 	}
 }
+
+.bg-service {
+	background-color: grey;
+}
