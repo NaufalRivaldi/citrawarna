@@ -86,8 +86,8 @@ body {
 		width: 100%;
 	}
 
-	.img-fluid {
-		z-index: -3;
+	#img-position {
+		padding-top: 46px;
 	}
 
 }
@@ -96,9 +96,6 @@ body {
 	margin-right: 0;
 }
 
-.container-fluid {
-	padding-top: 85px;
-}
 
 .navbar {
 	width: 100%;
@@ -137,6 +134,10 @@ body {
 	padding: 13px;
 	text-decoration: none;
 	width: auto;
+}
+
+.img-position {
+	padding-top:70px;
 }
 
 .logo-brand {
@@ -212,6 +213,13 @@ body {
 	top: 0;
 }
 
+.about {
+	font-size: 18px;
+}
+
+.sorot {
+	background-color: yellow;
+}
 
 
 .bg-red {
