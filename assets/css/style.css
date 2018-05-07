@@ -245,3 +245,31 @@ h2 {
 .service {
 	width: 230px;
 }
+
+.text-product {
+	width: 250px;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eb4d4b;
+	color:white;
+	border-radius:10px;
+}
+
+.img-product {
+  width: 250px;
+  height: 250px;
+  border: 1px solid red;
+  border-radius:10px;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.img-product:hover {
+	border-radius:10px;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+

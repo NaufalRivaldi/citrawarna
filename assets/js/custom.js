@@ -12,3 +12,16 @@ $(document).ready(function(){
 		}
 	});
 });
+
+/*
+$( ".img-product" ).hover(
+  function() {
+    $('.text-product').css('display', 'block');
+  }, function() {
+    $('.text-product').css('display', 'none');
+  }
+);
+
+*/
+
+

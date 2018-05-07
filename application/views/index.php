@@ -134,7 +134,7 @@
 					<img src="<?= base_url('assets/img/gif1.gif') ?>" alt="" class="img-fluid">
 				</div>	
 			</div>
-			<br>
+			<br><br>
 			
 			<h1 align="center">OUR SERVICE</h1>
 			<hr>
@@ -170,11 +170,35 @@
 					<p align="center">Kami juga melayani jasa pengiriman barang ke lokasi anda dengan ketentuan yang berlaku</p>
 				</div>
 			</div>
-			<br>
+			<br><br>
+			<?php $namaFile = "roti.jpg"; ?>
 
 			<h2 align="center">PRODUK UNGGULAN KAMI</h2>
-			<div class="row">
-				
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-3">
+					<div class="text-product">Anjayy
+						<div class="img-product" style="background: url('upload/produk/<?= $namaFile?>') no-repeat; background-position: center; background-size: cover;">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="text-product">Coek
+						<div class="img-product" style="background: url('upload/produk/naruto.jpg') no-repeat; background-position: center; background-size: cover;">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="text-product">Coek
+						<div class="img-product" style="background: url('upload/produk/photographie.jpg') no-repeat; background-position: center; background-size: cover;">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<center>
+						<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;"></div>
+					</center>
+				</div>
 			</div>
 		</div>
 	</div>	
