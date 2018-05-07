@@ -54,36 +54,39 @@ class Raw_model extends CI_Model
 		}
 	}
 
-	public function import($fileName, $field){
+	public function import($fileName){
+		$tgl_upload = $this->get_setting('last_raw_upload');
+		$tgl_update = $this->get_setting('last_raw_update');
+		$a = strtotime($tgl_upload['value']);
+		$b = strtotime($tgl_update['value']);
 
-		$reader = new PhpOffice\PhpSpreadsheet\Reader\Csv();
-		$spreadsheet = $reader->load('upload/raw/'.$fileName);
-		$worksheet = $spreadsheet->getActiveSheet();
-		$highestRow = $worksheet->getHighestRow(); // e.g. 10
-		$highestColumn = $worksheet->getHighestColumn(); // e.g 'F'
-		$highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn); // e.g. 5
-		
-		$query = "insert into raws values('', ";
+		if($a > $b){
+			$loc = "upload/raw/$fileName";
+			require_once("class/excel_reader2.php");
+			require_once("class/SpreadsheetReader.php");
+			$reader = new SpreadsheetReader($loc);
+			$no = 1;
 
-		$iterator = 0;
-		foreach ($worksheet->getRowIterator() as $row) {
-		    $cellIterator = $row->getCellIterator();
-		    $cellIterator->setIterateOnlyExistingCells(true);
-		    foreach ($cellIterator as $cell) {
-		    	$val = $cell->getValue();
-		        if ($iterator > $field) {
-		        	if ($iterator % $field === 0) {
-		        		$query .= "'$val')";
-		        		$this->db->query($query);
-						$query = "insert into raws values('',";
-		        	}else{
-	        			$query .= " '$val',";
-		        		
-		        	}
-		        }
-		        $iterator++;
-		    }
+
+			$del = $this->db->query("TRUNCATE TABLE raw");
+			$query = "INSERT INTO raw VALUES";
+			foreach($reader as $row){
+				$query .= "(NULL,
+				'$row[0]', '$row[1]', ".$this->db->escape($row[2]).", '$row[3]', 
+				'$row[4]', '$row[6]', '$row[7]', '$row[8]', '$row[9]'), ";
+			}
+			$query = substr($query, 0, -2);
+			
+			$run =  $this->db->query($query.";");
+
+			if($run){
+				$this->db->set('value', date('Y-m-d H:i:s'))->where('param', 'last_raw_update')->update('setting'); 
+				
+			}
+			
+
 		}
+		
 	}
 }
 

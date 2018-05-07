@@ -91,7 +91,7 @@ function array_comb($array1, $array2) {
 function v($data,$pos) {
 	return ord($data[$pos]) | ord($data[$pos+1])<<8;
 }
-
+/*
 class OLERead {
 	var $data = '';
 	function OLERead(){	}
@@ -258,7 +258,7 @@ class OLERead {
 	}
 
 }
-
+*/
 define('SPREADSHEET_EXCEL_READER_BIFF8',			 0x600);
 define('SPREADSHEET_EXCEL_READER_BIFF7',			 0x500);
 define('SPREADSHEET_EXCEL_READER_WORKBOOKGLOBALS',   0x5);
@@ -912,6 +912,7 @@ class Spreadsheet_Excel_Reader {
 	 *
 	 * Some basic initialisation
 	 */
+	/*
 	function Spreadsheet_Excel_Reader($file='',$store_extended_info=true,$outputEncoding='') {
 		$this->_ole = new OLERead();
 		$this->setUTFEncoder('iconv');
@@ -927,6 +928,23 @@ class Spreadsheet_Excel_Reader {
 		if ($file!="") {
 			$this->read($file);
 		}
+	}
+	*/
+	public function __construct($file='',$store_extended_info=true,$outputEncoding='') {
+	$this->_ole = new OLERead();
+	$this->setUTFEncoder('iconv');
+	if ($outputEncoding != '') {
+	$this->setOutputEncoding($outputEncoding);
+	}
+	for ($i=1; $i<245; $i++) {
+	$name = strtolower(( (($i-1)/26>=1)?chr(($i-1)/26+64):'') . chr(($i-1)%26+65));
+	$this->colnames[$name] = $i;
+	$this->colindexes[$i] = $name;
+	}
+	$this->store_extended_info = $store_extended_info;
+	if ($file!="") {
+	$this->read($file);
+	}
 	}
 
 	/**

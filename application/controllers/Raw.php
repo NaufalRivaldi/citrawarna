@@ -49,11 +49,8 @@ class Raw extends CI_Controller
 		$change2 = str_replace(" ", "", $change1);
 		$change3 = str_replace(":", "", $change2);
 		$newName = $change3.".csv";
-		$rowData = array();
-
 		
-		
-		$this->raw_model->import($newName, 10);
+		$this->raw_model->import($newName);
 	}
 
 

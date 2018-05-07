@@ -1,6 +1,8 @@
 <?php
 date_default_timezone_set("Asia/Makassar");
 ini_set('max_execution_time', 300);
+ini_set('mysql.connect_timeout', 300);
+ini_set('default_socket_timeout', 300); 
 /**
  * CodeIgniter
  *
