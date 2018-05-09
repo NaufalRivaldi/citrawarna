@@ -18,7 +18,7 @@
 		<td><?= $no++ ?></td>
 		<td><?= $row['judul'] ?></td>
 		<td><?= $row['tanggal'] ?></td>
-		<td><?= $row['excerpt'] ?></td>
+		<td><?= substr($row['excerpt'], 0, 50) ?> [...]</td>
 		<td><?= $row['nama_kategori'] ?></td>
 		<td><img src="<?= base_url('upload/artikel/thumbs/').$row['img']?>" alt="<?= $row['img'] ?>" width="80"></td>
 		<td>

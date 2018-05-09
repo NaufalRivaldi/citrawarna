@@ -140,32 +140,32 @@
 			<hr>
 			<div class="row">
 				<div class="col-md-4">
-					<h5 align="center">Jaminan Harga Termurah</h5>
+					<h5 align="center" class="service-title">Jaminan Harga Termurah</h5>
 					<center><img src="<?= base_url('assets/img/features-2.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Kami menjamin toko kami dengan harga yang paling murah, apabila ada yang lebih murah, kami ganti selisihnya. (syarat dan ketentuan berlaku)</p>
 				</div>
 				<div class="col-md-4">
-					<h5 align="center">Produk Terlengkap</h5>
+					<h5 align="center" class="service-title">Produk Terlengkap</h5>
 					<center><img src="<?= base_url('assets/img/features-1.png') ?>" alt="" class="service"></center>
 					<p align="center">Segala jenis cat dan keperluan pengecatan anda ada disini, mulai dari thinner, kuas, amplas dan sebagainya</p>
 				</div>
 				<div class="col-md-4">
-					<h5 align="center">Banyak Pilihan Warna</h5>
+					<h5 align="center" class="service-title">Banyak Pilihan Warna</h5>
 					<center><img src="<?= base_url('assets/img/features-3.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Warna apapun yang anda inginkan ada disini, karena kami juga memiliki mesin tinting untuk membuat cat dengan warna yang anda inginkan</p>
 				</div>
 				<div class="col-md-4">
-					<h5 align="center">Jasa Pengecekan Tembok</h5>
+					<h5 align="center" class="service-title">Jasa Pengecekan Tembok</h5>
 					<center><img src="<?= base_url('assets/img/features-4.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Menyediakan layanan jasa pengecekan kesiapan atau kesehatan tembok sebelum melakukan pengecatan, GRATIS tidak dipungut biaya (Khusus area denpasar)</p>
 				</div>
-				<div class="col-md-4">
-					<h5 align="center">Melayani Segala Partai Pembelian</h5>
+				<div class="col-md-4" class="service-title">
+					<h5 align="center" class="service-title">Melayani Segala Partai Pembelian</h5>
 					<center><img src="<?= base_url('assets/img/features-5.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Pembelian dalam jumlah besar hingga lebih dari 10 pail, atau pembelian hanya 1 kaleng, kami akan tetap melayani anda dengan sebaik-baiknya</p>
 				</div>
 				<div class="col-md-4">
-					<h5 align="center">Delivery Service</h5>
+					<h5 align="center" class="service-title">Delivery Service</h5>
 					<center><img src="<?= base_url('assets/img/features-6.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Kami juga melayani jasa pengiriman barang ke lokasi anda dengan ketentuan yang berlaku</p>
 				</div>
@@ -173,45 +173,112 @@
 			<br><br>
 			<?php $namaFile = "roti.jpg"; ?>
 
-			<h2 align="center">PRODUK UNGGULAN KAMI</h2>
+			<h2 align="center" class="section-title">PRODUK UNGGULAN KAMI</h2>
+			<hr>
+			<p class="unggulan">"Produk unggulan kami memiliki kualitas yang lebih baik dari produk lain"</p>
 			<br>
 			<div class="row justify-content-center">
-				<div class="col-md-3">
-					<div class="text-product">Anjayy
-						<div class="img-product" style="background: url('upload/produk/<?= $namaFile?>') no-repeat; background-position: center; background-size: cover;">
+				<div class="col-md-3 centered">
+					<a href="">
+						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
+							<div class="img-product" style="background: url('upload/produk/<?= $namaFile?>') no-repeat; background-position: center; background-size: cover;">
+							</div>
 						</div>
-					</div>
+						<p class="product-name">WELDON WALLPAINT </p>	
+						<p class="kat-name">Cat Tembok</p>
+					</a>
 				</div>
-				<div class="col-md-3">
-					<div class="text-product">Coek
-						<div class="img-product" style="background: url('upload/produk/naruto.jpg') no-repeat; background-position: center; background-size: cover;">
+				<div class="col-md-3 centered">
+					<a href="">
+						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
+							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
+							</div>
 						</div>
-					</div>
+						<p class="product-name">WELDON WALLPAINT </p>	
+						<p class="kat-name">Cat Tembok</p>
+					</a>
 				</div>
-				<div class="col-md-3">
-					<div class="text-product">Coek
-						<div class="img-product" style="background: url('upload/produk/photographie.jpg') no-repeat; background-position: center; background-size: cover;">
+				<div class="col-md-3 centered">
+					<a href="">
+						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
+							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
+							</div>
 						</div>
-					</div>
+						<p class="product-name">WELDON WALLPAINT </p>	
+						<p class="kat-name">Cat Tembok</p>
+					</a>
 				</div>
-				<div class="col-md-3">
-					<center>
-						<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;"></div>
-					</center>
+				<div class="col-md-3 centered">
+					<a href="">
+						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
+							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
+							</div>
+						</div>
+						<p class="product-name">WELDON WALLPAINT </p>	
+						<p class="kat-name">Cat Tembok</p>
+					</a>
+				</div>
+				<div class="col-md-3 centered">
+					<a href="">
+						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
+							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
+							</div>
+						</div>
+						<p class="product-name">WELDON WALLPAINT </p>	
+						<p class="kat-name">Cat Tembok</p>
+					</a>
+				</div>
+				<div class="col-md-3 centered">
+					<a href="">
+						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
+							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
+							</div>
+						</div>
+						<p class="product-name">WELDON WALLPAINT </p>	
+						<p class="kat-name">Cat Tembok</p>
+					</a>
+				</div>
+				<div class="col-md-3 centered">
+					<a href="">
+						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
+							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
+							</div>
+						</div>
+						<p class="product-name">WELDON WALLPAINT </p>	
+						<p class="kat-name">Cat Tembok</p>
+					</a>
+				</div>
+				<div class="col-md-3 centered">
+					<a href="">
+						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
+							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
+							</div>
+						</div>
+						<p class="product-name">WELDON WALLPAINT </p>	
+						<p class="kat-name">Cat Tembok</p>
+					</a>
+				</div>
+			</div>
+			<br><br>
+			
+			<h1 align="center">HUBUNGI KAMI</h1>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<p>Nama Lengkap :</p>
+					<input type="text" class="form-control">
+					<p>Email :</p>
+					<input type="text" class="form-control">
+					<p>No. Telp :</p>
+					<input type="text" class="form-control">
+					<p>Subject :</p>
+					<input type="text" class="form-control">
 				</div>
 			</div>
 		</div>
 	</div>	
 	<br>
-	<div class="container-fluid">
-		<br>
-		<div class="container">
-			
-			
-
-		</div>
-	</div>
-
+	
 
 	<script src="<?= base_url('assets/js/jquery-3.2.1.min.js') ?>"></script>
 	<script src="<?= base_url('assets/js/jquery-ui.min.js') ?>"></script>

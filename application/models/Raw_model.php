@@ -81,7 +81,36 @@ class Raw_model extends CI_Model
 
 			if($run){
 				$this->db->set('value', date('Y-m-d H:i:s'))->where('param', 'last_raw_update')->update('setting'); 
-				
+				$cabang = array(
+						"CW1",
+						"CW2",
+						"CW3",
+						"CW4",
+						"CW5",
+						"CW6",
+						"CW7",
+						"CW8",
+						"CW9",
+						"CA0",
+						"CA1",
+						"CA2",
+						"CA3",
+						"CA4",
+						"CA5",
+						"CA6",
+						"CA7",
+						"CA8",
+						"CA9",
+						"GUDANG"
+					);
+				$data_cabang = implode("','", $cabang);
+				$delete = $this->db->query("DELETE FROM raw WHERE kd_gudang NOT IN ('$data_cabang') OR nm_barang LIKE '%Tinter%' OR nm_barang LIKE '#%' OR nm_barang LIKE 'HAPUS%'");
+
+				if($delete){
+					return true;
+				} else {
+					return false;
+				}
 			}
 			
 

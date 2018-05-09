@@ -1,9 +1,5 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed!');
 
-require 'vendor/autoload.php';
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
 class Raw extends CI_Controller
 {
 	
@@ -35,11 +31,7 @@ class Raw extends CI_Controller
 		$this->load->view('backend/template', $data);
 	}
 
-	public function flush(){
-		$this->raw_model->flush();
-		$this->session->set_flashdata('success','Berhasil menghapus old raw');
-		redirect('raw');
-	}
+	
 
 	public function update(){
 		//$this->raw_model->update();
@@ -50,7 +42,16 @@ class Raw extends CI_Controller
 		$change3 = str_replace(":", "", $change2);
 		$newName = $change3.".csv";
 		
-		$this->raw_model->import($newName);
+		$import = $this->raw_model->import($newName);
+
+		if($import){
+			$this->session->set_flashdata('success', 'Berhasil Update Raw Data');
+			$this->raw_model->flush();
+			redirect('raw');
+		} else {
+			$this->session->set_flashdata('danger', 'Gagal Update Raw Data');
+			redirect('raw');
+		}
 	}
 
 

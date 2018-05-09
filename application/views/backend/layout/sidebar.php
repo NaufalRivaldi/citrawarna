@@ -22,7 +22,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="peminjaman.php">
+            <a class="nav-link <?php if($menu == 4) echo "active" ?>" href="<?= base_url('backend/barang') ?>">
               <i class="fa fa-shopping-cart"></i>&nbsp; 
               Barang
             </a>

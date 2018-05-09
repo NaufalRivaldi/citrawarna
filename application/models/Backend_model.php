@@ -20,7 +20,7 @@ class Backend_model extends CI_Model
 		];
 	}
 
-	public function upload_cover($path){
+	public function upload_cover($path, $field){
 		$config['upload_path'] = $path;
 		$config['allowed_types'] = 'jpg|jpeg|png';
 		$config['remove_space'] = true;
@@ -28,21 +28,13 @@ class Backend_model extends CI_Model
 
 		$this->load->library('upload', $config);
 
-		if(!$this->upload->do_upload('img')){
+		if(!$this->upload->do_upload($field)){
 			$return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
       		return $return;
 		} else {
 			$return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
       		return $return;
 		}
-	}
-
-	public function insert_artikel($upload){
-		$data = $this->input->post();
-		$data['link'] = strtolower(str_replace(" ", "-", $this->input->post('judul')));
-		$data['img'] = $upload['file']['file_name'];
-
-		$this->db->insert('artikel', $data);
 	}
 
 	public function do_resize($field, $source_path, $new_path){
@@ -60,6 +52,15 @@ class Backend_model extends CI_Model
 			return false;
 		}
 	}
+
+	public function insert_artikel($upload){
+		$data = $this->input->post();
+		$data['link'] = strtolower(str_replace(" ", "-", $this->input->post('judul')));
+		$data['img'] = $upload['file']['file_name'];
+
+		$this->db->insert('artikel', $data);
+	}
+
 
 	public function row_artikel($id_artikel){
 		return $this->db->where('id_artikel', $id_artikel)->get('artikel')->row_array();
@@ -131,6 +132,58 @@ class Backend_model extends CI_Model
 		$data['img'] = $upload['file']['file_name'];
 
 		$this->db->insert('slideshow', $data);
+	}
+
+
+	public function get_barang(){
+		return $this->db->join('kat_barang', 'kat_barang.kd_kategori = barang.kd_kategori')
+						->join('jenis', 'jenis.kd_jenis = barang.kd_jenis')
+						->where('stat', 1)
+						->get('barang')->result_array();
+	}
+
+	public function defaultBarang(){
+		return [
+			'kd_merk' => '',
+			'nm_barang' => '',
+			'deskripsi' => '',
+			'kd_kategori' => '',
+			'kd_jenis' => '',
+			'tag' => '',
+			'foto' => '',
+			'no_index' => '',
+			'unggulan' => '',
+			'stat' => '',
+			'click' => '',
+		];
+	}
+
+	public function insert_barang($upload){
+		$data = $this->input->post();
+		$data['foto'] = $upload['file']['file_name'];
+
+		$this->db->insert('barang', $data);
+	}
+
+	public function row_barang($id_barang){
+		return $this->db->where('id_barang', $id_barang)->get('barang')->row_array();
+	}
+
+	public function update_barang($id_barang, $upload){
+		$data = $this->input->post();
+		$data['foto'] = $upload['file']['file_name'];
+
+		$this->db->where('id_barang', $id_barang);
+		$this->db->update('barang', $data);
+	}
+
+	public function update_barang_without_image($id_barang, $data){
+		$data = $this->input->post();
+		return $this->db->where('id_barang', $id_barang)->update('barang', $data);
+	}
+
+	public function changeStatBarang($id_barang){
+		return $this->db->set('stat', 0)->where('id_barang', $id_barang)->update('barang');
 	}
 
 
