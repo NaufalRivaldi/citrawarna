@@ -14,10 +14,12 @@
     <link href="<?= base_url() ?>assets/css/dashboard.css" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="<?= base_url('assets/font-awesome/css/font-awesome.min.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/DataTables/datatables.min.css'); ?>"/>
     <!-- CKEDITOR -->
     <script src="<?= base_url('assets/ckeditor/ckeditor.js') ?>"></script>
     <script src="<?= base_url('assets/js/jquery-3.2.1.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
+    <script type="text/javascript" src="<?= base_url('assets/DataTables/datatables.min.js') ?>"></script>
   </head>
 
   <body>

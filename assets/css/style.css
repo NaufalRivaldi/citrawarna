@@ -310,3 +310,72 @@ h2 {
 	font-size: 20px;
 	font-style: italic;
 }
+
+.body-article {
+	width: 100%;
+	background-color: white;
+	border-radius:5px;
+	box-shadow: 0px 0px 2px #222222;
+	padding: 8px;
+	transition: 0.5s;
+}
+
+.body-article a:hover{
+	text-decoration: none;
+	color: #eb4d4b;
+}
+
+.body-article a:hover .judul-article{
+	color: #eb4d4b;
+	text-decoration: none;
+}
+
+.judul-article {
+	padding-top: 9px;
+	font-size: 20px;
+	text-transform:capitalize;
+	text-align: center;
+	color: #222222 
+}
+
+.img-article {
+  width: 335px;
+  height: 180px;
+  transition: 0.5s;
+}
+
+.body-article:hover {
+	 -ms-transform: scale(1.04,1.04); /* IE 9 */
+    -webkit-transform: scale(1.04,1.04); /* Safari */
+    transform: scale(1.04,1.04); /* Standard syntax */
+	transition: 0.5s;
+}
+
+.desc-article {
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+.cabang {
+	color:red;
+}
+
+.inputbox {
+    position: relative;
+    padding: .5em 0;
+}
+
+.inputbox .ipt {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    height: 40px;
+    transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    -khtml-transition: .3s;
+}
