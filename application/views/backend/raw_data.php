@@ -36,30 +36,25 @@ if($last_upload > $last_update){ ?>
 <div class="row">
 	<table class="table table-sm" id="example">
 		<tr>
-		<thead>
-			<td>kd_merk</td>
-			<td>nm_barang</td>
-			<td>Harga</td>
+			<thead>
+				<td>kd_merk</td>
+				<td>nm_barang</td>
+				<td>Harga</td>
+				<td>Keterangan</td>
 			</thead>
 		</tr>
+		<?php foreach($raw as $row) {  ?>
+		<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">
+			<td><a href="#"><?= $row['kd_barang'] ?></a></td>
+			<td>
+				<a href="<?= base_url('produk/view/'.strtolower(str_replace(" ", "-", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
+			</td>
+			<td><a href="#"><?= $row['harga'] ?></a></td>
+			<td><a href="#"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></a></td>
+		</tr>
+		<?php } ?>
 		
 	</table>
-
-	<script>
-		var data = <?php echo json_encode($raw) ?>;
-		$('#example').DataTable( {
-	    data: data,
-	    columns: [
-	        { data: 'kd_barang' },
-	        { data: 'nm_barang',  "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-            $(nTd).html("<a href='detail/"+oData.nm_barang+"'>"+oData.nm_barang+"</a>");
-        	} },
-        	{ data: 'harga' },
-	    ]
-	} );
-	</script>
-	
-	
 	
 </div>
 

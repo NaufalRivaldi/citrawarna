@@ -1,0 +1,16 @@
+<?php defined('BASEPATH') or exit('No Direct script access allowed!');
+
+class Home_model extends CI_Model 
+{
+	public function get_home_artikel(){
+		return $this->db->join('kategori', 'kategori.id_kategori = artikel.id_kategori')
+						->order_by('tanggal', 'desc')
+						->get('artikel',0,3)->result_array();
+	}
+
+	public function get_cabang(){
+		return $this->db->get('cabang')->result_array();
+	}
+}
+
+ ?>

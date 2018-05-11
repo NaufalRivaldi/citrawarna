@@ -117,6 +117,17 @@ class Backend extends CI_Controller
 		//$laman['cek'] = $this->db->query('SELECT distinct nm_barang,harga FROM raw WHERE kd_merk = "WLDN"')->result_array();
 		$this->load->view('backend/template', $laman);
 	}
+
+	public function cabang(){
+		$this->login_model->cek_login();
+		$laman = [
+			'content' => 'backend/cabang/index',
+			'title' => 'cabang',
+			'menu' => 6,
+		];
+
+		$this->load->view('backend/template', $laman);
+	}
 }
 
  ?>

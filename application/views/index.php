@@ -174,212 +174,32 @@
 			<h1 align="center">ARTIKEL TERBARU</h1>
 			<hr>
 			<div class="row">
+			<?php $articles = $this->home_model->get_home_artikel(); 
+				foreach($articles as $artikel) { ?>
 				<div class="col-md-4">
 					<div class="body-article">
 						<a href="">
-							<div class="img-article" style="background: url('upload/artikel/cat-cwa.jpg') no-repeat; background-position: center; background-size: cover;"></div>
+							<div class="img-article" style="background: url('upload/artikel/<?= $artikel['img'] ?>') no-repeat; background-position: center; background-size: cover;"></div>
 							<div class="judul-article">
-								<b>Merek Cat Tembok  </b>
+								<b><?= $artikel['judul'] ?></b>
 							</div>
 							<hr>
 						</a> 
 						<div class="desc-article">
-							<p>Published : 10-05-2018 - Kategori : Tips & Trick</p>
+							<p>Published : <?= $artikel['tanggal'] ?> <br> Kategori : <?= $artikel['nama_kategori'] ?></p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="body-article">
-						<a href="">
-							<div class="img-article" style="background: url('upload/artikel/cat-cwa.jpg') no-repeat; background-position: center; background-size: cover;"></div>
-							<div class="judul-article">
-								<b>Merek Cat Tembok Berdasarkan Kebutuhan</b>
-							</div>
-							<hr>
-						</a> 
-						<div class="desc-article">
-							<p>Published : 10-05-2018 - Kategori : Tips & Trick</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="body-article">
-						<a href="">
-							<div class="img-article" style="background: url('upload/artikel/cat-cwa.jpg') no-repeat; background-position: center; background-size: cover;"></div>
-							<div class="judul-article">
-								<b>Merek Cat Tembok Berdasarkan Kebutuhan Berdasarkan Kebutuhan</b>
-							</div>
-							<hr>
-						</a> 
-						<div class="desc-article">
-							<p>Published : 10-05-2018 - Kategori : Tips & Trick</p>
-						</div>
-					</div>
-				</div>
+				<?php } ?>
 			</div>
 			<br><br>
 
 			<!-- LOKASI SECTION -->
-			<h1 align="center">LOKASI KAMI</h1>
-			<hr>
-			<p class="unggulan">"Temukan toko cat Citra Warna terdekat anda"</p>
+			<?php $this->load->view('frontend/layout/cabang') ?>
+
+			<!-- MAPS SECTION -->
+			<?php $this->load->view('frontend/layout/maps') ?>
 			
-			<br>
-			<div class="row">
-				<div class="col-md-4">
-					<strong>Citra Warna Imam Bonjol 1</strong>
-					<br>
-					Jl Imam Bonjol 257 AB, Denpasar. <br>Tel : (0361)489306, 489307, 085102091930
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Imam Bonjol 2</strong>
-					<br>
-					Jl Imam Bonjol 350, Denpasar. <br>Tel : (0361)485084, 485035, 085100103423
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Buluh Indah</strong>
-					<br>
-					Jl Buluh Indah 22 AB, Denpasar. <br>Tel : 085100104115, 085100815759
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<strong>Citra Warna Canggu</strong>
-					<br>
-					Jl Raya Canggu, Ruko Anyar Kencana no 9, Kerobokan. Tel : (0361)9002586, 085101284515
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Teuku Umar Barat</strong>
-					<br>
-					Jl Teuku Umar Barat 343, Kerobokan. <br>Tel : (0361)735115
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Sunset Road</strong>
-					<br>
-					Jl Sunset Road, Ruko Sunset Plaza no 16, Kuta.
-					<br>Tel : (0361)8476780, 085101181956
-					<hr>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-4">
-					<strong>Citra Warna Gatot Subroto</strong>
-					<br>
-					Jl Gatot Subroto 155 A, Denpasar. Tel : (0361)240941, 240942, 085100341549
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Ubud</strong>
-					<br>
-					Jl Tjokorda Rai Pudak, Br Yangloni, Desa Peliatan, Gianyar. <br> Tel (0361)978220, 082339649722
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Mumbul Nusa Dua</strong>
-					<br>
-					Jl By Pass Ngurah Rai (Seberang Krematorium Kertha Semadi). <br> Tel : 0895334122805
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<strong>Citra Warna Mahendradatha</strong>
-					<br>
-					Jl Mahendradatha no 89X, Denpasar. <br> Tel 0895606305726
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Semabaung Gianyar </strong>
-					<br>
-					Jl Mahendradatta no 15 blok 1, Semabaung - Gianyar. Tel : 085 337 259 006
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Kediri Tabanan</strong>
-					<br>
-					Jl By Pass Ir. Soekarno No. 90x, Kediri Tabanan. Tel : 081237816322
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<strong>Citra Warna Panjer </strong>
-					<br>
-					Jl Tukad Yeh Aya No. 127 X/A. Tel : 081237821646
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Dalung</strong>
-						<br>
-						Jl Raya Padang Luwih Pertokoan Sutra Mas, Kav A8. Tel : 0361428939, 082235015265, 0895410917930
-					<hr>
-				</div>
-				<div class="col-md-4">
-					<strong>Citra Warna Singaraja</strong>
-					<br>
-					Jl A Yani no. 194A Kelurahan Banyuasri - Singaraja Tel : 081237691264
-					<hr>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<br>
-					<script src="http://maps.google.com/maps/api/js?key=AIzaSyC4xI03S7A49UtfJRr8cyE7IMptn3XTPKw" 
-	          type="text/javascript"></script>
-					<div id="map" style="width: 100%; height: 250px;"></div>
-					<script type="text/javascript">
-					    var locations = [
-					      ['Citra Warna Imam Bonjol 1', -8.6831194,115.1961952, 1],
-					      ['Citra Warna Imam Bonjol 2', -8.6980697,115.1855397, 2],
-					      ['Citra Warna Buluh Indah', -8.6500855,115.1953654, 3],
-					      ['Citra Warna Canggu', -8.6464189,115.1656472, 4],
-					      ['Citra Warna Teuku Umar Barat', -8.6720333,115.1731858, 5],
-					      ['Citra Warna Sunset Road', -8.696235,115.1758945, 6],
-					      ['Citra Warna Gatot Subroto', -8.6357431,115.2299356, 7],
-					      ['Citra Warna Ubud', -8.5258281,115.271246, 8],
-					      ['Citra Warna Nusa Dua', -8.784843, 115.195003, 9],
-					      ['Citra Warna Mahendradatta', -8.664949, 115.189706, 10],
-					      ['Citra Warna Semabaung', -8.534997, 115.307913, 11],
-					      ['Citra Warna Dalung', -8.635750, 115.175192],
-					      ['Citra Warna Panjer', -8.677053, 115.239976],
-					      ['Citra Warna Kediri Tabanan', -8.549910, 115.123622]
-					    ];
-
-					    var map = new google.maps.Map(document.getElementById('map'), {
-					      zoom: 12,
-					      center: new google.maps.LatLng(-8.6595943,115.2019129),
-					      mapTypeId: google.maps.MapTypeId.ROADMAP
-					    });
-
-					    var infowindow = new google.maps.InfoWindow();
-
-					    var marker, i;
-
-					    for (i = 0; i < locations.length; i++) {  
-					      marker = new google.maps.Marker({
-					        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-					        map: map
-					      });
-
-					      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-					        return function() {
-					          infowindow.setContent(locations[i][0]);
-					          infowindow.open(map, marker);
-					        }
-					      })(marker, i));
-					    }
-					</script>
-					
-				</div>
-			</div>
-			<br><br>
 			
 			<h1 align="center">HUBUNGI KAMI</h1>
 			<hr>

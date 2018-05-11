@@ -185,8 +185,6 @@ class Backend_model extends CI_Model
 	public function changeStatBarang($id_barang){
 		return $this->db->set('stat', 0)->where('id_barang', $id_barang)->update('barang');
 	}
-
-
 }
 
  ?>

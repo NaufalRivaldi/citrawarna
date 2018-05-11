@@ -33,6 +33,12 @@
               Raw Data
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link <?php if($menu == 6) echo "active" ?>" href="<?= base_url('backend/cabang') ?>">
+              <i class="fa fa-globe"></i>&nbsp; 
+              Cabang
+            </a>
+          </li>
         </ul>
       </div>
       <p style="font-size:12px;" align="center">Copyright 2018 - Refo Junior</p>

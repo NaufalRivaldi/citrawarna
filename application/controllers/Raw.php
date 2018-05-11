@@ -27,7 +27,7 @@ class Raw extends CI_Controller
 				echo "<script>alert('Upload data gagal')</script>";
 			}
 		}
-		$data['raw'] = $this->db->query('SELECT distinct kd_barang, nm_barang,harga FROM raw WHERE kd_merk = "WLDN"')->result_array();
+		$data['raw'] = $this->db->query('SELECT * FROM raw WHERE kd_merk = "WLDN" group by nm_barang')->result_array();
 		
 		$this->load->view('backend/template', $data);
 	}
@@ -54,6 +54,8 @@ class Raw extends CI_Controller
 			redirect('raw');
 		}
 	}
+
+	
 
 
 }
