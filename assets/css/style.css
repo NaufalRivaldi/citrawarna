@@ -104,6 +104,16 @@ h2 {
 		padding-top: 46px;
 	}
 
+	.img-artikel {
+		width: 100%;
+		height: 100%;
+		padding:20px;
+	}
+
+	.body-barang {
+		text-align: center
+	}
+
 }
 
 .toggle{
@@ -274,6 +284,7 @@ h2 {
   border-radius:10px;
   position: absolute;
   transition: 0.5s;
+  padding: 20px;
 }
 
 .img-product:hover {
@@ -360,22 +371,70 @@ h2 {
 	color:red;
 }
 
-.inputbox {
-    position: relative;
-    padding: .5em 0;
+.footer {
+	background-color: #eb4d4b;
+	width: 100%;
+	text-align: center;
+	padding:7px 0;
+	font-size: 13px;
+	color:white;
 }
 
-.inputbox .ipt {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    height: 40px;
-    transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    -webkit-transition: .3s;
-    -khtml-transition: .3s;
+
+.body-artikel {
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px #222222;
+	padding-top: 70px;
+	text-align: center
+}
+
+.img-artikel {
+	width: 65%;
+	height: 65%;
+	padding: 20px;
+}
+
+.isi-artikel {
+	text-align: left;
+	padding: 35px;
+}
+
+.judul-barang{
+	padding-bottom: 10px;
+}
+
+.img-barang {	
+	border:1px solid red;
+	border-radius: 10px;
+}
+
+.body-barang {
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px #222222;
+	padding-top: 85px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.deskripsi-barang{
+	font-size :18px;
+	font-style: italic;
+}
+
+.keterangan-barang {
+	font-size:12px;
+	padding-top: 10px;
+}
+
+.keterangan-barang p {
+	margin: 0;
+	padding:0;
+}
+
+.not-active td a {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #bfbfbf;
+
 }

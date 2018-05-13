@@ -11,6 +11,14 @@ class Home_model extends CI_Model
 	public function get_cabang(){
 		return $this->db->get('cabang')->result_array();
 	}
+
+	public function get_setting($param){
+		return $this->db->where('param', $param)->get('setting')->row_array();
+	}
+
+	public function get_barang(){
+		return $this->db->get('barang',0,6)->result_array();
+	}
 }
 
  ?>

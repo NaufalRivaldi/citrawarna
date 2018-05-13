@@ -81,93 +81,26 @@
 				</div>
 			</div>
 			<br><br>
-			<?php $namaFile = "weldon.jpg"; ?>
+			<?php $barangs = $this->home_model->get_barang(); ?>
 
 			<h2 align="center" class="section-title">PRODUK UNGGULAN KAMI</h2>
 			<hr>
 			<p class="unggulan">"Produk unggulan kami memiliki kualitas yang lebih baik dari produk lain"</p>
 			<br>
 			<div class="row justify-content-center">
+				<?php foreach($barangs as $barang) { ?>
 				<div class="col-md-3 centered">
-					<a href="">
+					<a href="<?= base_url('product/view/').$barang['kd_merk'] ?>">
 						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
-							<div class="img-product" style="background: url('upload/produk/<?= $namaFile?>') no-repeat; background-position: center; background-size: cover;">
+							<div class="img-product" style="background: url('upload/produk/thumbs/<?= $barang['foto']?>') no-repeat; background-position: center; background-size: cover; ">
 							</div>
 						</div>
-						<p class="product-name">WELDON WALLPAINT </p>	
+						<p class="product-name"><?= $barang['nm_barang'] ?> </p>	
 						<p class="kat-name">Cat Tembok</p>
 					</a>
 				</div>
-				<div class="col-md-3 centered">
-					<a href="">
-						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
-							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
-							</div>
-						</div>
-						<p class="product-name">WELDON WALLPAINT </p>	
-						<p class="kat-name">Cat Tembok</p>
-					</a>
-				</div>
-				<div class="col-md-3 centered">
-					<a href="">
-						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
-							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
-							</div>
-						</div>
-						<p class="product-name">WELDON WALLPAINT </p>	
-						<p class="kat-name">Cat Tembok</p>
-					</a>
-				</div>
-				<div class="col-md-3 centered">
-					<a href="">
-						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
-							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
-							</div>
-						</div>
-						<p class="product-name">WELDON WALLPAINT </p>	
-						<p class="kat-name">Cat Tembok</p>
-					</a>
-				</div>
-				<div class="col-md-3 centered">
-					<a href="">
-						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
-							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
-							</div>
-						</div>
-						<p class="product-name">WELDON WALLPAINT </p>	
-						<p class="kat-name">Cat Tembok</p>
-					</a>
-				</div>
-				<div class="col-md-3 centered">
-					<a href="">
-						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
-							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
-							</div>
-						</div>
-						<p class="product-name">WELDON WALLPAINT </p>	
-						<p class="kat-name">Cat Tembok</p>
-					</a>
-				</div>
-				<div class="col-md-3 centered">
-					<a href="">
-						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
-							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
-							</div>
-						</div>
-						<p class="product-name">WELDON WALLPAINT </p>	
-						<p class="kat-name">Cat Tembok</p>
-					</a>
-				</div>
-				<div class="col-md-3 centered">
-					<a href="">
-						<div class="text-product">See Details &nbsp; <i class="fa fa-eye"></i>
-							<div class="img-product" style="background: url('upload/produk/weldon.jpg') no-repeat; background-position: center; background-size: cover;">
-							</div>
-						</div>
-						<p class="product-name">WELDON WALLPAINT </p>	
-						<p class="kat-name">Cat Tembok</p>
-					</a>
-				</div>
+				<?php } ?>
+				
 			</div>
 
 			<br><br>
@@ -178,8 +111,8 @@
 				foreach($articles as $artikel) { ?>
 				<div class="col-md-4">
 					<div class="body-article">
-						<a href="">
-							<div class="img-article" style="background: url('upload/artikel/<?= $artikel['img'] ?>') no-repeat; background-position: center; background-size: cover;"></div>
+						<a href="<?= base_url('artikel/read/').$artikel['link'] ?>">
+							<div class="img-article" style="background: url('upload/artikel/thumbs/<?= $artikel['img'] ?>') no-repeat; background-position: center; background-size: cover;"></div>
 							<div class="judul-article">
 								<b><?= $artikel['judul'] ?></b>
 							</div>
@@ -204,11 +137,45 @@
 			<h1 align="center">HUBUNGI KAMI</h1>
 			<hr>
 			<br>
-		
+			<div class="row">
+				<div class="col-md-6">
+					<label for="nama_lengkap">Nama Lengkap</label>
+					<input type="text" class="form-control">
+				</div>
+				<div class="col-md-6">
+					<h4>INFORMATION</h4>
+					<table class="table">
+						<tr>
+							<td><strong>Head Office</strong></td>
+							<td> : </td>
+							<td>Jl. Teuku Umar Barat no. 343</td>
+						</tr>
+						<tr>
+							<td><strong>Waktu Operasional</strong></td>
+							<td> : </td>
+							<td>07:00 - 21:00</td>
+						</tr>
+						<tr>
+							<td><strong>No. Telp</strong></td>
+							<td> : </td>
+							<td>081111111</td>
+						</tr>
+						<tr>
+							<td><strong>Email</strong></td>
+							<td> : </td>
+							<td>admin@cwabali.com</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="footer">	
+				&copy; Refo Junior - 2018
+			</div>	
 		</div>	
-	</div>
-	<br>
-	
+	</div>	
 
 	<script src="<?= base_url('assets/js/jquery-3.2.1.min.js') ?>"></script>
 	<script src="<?= base_url('assets/js/jquery-ui.min.js') ?>"></script>
