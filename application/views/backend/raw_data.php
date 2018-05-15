@@ -33,29 +33,5 @@ if($last_upload > $last_update){ ?>
 	</div>
 </div>
 <br>
-<div class="row">
-	<table class="table table-sm" id="example">
-		<tr>
-			<thead>
-				<td>kd_merk</td>
-				<td>nm_barang</td>
-				<td>Harga</td>
-				<td>Keterangan</td>
-			</thead>
-		</tr>
-		<?php foreach($raw as $row) {  ?>
-		<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">
-			<td><a href="#"><?= $row['kd_barang'] ?></a></td>
-			<td>
-				<a href="<?= base_url('produk/view/'.strtolower(str_replace(" ", "-", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
-			</td>
-			<td><a href="#"><?= $row['harga'] ?></a></td>
-			<td><a href="#"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></a></td>
-		</tr>
-		<?php } ?>
-		
-	</table>
-	
-</div>
 
 

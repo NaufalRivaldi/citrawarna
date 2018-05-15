@@ -1,18 +1,19 @@
 body {
 	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
 }
 
 h1 {
 	text-decoration: underline;
 	-webkit-text-decoration-color: red;
-	text-decoration-color: red;
+	text-decoration-color: #f9ca24;
 	text-underline-position: under;
 }
 
 h2 {
 	text-decoration: underline;
 	-webkit-text-decoration-color: red;
-	text-decoration-color: red;
+	text-decoration-color: #f9ca24;
 	text-underline-position: under;
 }
 
@@ -105,13 +106,12 @@ h2 {
 	}
 
 	.img-artikel {
-		width: 100%;
-		height: 100%;
+		width: 80%;
 		padding:20px;
 	}
 
 	.body-barang {
-		text-align: center
+		width: 415px;
 	}
 
 }
@@ -124,7 +124,6 @@ h2 {
 .navbar {
 	width: 100%;
 	height: 50px;
-	background: #eb4d4b;
 	color: white;
 	position: fixed;
 	z-index: 2;
@@ -154,7 +153,7 @@ h2 {
 }
 
 .navbar ul li a:hover {
-	color:black;
+	color:yellow;
 	padding: 13px;
 	text-decoration: none;
 	width: auto;
@@ -178,7 +177,7 @@ h2 {
 	position:fixed;
 	top:50px;
 	width: 100%;	
-	background: #f1f2f6;
+	background: #FFF200;
 	height: 35px;
 	box-shadow: 0px 0px 7px #222222;
 	z-index: 1;
@@ -199,7 +198,7 @@ h2 {
 
 .nav-second ul li a {
 	padding-right: 10px;
-	color: black
+	color: #222222
 }
 
 .nav-second ul li a:hover {
@@ -242,9 +241,9 @@ h2 {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #F1F1F1;
     background-clip: border-box;
-    border: 1px solid #eb4d4b;
+    border: 1px solid black;
     border-radius: .25rem;
 }
 
@@ -256,14 +255,15 @@ h2 {
 	width: 230px;
 }
 
+
 .text-product {
 	width: 250px;
 	height: 250px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #eb4d4b;
-	color:white;
+	background-color: #fbc531;
+	color:black;
 	border-radius:10px;
 	font-size: 23px;
 }
@@ -280,7 +280,7 @@ h2 {
 .img-product {
   width: 250px;
   height: 250px;
-  border: 1px solid red;
+  border: 1px solid #fbc531;
   border-radius:10px;
   position: absolute;
   transition: 0.5s;
@@ -294,8 +294,15 @@ h2 {
 }
 
 .service-title {
-	color:#eb4d4b;
+	padding-top:3px;
+	padding-bottom: 3px;
+	color:#2f3640;
 	font-style:oblique;
+	text-decoration: underline;
+	-webkit-text-decoration-color: red;
+	text-decoration-color: #f9ca24;
+	text-underline-position: under;
+
 }
 
 .product-name {
@@ -337,7 +344,7 @@ h2 {
 }
 
 .body-article a:hover .judul-article{
-	color: #eb4d4b;
+	color: #fbc531;
 	text-decoration: none;
 }
 
@@ -372,12 +379,12 @@ h2 {
 }
 
 .footer {
-	background-color: #eb4d4b;
 	width: 100%;
 	text-align: center;
 	padding:7px 0;
 	font-size: 13px;
-	color:white;
+	color:black;
+	padding-bottom: 16px;
 }
 
 
@@ -385,12 +392,13 @@ h2 {
 	border-radius: 10px;
 	box-shadow: 0px 0px 3px #222222;
 	padding-top: 70px;
-	text-align: center
+	text-align: center;
+	background-color:white;
 }
 
 .img-artikel {
-	width: 65%;
-	height: 65%;
+	width: 90%;
+	height: 90%;
 	padding: 20px;
 }
 
@@ -404,7 +412,7 @@ h2 {
 }
 
 .img-barang {	
-	border:1px solid red;
+	border:1px solid #fbc531;
 	border-radius: 10px;
 }
 
@@ -437,4 +445,81 @@ h2 {
   text-decoration: none;
   color: #bfbfbf;
 
+}
+
+
+
+.contact-form .form-field {
+  position: relative;
+  margin: 40px 0;
+}
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #fbc531;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+}
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #888;
+  cursor: text;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+.contact-form .submit-btn {
+  background-color: #fbc531;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.note {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+}
+.note .link {
+  color: #888;
+  text-decoration: none;
+}
+.note .link:hover {
+  text-decoration: underline;
+}
+
+.hr-footer {
+	display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    padding-top:2px;
 }

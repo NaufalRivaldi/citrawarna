@@ -185,6 +185,18 @@ class Backend_model extends CI_Model
 	public function changeStatBarang($id_barang){
 		return $this->db->set('stat', 0)->where('id_barang', $id_barang)->update('barang');
 	}
+
+	public function get_cabang(){
+		return $this->db->where('stat', 1)->get('cabang')->result_array();
+	}
+
+	public function defaultCabang(){
+		return [
+			'nm_cbg' => '',
+			'alamat' => '',
+			'telp' => '',
+		];
+	}
 }
 
  ?>

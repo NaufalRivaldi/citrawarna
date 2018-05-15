@@ -1,9 +1,4 @@
-<!-- LOAD HEADER -->
-<?php $this->load->view('frontend/layout/header'); ?>
-	<!-- LOAD NAVBAR -->
-	<?php $this->load->view('frontend/layout/navbar'); ?>
-	
-	<img src="<?= base_url('upload/slideshow/Beauty.jpg') ?>" alt="" class="img-fluid img-position" id="img-position">
+<img src="<?= base_url('upload/slideshow/Beauty.jpg') ?>" alt="" class="img-fluid img-position" id="img-position">
 
 	<div class="container-fluid">
 		<br>
@@ -14,7 +9,7 @@
 				<div class="col-md-7">
 					<p class="about"><b class="sorot"> CITRA WARNA </b> adalah toko cat terbesar di Bali, yang menyediakan produk-produk berkualitas, dan menjamin harga termurah. Cabang kami tersebar didaerah Denpasar, Nusadua, Ubud, Tabanan, Singaraja dan akan terus berkembang. </p>
 					<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-					    <img src="<?= base_url('assets/img/visimisi.png') ?>" alt="visimisi" width="390px">
+					    <img src="<?= base_url('assets/img/visimisi.jpg') ?>" alt="visimisi" width="360px">
 					</a>
 					<div class="collapse" id="collapseExample">
 					  <div class="card-theme card-body " style="">
@@ -32,16 +27,17 @@
 					</div>
 					<br><br>
 					<a data-toggle="collapse" href="#collapseBudaya" role="button" aria-expanded="false" aria-controls="collapseBudaya">
-					    <img src="<?= base_url('assets/img/budaya.png') ?>" alt="visimisi" width="390px">
+					    <img src="<?= base_url('assets/img/budaya.jpg') ?>" alt="visimisi" width="360px">
 					</a>
 					<div class="collapse" id="collapseBudaya">
 					  <div class="card-theme card-body " style="">
 					  	<img src="<?= base_url('assets/img/budayaa.png') ?>" alt="" class="img-fluid">
 					  </div>
 					</div>
+					<br><br>
 				</div>
-				<div class="col-md-5">
-					<img src="<?= base_url('assets/img/gif1.gif') ?>" alt="" class="img-fluid">
+				<div class="col-md-5" style="text-align:center">
+					<img src="<?= base_url('assets/img/bawacat.png') ?>" alt="mascot" width="210px;">
 				</div>	
 			</div>
 			<br><br>
@@ -50,32 +46,35 @@
 			<hr>
 			<div class="row">
 				<div class="col-md-4">
-					<h5 align="center" class="service-title">Jaminan Harga Termurah</h5>
+					<h5 align="center" class="service-title"><b>Jaminan Harga Termurah</b></h5>
 					<center><img src="<?= base_url('assets/img/features-2.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Kami menjamin toko kami dengan harga yang paling murah, apabila ada yang lebih murah, kami ganti selisihnya. (syarat dan ketentuan berlaku)</p>
+					
 				</div>
 				<div class="col-md-4">
-					<h5 align="center" class="service-title">Produk Terlengkap</h5>
+					<h5 align="center" class="service-title"><b>Produk Terlengkap</b></h5>
 					<center><img src="<?= base_url('assets/img/features-1.png') ?>" alt="" class="service"></center>
 					<p align="center">Segala jenis cat dan keperluan pengecatan anda ada disini, mulai dari thinner, kuas, amplas dan sebagainya</p>
+					<hr>
 				</div>
 				<div class="col-md-4">
-					<h5 align="center" class="service-title">Banyak Pilihan Warna</h5>
+					<h5 align="center" class="service-title"><b>Banyak Pilihan Warna</b></h5>
 					<center><img src="<?= base_url('assets/img/features-3.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Warna apapun yang anda inginkan ada disini, karena kami juga memiliki mesin tinting untuk membuat cat dengan warna yang anda inginkan</p>
+					<hr>
 				</div>
 				<div class="col-md-4">
-					<h5 align="center" class="service-title">Jasa Pengecekan Tembok</h5>
+					<h5 align="center" class="service-title"><b>Jasa Pengecekan Tembok</b></h5>
 					<center><img src="<?= base_url('assets/img/features-4.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Menyediakan layanan jasa pengecekan kesiapan atau kesehatan tembok sebelum melakukan pengecatan, GRATIS tidak dipungut biaya (Khusus area denpasar)</p>
 				</div>
 				<div class="col-md-4" class="service-title">
-					<h5 align="center" class="service-title">Melayani Segala Partai Pembelian</h5>
+					<h5 align="center" class="service-title"><b>Melayani Segala Partai Pembelian</b></h5>
 					<center><img src="<?= base_url('assets/img/features-5.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Pembelian dalam jumlah besar hingga lebih dari 10 pail, atau pembelian hanya 1 kaleng, kami akan tetap melayani anda dengan sebaik-baiknya</p>
 				</div>
 				<div class="col-md-4">
-					<h5 align="center" class="service-title">Delivery Service</h5>
+					<h5 align="center" class="service-title"><b>Delivery Service</b></h5>
 					<center><img src="<?= base_url('assets/img/features-6.png') ?>" alt="features-3" class="service"></center>
 					<p align="center">Kami juga melayani jasa pengiriman barang ke lokasi anda dengan ketentuan yang berlaku</p>
 				</div>
@@ -102,12 +101,19 @@
 				<?php } ?>
 				
 			</div>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-4">
+					<a href="#" class="btn btn-warning btn-block btn-lg">Lihat Semua Produk</a>
+				</div>
+			</div>
+			<hr>
 
 			<br><br>
 			<h1 align="center">ARTIKEL TERBARU</h1>
 			<hr>
 			<div class="row">
-			<?php $articles = $this->home_model->get_home_artikel(); 
+				<?php $articles = $this->home_model->get_home_artikel(); 
 				foreach($articles as $artikel) { ?>
 				<div class="col-md-4">
 					<div class="body-article">
@@ -125,61 +131,11 @@
 				</div>
 				<?php } ?>
 			</div>
-			<br><br>
-
-			<!-- LOKASI SECTION -->
-			<?php $this->load->view('frontend/layout/cabang') ?>
-
-			<!-- MAPS SECTION -->
-			<?php $this->load->view('frontend/layout/maps') ?>
-			
-			
-			<h1 align="center">HUBUNGI KAMI</h1>
-			<hr>
 			<br>
-			<div class="row">
-				<div class="col-md-6">
-					<label for="nama_lengkap">Nama Lengkap</label>
-					<input type="text" class="form-control">
-				</div>
-				<div class="col-md-6">
-					<h4>INFORMATION</h4>
-					<table class="table">
-						<tr>
-							<td><strong>Head Office</strong></td>
-							<td> : </td>
-							<td>Jl. Teuku Umar Barat no. 343</td>
-						</tr>
-						<tr>
-							<td><strong>Waktu Operasional</strong></td>
-							<td> : </td>
-							<td>07:00 - 21:00</td>
-						</tr>
-						<tr>
-							<td><strong>No. Telp</strong></td>
-							<td> : </td>
-							<td>081111111</td>
-						</tr>
-						<tr>
-							<td><strong>Email</strong></td>
-							<td> : </td>
-							<td>admin@cwabali.com</td>
-						</tr>
-					</table>
+			<div class="row justify-content-center">
+				<div class="col-md-4">
+					<a href="#" class="btn btn-warning btn-block btn-lg">Tampilkan Lebih Banyak</a>
 				</div>
 			</div>
-		</div>
-
-		<div class="row justify-content-center">
-			<div class="footer">	
-				&copy; Refo Junior - 2018
-			</div>	
-		</div>	
-	</div>	
-
-	<script src="<?= base_url('assets/js/jquery-3.2.1.min.js') ?>"></script>
-	<script src="<?= base_url('assets/js/jquery-ui.min.js') ?>"></script>
-	<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
-	<script src="<?= base_url('assets/js/custom.js') ?>"></script>
-</body>
-</html>
+			<hr>
+			<br>

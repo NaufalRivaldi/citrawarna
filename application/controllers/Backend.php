@@ -114,7 +114,6 @@ class Backend extends CI_Controller
 			'barang' => $this->backend->get_barang()
 		];
 
-		//$laman['cek'] = $this->db->query('SELECT distinct nm_barang,harga FROM raw WHERE kd_merk = "WLDN"')->result_array();
 		$this->load->view('backend/template', $laman);
 	}
 
@@ -124,6 +123,7 @@ class Backend extends CI_Controller
 			'content' => 'backend/cabang/index',
 			'title' => 'cabang',
 			'menu' => 6,
+			'cabang' => $this->backend->get_cabang()
 		];
 
 		$this->load->view('backend/template', $laman);

@@ -1,6 +1,6 @@
 	
 	<nav>
-		<div class="navbar">
+		<div class="navbar bg-dark">
 			<div class="container">
 				<div class="flex-container">
 					<div class="nav-brand">
@@ -15,7 +15,7 @@
 						<li><a href="">CONTACT</a></li>
 					</ul>
 					<div class="mobile-responsive">
-						<div class="btn-cok">
+						<div class="btn-cok bg-dark">
 							<span></span>
 							<span></span>
 							<span></span>

@@ -9,7 +9,7 @@ class Home_model extends CI_Model
 	}
 
 	public function get_cabang(){
-		return $this->db->get('cabang')->result_array();
+		return $this->db->where('stat', 1)->get('cabang')->result_array();
 	}
 
 	public function get_setting($param){
@@ -19,6 +19,12 @@ class Home_model extends CI_Model
 	public function get_barang(){
 		return $this->db->get('barang',0,6)->result_array();
 	}
+
+	public function updateClick($tbl,$field,$value){
+		$query = $this->db->query("UPDATE $tbl SET click = click + 1 WHERE $field = '$value' ");
+		return $query;
+	}
+
 }
 
  ?>

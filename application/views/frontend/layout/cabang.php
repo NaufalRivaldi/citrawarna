@@ -1,3 +1,4 @@
+			<br><br>
 			<h1 align="center">LOKASI KAMI</h1>
 			<hr>
 			<p class="unggulan">"Temukan toko cat Citra Warna terdekat anda"</p>
@@ -9,7 +10,7 @@
 					<div class="col-md-4">
 						<strong><?= $toko['nm_cbg'] ?></strong>
 						<br>
-						<?= $toko['alamat'] ?> <br><?= $toko['telp'] ?>
+						<?= $toko['alamat'] ?> <br> Telp : <?= $toko['telp'] ?>
 						<hr>
 					</div>
 				<?php } ?>

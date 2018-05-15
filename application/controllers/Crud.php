@@ -133,7 +133,7 @@ class Crud extends CI_Controller
 		    if($upload['result'] == "success"){ 
 		    	$this->backend->insert_barang($upload);
 		    	$resize = $this->backend->do_resize('foto', "./upload/produk/".$upload['file']['file_name'], './upload/produk/thumbs/');
-		        print_r($upload['file']['file_name']);
+		        //print_r($upload['file']['file_name']);
 
 		        $this->session->set_flashdata('success', 'Data barang berhasil ditambah');
 		        redirect('backend/barang'); 
@@ -179,6 +179,35 @@ class Crud extends CI_Controller
 			$this->session->set_flashdata('success', 'Data berhasil dihapus');
 			redirect('backend/barang');
 		}
+	}
+
+
+	public function cabang_add(){
+		$laman = [
+			'content' => 'backend/cabang/form',
+			'title' => 'Add cabang',
+			'menu' => 4,
+			'form_action' => 'crud/cabang_add'
+		];
+
+		if(!$_POST){
+			$laman['input'] = (array) $this->backend->defaultCabang();
+		} else {
+      		$laman['input'] = (array) $this->input->post();
+      		$this->db->insert('cabang', $laman['input']);
+      		$this->session->set_flashdata('success', 'Data berhasil ditambah');
+      		redirect('backend/cabang');
+		}
+
+
+
+		$this->load->view('backend/template', $laman);
+	}
+
+	public function cabang_delete($id){
+		$this->db->set('stat', 0)->where('id_cabang', $id)->update('cabang');
+		$this->session->set_flashdata('success', 'Data berhasil dihapus');
+		redirect('backend/cabang');
 	}
 }
 
