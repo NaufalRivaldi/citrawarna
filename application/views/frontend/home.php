@@ -46,36 +46,35 @@
 			<hr>
 			<div class="row">
 				<div class="col-md-4">
-					<h5 align="center" class="service-title"><b>Jaminan Harga Termurah</b></h5>
 					<center><img src="<?= base_url('assets/img/features-2.png') ?>" alt="features-3" class="service"></center>
+					<h5 align="center" class="service-title"><b>Jaminan Harga Termurah</b></h5>
 					<p align="center">Kami menjamin toko kami dengan harga yang paling murah, apabila ada yang lebih murah, kami ganti selisihnya. (syarat dan ketentuan berlaku)</p>
-					
 				</div>
 				<div class="col-md-4">
-					<h5 align="center" class="service-title"><b>Produk Terlengkap</b></h5>
 					<center><img src="<?= base_url('assets/img/features-1.png') ?>" alt="" class="service"></center>
+					<h5 align="center" class="service-title"><b>Produk Terlengkap</b></h5>
 					<p align="center">Segala jenis cat dan keperluan pengecatan anda ada disini, mulai dari thinner, kuas, amplas dan sebagainya</p>
-					<hr>
+				
 				</div>
 				<div class="col-md-4">
-					<h5 align="center" class="service-title"><b>Banyak Pilihan Warna</b></h5>
 					<center><img src="<?= base_url('assets/img/features-3.png') ?>" alt="features-3" class="service"></center>
+					<h5 align="center" class="service-title"><b>Banyak Pilihan Warna</b></h5>
 					<p align="center">Warna apapun yang anda inginkan ada disini, karena kami juga memiliki mesin tinting untuk membuat cat dengan warna yang anda inginkan</p>
-					<hr>
+				
 				</div>
 				<div class="col-md-4">
-					<h5 align="center" class="service-title"><b>Jasa Pengecekan Tembok</b></h5>
 					<center><img src="<?= base_url('assets/img/features-4.png') ?>" alt="features-3" class="service"></center>
+					<h5 align="center" class="service-title"><b>Jasa Pengecekan Tembok</b></h5>
 					<p align="center">Menyediakan layanan jasa pengecekan kesiapan atau kesehatan tembok sebelum melakukan pengecatan, GRATIS tidak dipungut biaya (Khusus area denpasar)</p>
 				</div>
 				<div class="col-md-4" class="service-title">
-					<h5 align="center" class="service-title"><b>Melayani Segala Partai Pembelian</b></h5>
 					<center><img src="<?= base_url('assets/img/features-5.png') ?>" alt="features-3" class="service"></center>
+					<h5 align="center" class="service-title"><b>Melayani Segala Partai Pembelian</b></h5>
 					<p align="center">Pembelian dalam jumlah besar hingga lebih dari 10 pail, atau pembelian hanya 1 kaleng, kami akan tetap melayani anda dengan sebaik-baiknya</p>
 				</div>
 				<div class="col-md-4">
-					<h5 align="center" class="service-title"><b>Delivery Service</b></h5>
 					<center><img src="<?= base_url('assets/img/features-6.png') ?>" alt="features-3" class="service"></center>
+					<h5 align="center" class="service-title"><b>Delivery Service</b></h5>
 					<p align="center">Kami juga melayani jasa pengiriman barang ke lokasi anda dengan ketentuan yang berlaku</p>
 				</div>
 			</div>

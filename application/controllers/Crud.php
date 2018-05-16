@@ -23,8 +23,10 @@ class Crud extends CI_Controller
 		];
 		
 		if(!$_POST){
+			//jika input pada form kosong 
 			$laman['input'] = (array) $this->backend->defaultArtikel();
 		} else {
+			//jika tombol di klik 
       		$upload = $this->backend->upload_cover('./upload/artikel/', 'img');
 		    if($upload['result'] == "success"){ 
 		    	$this->backend->insert_artikel($upload);
@@ -132,6 +134,13 @@ class Crud extends CI_Controller
       		$upload = $this->backend->upload_cover('./upload/produk/', 'foto');
 		    if($upload['result'] == "success"){ 
 		    	$this->backend->insert_barang($upload);
+		    	$fileName = explode(".", $upload['file']['file_name']);
+
+		    	if($fileName[1] == "png"){
+		    		$convert = $this->backend->convert_image("./upload/produk/".$upload['file']['file_name']);
+		    		$resize = $this->backend->do_resize('foto', "./upload/produk/".$fileName[0].".jpg", './upload/produk/thumbs/');
+		    	}
+		   
 		    	$resize = $this->backend->do_resize('foto', "./upload/produk/".$upload['file']['file_name'], './upload/produk/thumbs/');
 		        //print_r($upload['file']['file_name']);
 
@@ -161,6 +170,12 @@ class Crud extends CI_Controller
 			//kalau ada gambar cover dirubah
 			if($upload['result'] == "success"){ 
 		    	$this->backend->update_barang($id_barang, $upload);
+		    	$fileName = explode(".", $upload['file']['file_name']);
+		    	
+		    	if($fileName[1] == "png"){
+		    		$convert = $this->backend->convert_image("./upload/produk/".$upload['file']['file_name']);
+		    		$resize = $this->backend->do_resize('foto', "./upload/produk/".$fileName[0].".jpg", './upload/produk/thumbs/');
+		    	}
 		    	$resize = $this->backend->do_resize('foto', "./upload/produk/".$upload['file']['file_name'],'./upload/produk/thumbs/');
 		        $this->session->set_flashdata('success', 'Data barang berhasil diedit');
 		        redirect('backend/barang'); 

@@ -25,6 +25,10 @@ class Backend_model extends CI_Model
 		$config['allowed_types'] = 'jpg|jpeg|png';
 		$config['remove_space'] = true;
 		$config['overwrite'] = true;
+		// $ext = explode(".", $_FILES[$field]['name']);
+		// if($ext[1] == 'png'){
+		// 	$config['file_name'] = $ext[0].".jpg";
+		// } 
 
 		$this->load->library('upload', $config);
 
@@ -36,6 +40,22 @@ class Backend_model extends CI_Model
       		return $return;
 		}
 	}
+
+	public function convert_image($filePath){
+		$image = imagecreatefrompng($filePath);
+		$bg = imagecreatetruecolor(imagesx($image), imagesy($image));
+		imagefill($bg, 0, 0, imagecolorallocate($bg, 255, 255, 255));
+		imagealphablending($bg, TRUE);
+		imagecopy($bg, $image, 0, 0, 0, 0, imagesx($image), imagesy($image));
+		imagedestroy($image);
+		$quality = 50; // 0 = worst / smaller file, 100 = better / bigger file
+		$ext = explode(".", $filePath);
+		imagejpeg($bg, ".".$ext[1] . ".jpg", $quality);
+		imagedestroy($bg);
+		unlink($filePath);
+	}
+
+
 
 	public function do_resize($field, $source_path, $new_path){
 		$config = [
@@ -160,7 +180,14 @@ class Backend_model extends CI_Model
 
 	public function insert_barang($upload){
 		$data = $this->input->post();
-		$data['foto'] = $upload['file']['file_name'];
+		$ext = explode(".", $upload['file']['file_name']);
+		if($ext[1] == 'png'){
+			$data['foto'] = $ext[0].".jpg";
+		} else {
+			$data['foto'] = $upload['file']['file_name'];
+		}
+
+		
 
 		$this->db->insert('barang', $data);
 	}
@@ -171,7 +198,12 @@ class Backend_model extends CI_Model
 
 	public function update_barang($id_barang, $upload){
 		$data = $this->input->post();
-		$data['foto'] = $upload['file']['file_name'];
+		$ext = explode(".", $upload['file']['file_name']);
+		if($ext[1] == 'png'){
+			$data['foto'] = $ext[0].".jpg";
+		} else {
+			$data['foto'] = $upload['file']['file_name'];
+		}
 
 		$this->db->where('id_barang', $id_barang);
 		$this->db->update('barang', $data);

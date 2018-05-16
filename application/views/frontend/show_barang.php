@@ -26,14 +26,15 @@
 			</div>
 			<br><br>
 			<div class="row">
-				<table class="table table-sm table-striped table-hover" id="example">
+				<?php if($detail==0) { ?>
+					<table class="table table-sm table-striped table-hover" id="example">
 					<tr>
 						<thead>
 							<th>No</th>
 							<th>Kode</th>
 							<th>Nama Barang</th>
 							<th>Harga</th>
-							<th>Keterangan</th>
+							<th>Stock</th>
 						</thead>
 					</tr>
 					<?php $no=1; foreach($raw as $row) {  ?>
@@ -41,14 +42,93 @@
 						<td><?= $no++ ?></td>
 						<td><a href="#"><?= $row['kd_barang'] ?></a></td>
 						<td>
-							<a href="<?= base_url('produk/view/'.strtolower(str_replace(" ", "-", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
+							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "-", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
 						</td>
 						<td><a href="#"><?= $row['harga'] ?></a></td>
 						<td><a href="#"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></a></td>
 					</tr>
 					<?php } ?>
 		
+					</table>
+				<?php } else { ?>
+			
+					<table class="table table-sm table-striped table-hover" id="example">
+					<tr>
+						<thead>
+							<th>No</th>
+							<th>Kode</th>
+							<th>Nama Barang</th>
+							<th>Harga</th>
+							<th>Stock</th>
+							<th>Lokasi</th>
+						</thead>
+					</tr>
+					<?php $no=1; foreach($raw as $row) { 
+					//kalau cabang nambah, tulis disini 
+						$lokasi = '';
+							switch ($row['kd_gudang']) {
+								case 'CW1':
+									$lokasi = " Citra Warna Imam Bonjol 1";
+									break;
+								case 'CW2':
+									$lokasi = " Citra Warna Imam Bonjol 2";
+									break;
+								case 'CW3':
+									$lokasi = " Citra Warna Buluh Indah";
+									break;
+								case 'CW4':
+									$lokasi = " Citra Warna Canggu";
+									break;
+								case 'CW5':
+									$lokasi = " Citra Warna Teuku Umar";
+									break;
+								case 'CW6' : 
+									$lokasi = " Citra Warna Sunset Road";
+									break;
+								case 'CW7' : 
+									$lokasi = " Citra Warna Gatot Subroto  ";
+									break;
+								case 'CW8' : 
+									$lokasi = " Citra Warna Ubud ";
+									break;
+								case 'CW9' : 
+									$lokasi = " Citra Warna Mumbul Nusa Dua ";
+									break;
+								case 'CA0' : 
+									$lokasi = " Citra Warna Mahendradata ";
+									break;
+								case 'CA1' : 
+									$lokasi = " Citra Warna Semabaung Gianyar  ";
+									break;
+								case 'CA2' : 
+									$lokasi = " Citra Warna Kediri Tabanan";
+									break;
+								case 'CA3' : 
+									$lokasi = " Citra Warna Panjer";
+									break;
+								case 'CA4' : 
+									$lokasi = " Citra Warna Dalung";
+									break;
+								case 'CA5' : 
+									$lokasi = " Citra Warna Singaraja";
+									break;
+
+							}
+						?>
+					<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">
+						<td><?= $no++ ?></td>
+						<td><a href="#"><?= $row['kd_barang'] ?></a></td>
+						<td>
+							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "-", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
+						</td>
+						<td><a href="#"><?= $row['harga'] ?></a></td>
+						<td><a href="#"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></a></td>
+						<td><?=  $lokasi ?></td>
+					</tr>
+					<?php } ?>
+		
 				</table>
+				<?php } ?>
 	
 			</div>
 			
