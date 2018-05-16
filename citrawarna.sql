@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 09 Mei 2018 pada 09.54
+-- Generation Time: 15 Mei 2018 pada 08.59
 -- Versi Server: 10.1.10-MariaDB
 -- PHP Version: 7.0.3
 
@@ -45,8 +45,9 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id_artikel`, `tanggal`, `judul`, `link`, `keyword`, `excerpt`, `isi`, `id_kategori`, `img`, `stat`, `click`) VALUES
-(1, '2018-05-09 14:41:06', 'Artikel Percobaan', 'artikel-percobaan', 'Artikel Percobaan gan', 'Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan ok gan', '<p>Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan Artikel Percobaan gan</p>\r\n', 1, 'null.jpg', 1, 1),
-(2, '2018-05-09 14:38:52', 'Merk Cat Tembok berdasarkan Kebutuhan', 'merk-cat-tembok-berdasarkan-kebutuhan', 'toko cat, toko cat bali, toko cat denpasar', 'Ingin beli cat tembok, tapi nggak tahu merk apa yang harus dibeli sesuai kebutuhan. Memang hal itu s', '<p>Ingin beli cat tembok, tapi nggak tahu merk apa yang harus dibeli sesuai kebutuhan. Memang hal itu sangat wajar, berhubung merk cat ada sangat banyak, dan spesifikasinya juga bermacam-macam tergantung kebutuhan Anda. Karena itu, saat ini kami akan membantu mengkategorikan cat yang anda perlukan berdasarkan kategori umum yang ada.</p>\r\n\r\n<ul>\r\n	<li><strong>Cat Untuk Luar Rumah (Eksterior)</strong>. Jika anda mencari cat untuk luar ruangan, sangat disarankan untuk memilih cat tembok eksterior, karena cat tembok eksterior memiliki daya tahan yang jauh lebih tinggi dari cat tembok interior. Memang harganya lebih mahal daripada tembok interior, tapi hasil yang diberikan juga jauh lebih memuaskan. Produk di kategori ini antara lain : Paladin Gold,&nbsp;<a href="http://cwabali.com/produk/view/Belazo-Exterior-Finish" target="_blank">Belazo EF</a>,&nbsp;<a href="http://cwabali.com/produk/view/Dulux-Weathershield-Pro" target="_blank">Dulux Weathershield</a>&nbsp;, dan&nbsp;<a href="http://cwabali.com/produk/view/Mowilex-Weathercoat" target="_blank">Mowilex Weathercoat</a></li>\r\n	<li><strong>Cat untuk Dalam Rumah (Interior), Kualitas Premium</strong>. Cat untuk dalam rumah tidak semahal cat untuk luar rumah, karena tidak terlalu memperhatikan daya tahan seperti cat tembok eksterior. Sekalipun begitu, cat tembok dengan kualitas premium tetap memiliki kapasitas yang sangat baik sebagai cat tembok. Produk di kategori ini antara lain :&nbsp;<a href="http://cwabali.com/produk/view/Paladin-Silver" target="_blank">Paladin Silver</a>,&nbsp;<a href="http://cwabali.com/produk/view/Belazo-Multi-Emulsion" target="_blank">Belazo ME</a>,&nbsp;<a href="http://cwabali.com/produk/view/Dulux-Pentalite" target="_blank">Dulux Pentalite</a>, dan&nbsp;<a href="http://cwabali.com/produk/view/Mowilex-Emulsion" target="_blank">Mowilex Emulsion</a>.</li>\r\n	<li><strong>Cat Tembok Interior Oke dengan Harga Standar</strong>. Cat Tembok Interior dengan harga standar ini bukan berarti tidak lebih bagus dari cat yang lainnya, akan tetapi berusaha memberikan cat yang baik dengan harga yang mudah dijangkau masyarakat. Sangat banyak produk yang kami tawarkan di kategori ini:&nbsp;<a href="http://cwabali.com/produk/view/Weldon-Wallpaint" target="_blank">Weldon Wallpaint</a>,&nbsp;<a href="http://cwabali.com/produk/view/Envi" target="_blank">Envi Wallpaint</a>,&nbsp;<a href="http://cwabali.com/produk/view/Vinilex" target="_blank">Vinilex</a>, dan&nbsp;<a href="http://cwabali.com/produkview/Dulux-Catylac" target="_blank">Dulux Catylac</a>.</li>\r\n	<li><strong>Cat dengan Harga Ekonomis</strong>. Cat tembok satu ini menawarkan harga yang sangat murah dan terjangkau. Memiliki pilihan warna yang cukup banyak, tapi tetap diperhitungkan sebagai cat tembok yang baik. Produk yang kami tawarkan yaitu,&nbsp;<a href="http://cwabali.com/produk/view/Fresh-Lux" target="_blank">Fresh Lux</a></li>\r\n	<li><strong>Cat Tembok Anti Air (Waterproof)</strong>. Cat tembok anti air adalah cat tembok yang diaplikasikan di luar ruangan, yang berguna supaya tembok kita tidak bocor. produk dalam kategori ini antara lain&nbsp;<a href="http://cwabali.com/produk/view/Welproof" target="_blank">Welproof</a>,&nbsp;<a href="http://cwabali.com/produk/view/Top-Seal" target="_blank">Top Seal</a>,&nbsp;<a href="http://cwabali.com/produk/view/Aquaproof" target="_blank">Aquaproof</a>,&nbsp;<a href="http://cwabali.com/produk/view/No-Drop" target="_blank">No Drop</a>, dan&nbsp;<a href="http://cwabali.com/produk/view/Ultraproof" target="_blank">Ultra Proof</a>.</li>\r\n	<li><strong>Cat yang tidak Berbau Racun</strong>. Pada umumnya, rumah yang baru dicat memiliki bau yang tidak begitu enak dan berbahaya jika terlalu lama menghirup ruangan yang baru dicat. Wajar saja, karena pada umumnya cat tembok dibuat dengan bahan kimia yang demikian. Akan tetapi, ada cat tembok yang menawarkan hasil yang optimal, harga yang murah, dan tidak berbau. Cat tersebut adalah&nbsp;<a href="http://cwabali.com/produk/view/Envi" target="_blank">Envi</a>. Tidak cuma baunya yang tidak beracun, Envi bahkan memberi sensasi keharuman dibandingkan semua cat tembok lainnya. Karena itu, cat tembok ini sangat cocok untuk rumah yang langsung ditempati ketika selesai dicat, maupun untuk memperbarui warna ruangan.</li>\r\n	<li><strong>Cat dengan Kualitas Terjamin dan Harga Murah</strong>. Tentunya setiap kita sangat ingin membeli cat tembok dengan harga yang terjangkau, akan tetapi tetap memberi hasil yang baik. Produk yang kami tawarkan dari spesifikasi ini adalah&nbsp;<a href="http://cwabali.com/produk/view/Weldon-Wallpaint" target="_blank">Weldon Wallpaint</a>. Harganya tidak terlalu mahal, akan tetapi tetap memberikan hasil yang terbaik dengan daya sebar yang luas, dan daya tutup yang baik.</li>\r\n</ul>\r\n', 1, 'cat-cwa.jpg', 1, 0);
+(1, '2018-05-11 15:36:13', 'Perbandingan Merk Cat Termurah', 'perbandingan-merk-cat-termurah', 'toko cat, toko cat bali, toko cat denpasar, toko cat ubud, cat tembok, weldon, harga cat, jual cat', 'Murah, mewah, meriah, dan kalau bisa ada kembaliannya.. Tentunya produk tersebut akan sangat diminati dong ya.. :D Di postingan kali ini kita akan melihat perbandingan harga produk-produk yang kami miliki, supaya kita bisa memilih produk yang diinginkan d', '<p>Murah, mewah, meriah, dan kalau bisa ada kembaliannya.. Tentunya produk tersebut akan sangat diminati dong ya.. :D Di postingan kali ini kita akan melihat perbandingan harga produk-produk yang kami miliki, supaya kita bisa memilih produk yang diinginkan dengan lebih mudah.</p>\r\n\r\n<ol>\r\n	<li><strong>Cat Tembok Interior</strong>&nbsp;<br />\r\n	-&nbsp;Weldon&nbsp;kemasan 1kg : Rp 27.500, kemasan galon 5kg :&nbsp;<strong>Rp 95.000</strong>, kemasan pail 25kg :&nbsp;<strong>Rp 450.000</strong><br />\r\n	-&nbsp;Envi&nbsp;kemasan 1kg :&nbsp;<strong>Rp 26.500</strong>, kemasan galon 5kg : Rp 100.000, kemasan pail 25kg : Rp 475.000<br />\r\n	-&nbsp;Vinilex&nbsp;kemasan galon 5kg: Rp 98.000, kemasan pail 25kg : Rp 470.000&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Cat Tembok Eksterior</strong>&nbsp;<br />\r\n	-&nbsp;Paladin Gold&nbsp;kemasan 2,5 liter :&nbsp;<strong>Rp 215.000</strong>, kemasan pail 20 liter : Rp 1.550.000<br />\r\n	-&nbsp;Belazo EF&nbsp;kemasan 2,5 liter : Rp 219.000, kemasan pail 20 liter : Rp 1.728.000<br />\r\n	-&nbsp;Dulux Weathershield Pro&nbsp;2,5 liter : Rp 219.000*, kemasan pail 20 liter (warna brilliant white) :&nbsp;<strong>Rp 1.540.000*</strong><br />\r\n	-&nbsp;Mowilex Weathercoat&nbsp;kemasan 2,5 liter : Rp 216.500*, kemasan pail 20 liter : Rp 1.618.000*&nbsp;<br />\r\n	<em>Note * : Cat tembok eksterior yang kisaran harganya cukup variatif, karena kebanyakan produk di kategori ini menggunakan warna mixing. Harga yang tercantum merupakan harga cat warna ready stok yang paling murah.</em>&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Cat Kayu Besi</strong>&nbsp;<br />\r\n	-&nbsp;Envilux&nbsp;kemasan&nbsp;<strong>1kg : Rp 50.000</strong>, kemasan 3,78kg : Rp 197.000<br />\r\n	-&nbsp;Ocean Gloss&nbsp;kemasan 0,8 liter : Rp 34.200<br />\r\n	-&nbsp;Danalac&nbsp;kemasan 0,9 liter :&nbsp;<strong>Rp 32.500*</strong><br />\r\n	-&nbsp;Emco&nbsp;kemasan 0,5 kg :&nbsp;<strong>Rp 27.500**</strong>, kemasan 1 kg : Rp 61.000**<br />\r\n	-&nbsp;Avian&nbsp;kemasan 0,5 kg : Rp 29.000, kemasan 1 kg : Rp 51.000&nbsp;<br />\r\n	<em>Note * : HARGA PROMO!! Stok terbatas. - ** : Produk dengan kisaran harga yang variatif. Harga yang tercantum adalah harga cat dengan warna termurah.</em>&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Cat Genteng</strong>&nbsp;<br />\r\n	-&nbsp;Danaroof&nbsp;kemasan 3,8 liter :&nbsp;<strong>Rp 95.000*</strong><br />\r\n	-&nbsp;Ocean Roof&nbsp;kemasan 3,8 liter : Rp 122.500<br />\r\n	-&nbsp;Envi Roof Paint&nbsp;kemasan 4 kg : Rp 153.000&nbsp;<br />\r\n	<em>Note * : HARGA PROMO!! Stok terbatas.</em>&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Waterproof</strong>&nbsp;<br />\r\n	-&nbsp;NoDrop&nbsp;kemasan 1kg :&nbsp;<strong>Rp 41.700</strong>, kemasan galon 4kg :&nbsp;<strong>Rp 158.000</strong>, kemasan pail 20kg :&nbsp;<strong>Rp 723.400</strong><br />\r\n	-&nbsp;Aquaproof&nbsp;kemasan 1kg : Rp 42.000, kemasan galon 4kg : Rp 158.500, kemasan pail 20kg : Rp 726.000<br />\r\n	-&nbsp;WelProof&nbsp;kemasan 1 kg : Rp 44.000, kemasan galon 4 kg : Rp 167.000, kemasan pail 20kg : Rp 750.000&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Plamir</strong>&nbsp;<br />\r\n	-&nbsp;Pillar&nbsp;kemasan 1 kg : Rp 13.500, kemasan galon 5kg : Rp 46.000, kemasan pail 25kg : Rp 220.500<br />\r\n	-&nbsp;Tartar&nbsp;kemasan 1 kg : Rp 12.500, kemasan galon 5 kg : Rp 37.500, kemasan pail 25 kg : Rp 162.500&nbsp;</li>\r\n</ol>\r\n\r\n<p>Demikian sebagian perbandingan harga produk yang dapat kami tampilkan.. Sebagai catatan, harga yang ditampilkan di halaman ini dapat berubah suatu saat nanti.. Karena itu tidak ada salahnya kita cek harga dan stok produk Citra Warna disini sebelum membelinya.&nbsp;</p>\r\n', 1, 'coba3.jpg', 1, 2),
+(2, '2018-05-11 15:28:10', 'Merk Cat Tembok berdasarkan Kebutuhan', 'merk-cat-tembok-berdasarkan-kebutuhan', 'toko cat, toko cat bali, toko cat denpasar', 'Ingin beli cat tembok, tapi nggak tahu merk apa yang harus dibeli sesuai kebutuhan. Memang hal itu sangat wajar, berhubung merk cat ada sangat banyak, dan spesifikasinya juga bermacam-macam tergantung kebutuhan Anda. Karena itu, saat ini kami akan membant', '<p>Ingin beli cat tembok, tapi nggak tahu merk apa yang harus dibeli sesuai kebutuhan. Memang hal itu sangat wajar, berhubung merk cat ada sangat banyak, dan spesifikasinya juga bermacam-macam tergantung kebutuhan Anda. Karena itu, saat ini kami akan membantu mengkategorikan cat yang anda perlukan berdasarkan kategori umum yang ada.</p>\n\n<ul>\n	<li><strong>Cat Untuk Luar Rumah (Eksterior)</strong>. Jika anda mencari cat untuk luar ruangan, sangat disarankan untuk memilih cat tembok eksterior, karena cat tembok eksterior memiliki daya tahan yang jauh lebih tinggi dari cat tembok interior. Memang harganya lebih mahal daripada tembok interior, tapi hasil yang diberikan juga jauh lebih memuaskan. Produk di kategori ini antara lain : Paladin Gold, Belazo EF, Dulux Weathershield, dan Mowilex Weathercoat.</li>\n	<li><strong>Cat untuk Dalam Rumah (Interior), Kualitas Premium</strong>. Cat untuk dalam rumah tidak semahal cat untuk luar rumah, karena tidak terlalu memperhatikan daya tahan seperti cat tembok eksterior. Sekalipun begitu, cat tembok dengan kualitas premium tetap memiliki kapasitas yang sangat baik sebagai cat tembok. Produk di kategori ini antara lain : Paladin Silver, Belazo ME, Dulux Pentalite dan Mowilex Emulsion.</li>\n	<li><strong>Cat Tembok Interior Oke dengan Harga Standar</strong>. Cat Tembok Interior dengan harga standar ini bukan berarti tidak lebih bagus dari cat yang lainnya, akan tetapi berusaha memberikan cat yang baik dengan harga yang mudah dijangkau masyarakat. Sangat banyak produk yang kami tawarkan di kategori ini: Weldon Wallpaint, Envi Wallpaint, Viniliex dan Dulux Catylac.</li>\n	<li><strong>Cat dengan Harga Ekonomis</strong>. Cat tembok satu ini menawarkan harga yang sangat murah dan terjangkau. Memiliki pilihan warna yang cukup banyak, tapi tetap diperhitungkan sebagai cat tembok yang baik. Produk yang kami tawarkan yaitu, Pillar Cat Tembok, Mawar</li>\n	<li><strong>Cat Tembok Anti Air (Waterproof)</strong>. Cat tembok anti air adalah cat tembok yang diaplikasikan di luar ruangan, yang berguna supaya tembok kita tidak bocor. produk dalam kategori ini antara lain&nbsp;Welproof,&nbsp;Top Seal,&nbsp;Aquaproof,&nbsp;No Drop</li>\n	<li><strong>Cat yang tidak Berbau Racun</strong>. Pada umumnya, rumah yang baru dicat memiliki bau yang tidak begitu enak dan berbahaya jika terlalu lama menghirup ruangan yang baru dicat. Wajar saja, karena pada umumnya cat tembok dibuat dengan bahan kimia yang demikian. Akan tetapi, ada cat tembok yang menawarkan hasil yang optimal, harga yang murah, dan tidak berbau. Cat tersebut adalah&nbsp;Envi. Tidak cuma baunya yang tidak beracun, Envi bahkan memberi sensasi keharuman dibandingkan semua cat tembok lainnya. Karena itu, cat tembok ini sangat cocok untuk rumah yang langsung ditempati ketika selesai dicat, maupun untuk memperbarui warna ruangan.</li>\n	<li><strong>Cat dengan Kualitas Terjamin dan Harga Murah</strong>. Tentunya setiap kita sangat ingin membeli cat tembok dengan harga yang terjangkau, akan tetapi tetap memberi hasil yang baik. Produk yang kami tawarkan dari spesifikasi ini adalah&nbsp;Weldon Wallpaint. Harganya tidak terlalu mahal, akan tetapi tetap memberikan hasil yang terbaik dengan daya sebar yang luas, dan daya tutup yang baik.</li>\n</ul>\n', 1, 'cat-cwa.jpg', 1, 1),
+(3, '2018-05-11 15:40:43', 'Tips Rumah yang Sehat dan Nyaman', 'tips-rumah-yang-sehat-dan-nyaman', 'toko cat, toko cat bali, toko cat denpasar, toko cat ubud, cat tembok, weldon, harga cat, jual cat', 'Rumah yang sehat adalah rumah yang praktis, tahan lama dan hemat energi, sehingga membuat hidup lebih terjamin, layak, dan mampu menghemat biaya hidup. Membuat rumah anda dengan lingkungannya yang baik, tentunya tidak selalu membutuhkan biaya besar. Pada ', '<p>Rumah yang sehat adalah rumah yang praktis, tahan lama dan hemat energi, sehingga membuat hidup lebih terjamin, layak, dan mampu menghemat biaya hidup. Membuat rumah anda dengan lingkungannya yang baik, tentunya tidak selalu membutuhkan biaya besar. Pada kenyataannya, ada beberapa tips rumah sehat dan nyaman yang dapat menghemat uang, sekaligus memanfaatkan sumber-sumber daya alam yang tersedia untuk keluarga Anda.</p>\r\n\r\n<p>Dengan merancang, merenovasi rumah dengan baik, akan membuat kualitas kehidupan penghuninya dapat ditingkatkan dan biaya hidup dapat lebih ditekan. Berikut ini adalah cara-cara meningkatkan kualitas rumah kita menjadi lebih sehat dan nyaman:</p>\r\n\r\n<ul>\r\n	<li>Buatlah tanaman merambat pada teralis di sekitar bagian luar rumah ( bisa dilakukan pada dinding dan atau pagar serta ruangan kosong di halaman ). Dapat menyejukkan rumah, bahkan menghasilkan makanan.</li>\r\n	<li>Menanam pohon besar sebagai tempat teduh yang produktif. Menyediakan pohon untuk berteduh dapat menyejukkan udara sekitar rumah</li>\r\n	<li>Menyaring sisa air limbah ke tempat penyaringan yang produktif. Setelah itu, air setelah disaring dapat dimanfaatkan kembali untuk menyiram tanaman.</li>\r\n	<li>Membuat ventilasi dan aliran udara dalam rumah yang baik (udara panas naik dan mengalir keluar lewat ventilasi atas dan udara sejuk masuk lewat bawah) untuk menjaga rumah tetap sejuk tanpa keluar biaya yang banyak.</li>\r\n	<li>Menggunakan jaring nyamuk pada ventilasi untuk mencegah nyamuk yang datang dari luar. Jika memungkinkan, dapat dipasang di seluruh bagian ruangan.</li>\r\n	<li>Pastikan letak jendela mendapat sinar dan atau cahaya matahari secara cukup. Karena cahaya matahari dapat mengurangi gangguan mata . Diusahakan memperbanyak cahaya matahari dan seminimal mungkin mengurangi sinar matahari yang masuk secara langsung</li>\r\n	<li>Membuat kolam ikan di sekitar rumah. Hal ini cukup membantu menampung genangan air yang berlebih.</li>\r\n</ul>\r\n\r\n<p>Demikian tips-tips yang dapat kami&nbsp;berikan, semoga tips-tips ini membantu kita memiliki rumah yang lebih sehat dan nyaman dari sebelumnya.</p>\r\n', 2, 'rumah_nyaman.JPG', 1, 5);
 
 -- --------------------------------------------------------
 
@@ -74,10 +75,45 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `kd_merk`, `nm_barang`, `deskripsi`, `kd_kategori`, `kd_jenis`, `tag`, `foto`, `no_index`, `stat`, `unggulan`, `click`) VALUES
-(1, 'WLDN', 'Weldon Wallpaint', 'Weldon Wallpaint adalah cat tembok Acrylic Emulsion yang diformulasikan untuk pengecatan dalam ruangan dengan perpaduan warna – warna yang menarik sehingga menghadirkan keindahan dan kenyamanan.', 1, 1, 'Weldon, cat tembok, cat weldon', 'weldon.jpg', 1, 1, 'y', 0),
+(1, 'WLDN', 'Weldon Wallpaint', 'Weldon Wallpaint adalah cat tembok Acrylic Emulsion yang diformulasikan untuk pengecatan dalam ruangan dengan perpaduan warna – warna yang menarik sehingga menghadirkan keindahan dan kenyamanan.', 1, 1, 'Weldon, cat tembok, cat weldon', 'weldon.jpg', 1, 1, 'y', 3),
 (6, 'IDCEV', 'Envi Wall Paint', 'Envi adalah cat tembok sehat dengan bahan yang ramah lingkungan. Sangat cocok untuk orang yang tidak suka bau cat yang menyengat.', 1, 1, 'harum, tak berbau, dalam rumah, interior, envi', 'envi_baru.png', 2, 1, 'y', 0),
 (7, 'PLDN(G)', 'Paladin Gold', 'Paladin Gold adalah cat tembok eksterior kelas premium yang memberikan hasil dan perlindungan maksimal untuk tembok luar ruangan anda.', 1, 2, 'paladin gold, cat tembok eksterior, premium', '3269Paladin_Gold.png', 4, 1, 'y', 0),
 (8, 'IDCRP', 'Envi Roof Paint', 'Envi Roof Paint adalah cat genteng serba guna berbahan dasar 100% akrilik yang dapat digunakan untuk segala jenis permukaan genteng, tembok, asbes, eternit, plafon, lapangan tenis, marka jalan serta lantai gudang.', 5, 2, 'envi roof, envi cat genteng, envi', 'enviroof.jpg', 5, 1, 'y', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `cabang`
+--
+
+CREATE TABLE `cabang` (
+  `id_cabang` int(11) NOT NULL,
+  `nm_cbg` varchar(70) NOT NULL,
+  `alamat` varchar(100) NOT NULL,
+  `telp` varchar(50) NOT NULL,
+  `stat` int(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `cabang`
+--
+
+INSERT INTO `cabang` (`id_cabang`, `nm_cbg`, `alamat`, `telp`, `stat`) VALUES
+(1, 'Citra Warna Imam Bonjol 1 ', 'Jl Imam Bonjol 257 AB, Denpasar. ', '(0361)489306, 489307, 085102091930', 1),
+(2, 'Citra Warna Imam Bonjol 2', 'Jl Imam Bonjol 350, Denpasar.', '(0361)485084, 485035, 085100103423', 1),
+(3, 'Citra Warna Buluh Indah ', 'Jl Buluh Indah 22 AB, Denpasar. \r\n', '085100104115, 085100815759', 1),
+(4, 'Citra Warna Canggu ', 'Jl Raya Canggu, Ruko Anyar Kencana no 9, Kerobokan. ', '(0361)9002586, 085101284515', 1),
+(5, 'Citra Warna Teuku Umar Barat \r\n', 'Jl Teuku Umar Barat 343, Kerobokan. ', '(0361)735115', 1),
+(6, 'Citra Warna Sunset Road \r\n', 'Jl Sunset Road, Ruko Sunset Plaza no 16, Kuta. \r\n', ' (0361)8476780, 085101181956', 1),
+(7, 'Citra Warna Gatot Subroto ', 'Jl Gatot Subroto 155 A, Denpasar. ', '(0361)240941, 240942, 085100341549', 1),
+(8, 'Citra Warna Ubud \r\n', 'Jl Tjokorda Rai Pudak, Br Yangloni, Desa Peliatan, Gianyar. ', '(0361)978220, 082339649722', 1),
+(9, 'Citra Warna Mumbul Nusa Dua ', 'Jl By Pass Ngurah Rai (Seberang Krematorium Kertha Semadi). ', '0895334122805', 1),
+(10, 'Citra Warna Mahendradatha \r\n', 'Jl Mahendradatha no 89X, Denpasar. ', ' 0895606305726', 1),
+(11, 'Citra Warna Semabaung Gianyar ', 'Jl Mahendradatta no 15 blok 1, Semabaung - Gianyar. ', '085 337 259 006', 1),
+(12, 'Citra Warna Kediri Tabanan ', 'Jl By Pass Ir. Soekarno No. 90x, Kediri Tabanan. ', '081237816322', 1),
+(13, 'Citra Warna Panjer ', 'Jl Tukad Yeh Aya No. 127 X/A. ', ' 081237821646', 1),
+(14, 'Citra Warna Dalung ', 'Jl Raya Padang Luwih Pertokoan Sutra Mas, Kav A8.', ' 0361428939, 082235015265, 0895410917930', 1),
+(15, 'Citra Warna Singaraja ', 'Jl A Yani no. 194A Kelurahan Banyuasri - Singaraja', ' 081237691264', 1);
 
 -- --------------------------------------------------------
 
@@ -29244,7 +29280,8 @@ CREATE TABLE `slideshow` (
 --
 
 INSERT INTO `slideshow` (`id_slideshow`, `tanggal`, `judul`, `url`, `img`, `z-index`, `stat`) VALUES
-(6, '2018-05-03', 'Coba gan', '', 'Ramadhan.jpg', 2, 1);
+(6, '2018-05-03', 'Coba gan', '', 'Ramadhan.jpg', 2, 1),
+(7, '2018-05-10', 'Slideshow baru', '', 'Beauty.jpg', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -29282,6 +29319,12 @@ ALTER TABLE `artikel`
 --
 ALTER TABLE `barang`
   ADD PRIMARY KEY (`id_barang`);
+
+--
+-- Indexes for table `cabang`
+--
+ALTER TABLE `cabang`
+  ADD PRIMARY KEY (`id_cabang`);
 
 --
 -- Indexes for table `jenis`
@@ -29339,12 +29382,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
   MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `cabang`
+--
+ALTER TABLE `cabang`
+  MODIFY `id_cabang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `jenis`
 --
@@ -29374,7 +29422,7 @@ ALTER TABLE `raw`
 -- AUTO_INCREMENT for table `slideshow`
 --
 ALTER TABLE `slideshow`
-  MODIFY `id_slideshow` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_slideshow` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `user`
 --
