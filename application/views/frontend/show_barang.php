@@ -40,12 +40,12 @@
 					<?php $no=1; foreach($raw as $row) {  ?>
 					<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">
 						<td><?= $no++ ?></td>
-						<td><a href="#"><?= $row['kd_barang'] ?></a></td>
+						<td><a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $row['nm_barang']))) ?>"><?= $row['kd_barang'] ?></a></td>
 						<td>
-							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "-", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
+							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
 						</td>
-						<td><a href="#"><?= $row['harga'] ?></a></td>
-						<td><a href="#"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></a></td>
+						<td><b><?= $row['harga'] ?></b></td>
+						<td style="<?= ($row['jumlah']>0 ? "color:green" : "color:red") ?>"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></td>
 					</tr>
 					<?php } ?>
 		
@@ -117,12 +117,12 @@
 						?>
 					<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">
 						<td><?= $no++ ?></td>
-						<td><a href="#"><?= $row['kd_barang'] ?></a></td>
+						<td><a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $row['nm_barang']))) ?>"><?= $row['kd_barang'] ?></a></td>
 						<td>
-							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "-", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
+							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
 						</td>
-						<td><a href="#"><?= $row['harga'] ?></a></td>
-						<td><a href="#"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></a></td>
+						<td><b><?= $row['harga'] ?></b></td>
+						<td style="<?= ($row['jumlah']>0 ? "color:green" : "color:red") ?>"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></td>
 						<td><?=  $lokasi ?></td>
 					</tr>
 					<?php } ?>

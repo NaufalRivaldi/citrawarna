@@ -18,7 +18,7 @@ class Home_model extends CI_Model
 	}
 
 	public function get_barang(){
-		return $this->db->where('stat', 1)->get('barang',0,6)->result_array();
+		return $this->db->where('stat', 1)->where('unggulan', 'y')->get('barang',0,6)->result_array();
 	}
 
 	public function updateClick($tbl,$field,$value){
@@ -28,7 +28,7 @@ class Home_model extends CI_Model
 
 	public function get_row_barang($field, $kd_merk){
 		return $this->db->join('kat_barang', 'barang.kd_kategori = kat_barang.kd_kategori')
-									->join('jenis', 'jenis.kd_jenis = barang.kd_jenis')
+									->join('jenis', 'jenis.kd_jenis = barang.kd_jenis', 'left')
 									->where($field, $kd_merk)->get('barang')->row_array();
 	}
 

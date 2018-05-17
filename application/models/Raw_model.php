@@ -64,13 +64,15 @@ class Raw_model extends CI_Model
 			$loc = "upload/raw/$fileName";
 			require_once("class/excel_reader2.php");
 			require_once("class/SpreadsheetReader.php");
+			//membaca file csv
 			$reader = new SpreadsheetReader($loc);
 			$no = 1;
 
-
+			//menghapus record sebelumnya
 			$del = $this->db->query("TRUNCATE TABLE raw");
 			$query = "INSERT INTO raw VALUES";
 			foreach($reader as $row){
+				//row[0] = kd_gudang, row[1] = kd_barang dsbnya, looping value setelah query insert diatas
 				$query .= "(NULL,
 				'$row[0]', '$row[1]', ".$this->db->escape($row[2]).", '$row[3]', 
 				'$row[4]', '$row[6]', '$row[7]', '$row[8]', '$row[9]'), ";
@@ -106,7 +108,11 @@ class Raw_model extends CI_Model
 				$data_cabang = implode("','", $cabang);
 				$delete = $this->db->query("DELETE FROM raw WHERE kd_gudang NOT IN ('$data_cabang') OR nm_barang LIKE '%Tinter%' OR nm_barang LIKE '#%' OR nm_barang LIKE 'HAPUS%'");
 
-				if($delete){
+				//ganti kd_merk paladin jadi PLDN_G or PLDN_S
+				$paladinG = $this->db->set('kd_merk', 'PLDN_G')->where('kd_merk', 'PLDN(G)')->update('raw');
+				$paladinS = $this->db->set('kd_merk', 'PLDN_V')->where('kd_merk', 'PLDN(V)')->update('raw');
+
+				if($delete || $paladinG || $paladinS){
 					return true;
 				} else {
 					return false;

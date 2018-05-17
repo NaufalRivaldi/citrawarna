@@ -157,7 +157,7 @@ class Backend_model extends CI_Model
 
 	public function get_barang(){
 		return $this->db->join('kat_barang', 'kat_barang.kd_kategori = barang.kd_kategori')
-						->join('jenis', 'jenis.kd_jenis = barang.kd_jenis')
+						->join('jenis', 'jenis.kd_jenis = barang.kd_jenis', 'left')
 						->where('stat', 1)
 						->get('barang')->result_array();
 	}

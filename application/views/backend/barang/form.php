@@ -3,7 +3,7 @@
 <form action="<?= base_url($form_action) ?>" method="post" enctype="multipart/form-data">
 	<div class="row">
 		<div class="col-md-6">
-			Kode Merek :
+			Kode Merek : (jika paladin gold or silver gunakan PLDN_G(gold) or PLDN_V(silver))
 			<input type="text" class="form-control" name="kd_merk" value="<?= $input['kd_merk'] ?>">
 		</div>
 		<div class="col-md-6">
