@@ -1,7 +1,8 @@
 	<div class="container-fluid">
 		<br>
 		<div class="container body-artikel">	
-		<h1>PRODUK UNGGULAN KAMI</h1>
+		<h1><?= $judul_kat ?></h1>
+		<p class="unggulan">"<?= $desc_kat['deskripsi_kat'] ?>"</p>
 		<br>	
 			<div class="row justify-content-center">
 				<?php foreach($barangs as $barang) { ?>

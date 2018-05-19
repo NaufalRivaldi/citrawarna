@@ -7,6 +7,16 @@ class Artikel extends CI_Controller
 
 	}
 
+	public function index(){
+		$data['artikels'] = $this->home_model->get_home_artikel(3);
+		$data['title'] = "Artikel ";
+		$data['keywords'] = "Artikel Citra Warna, cwa artikel";
+		$data['description'] = "Berikut adalah artikel dari kami";
+		$data['img'] = 'assets/img/cwa_banner.jpg';
+		$data['content'] = 'frontend/index_artikel';
+		$this->load->view('template', $data);
+	}
+
 	public function read($link){
 		$data['artikel'] = $this->db->where('link', $link)->get('artikel')->row_array();
 		$data['title'] = $data['artikel']['judul'];

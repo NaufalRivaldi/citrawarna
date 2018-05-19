@@ -79,7 +79,7 @@
 				</div>
 			</div>
 			<br><br>
-			<?php $barangs = $this->home_model->get_barang(); ?>
+			<?php $barangs = $this->home_model->get_barang_unggulan(8); ?>
 
 			<h2 align="center" class="section-title">PRODUK UNGGULAN KAMI</h2>
 			<hr>
@@ -112,7 +112,7 @@
 			<h1 align="center">ARTIKEL TERBARU</h1>
 			<hr>
 			<div class="row">
-				<?php $articles = $this->home_model->get_home_artikel(); 
+				<?php $articles = $this->home_model->get_home_artikel(3); 
 				foreach($articles as $artikel) { ?>
 				<div class="col-md-4">
 					<div class="body-article">
@@ -133,7 +133,7 @@
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-4">
-					<a href="#" class="btn btn-warning btn-block btn-lg">Tampilkan Lebih Banyak</a>
+					<a href="<?= base_url('artikel') ?>" class="btn btn-warning btn-block btn-lg">Tampilkan Lebih Banyak</a>
 				</div>
 			</div>
 			<hr>

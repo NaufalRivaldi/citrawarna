@@ -2,11 +2,11 @@
 
 class Home_model extends CI_Model 
 {
-	public function get_home_artikel(){
+	public function get_home_artikel($limit){
 		return $this->db->join('kategori', 'kategori.id_kategori = artikel.id_kategori')
 						->order_by('tanggal', 'desc')
 						->where('stat', 1)
-						->get('artikel',0,3)->result_array();
+						->get('artikel',$limit)->result_array();
 	}
 
 	public function get_cabang(){
@@ -17,8 +17,8 @@ class Home_model extends CI_Model
 		return $this->db->where('param', $param)->get('setting')->row_array();
 	}
 
-	public function get_barang(){
-		return $this->db->where('stat', 1)->where('unggulan', 'y')->get('barang',0,6)->result_array();
+	public function get_barang_unggulan($limit=null){
+		return $this->db->where('stat', 1)->where('unggulan', 'y')->get('barang', $limit)->result_array();
 	}
 
 	public function updateClick($tbl,$field,$value){

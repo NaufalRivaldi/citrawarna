@@ -43,12 +43,75 @@ class Product extends CI_Controller
 	public function kategori($kat=null){
 		$kat = $this->uri->segment(3);
 		switch ($kat) {
+			case 'all' :
+				$data['judul_kat'] = "PRODUK KAMI";
+				$data['barangs'] = $this->db->get('barang')->result_array();
+				$data['desc_kat'] = $this->db->where('kd_kategori', 44)->get('kat_barang')->row_array();
+			break;
+
 			case 'unggulan':
-				$data['barangs'] = $this->home_model->get_barang();
+				$data['judul_kat'] = "	PRODUK UNGGULAN KAMI";
+				$data['barangs'] = $this->home_model->get_barang_unggulan(0);
+				$data['desc_kat'] = $this->db->where('kd_kategori', 45)->get('kat_barang')->row_array();	
 				break;
 
+			case 'tembok':
+				$data['judul_kat'] = "	PRODUK CAT TEMBOK KAMI";
+				$data['barangs'] = $this->db->where('kd_kategori','1')->get('barang')->result_array();
+				$data['desc_kat'] = $this->db->where('kd_kategori', 1)->get('kat_barang')->row_array();	
+				break;
+
+			case 'kayu_besi':
+				$data['judul_kat'] = "	PRODUK CAT KAYU & BESI ";
+				$data['barangs'] = $this->db->where('kd_kategori','2')->get('barang')->result_array();
+				$data['desc_kat'] = $this->db->where('kd_kategori', 2)->get('kat_barang')->row_array();;	
+				break;
+
+			case 'politur':
+				$data['judul_kat'] = "	PRODUK CAT POLITUR ";
+				$data['barangs'] = $this->db->where('kd_kategori','8')->get('barang')->result_array();
+				$data['desc_kat'] = $this->db->where('kd_kategori', 8)->get('kat_barang')->row_array();;	
+				break;
+
+			case 'genteng':
+				$data['judul_kat'] = "	PRODUK CAT POLITUR ";
+				$data['barangs'] = $this->db->where('kd_kategori',5)->get('barang')->result_array();
+				$data['desc_kat'] = $this->db->where('kd_kategori', 5)->get('kat_barang')->row_array();;	
+				break;
+
+			case 'waterproofing':
+				$data['judul_kat'] = "	PRODUK CAT POLITUR ";
+				$data['barangs'] = $this->db->where('kd_kategori',7)->get('barang')->result_array();
+				$data['desc_kat'] = $this->db->where('kd_kategori', 7)->get('kat_barang')->row_array();;	
+				break;
+
+			case 'spray':
+				$data['judul_kat'] = "	PRODUK CAT SPRAY / SEMPROT ";
+				$data['barangs'] = $this->db->where('kd_kategori',31)->get('barang')->result_array();
+				$data['desc_kat'] = $this->db->where('kd_kategori', 31)->get('kat_barang')->row_array();;	
+				break;
+			
 			case 'duco':
-				$data['barangs'] = $this->db->where('unggulan','n')->get('barang')->result_array();
+				$data['judul_kat'] = "CAT DUCO";
+				$data['desc_kat'] = $this->db->where('kd_kategori', 3)->get('kat_barang')->row_array();
+				$data['barangs'] = $this->db->where('kd_kategori','3')->get('barang')->result_array();
+				break;
+
+			case 'batu':
+				$data['judul_kat'] = "CAT BATU";
+				$data['desc_kat'] = $this->db->where('kd_kategori', 42)->get('kat_barang')->row_array();
+				$data['barangs'] = $this->db->where('kd_kategori',42)->get('barang')->result_array();
+				break;
+
+			case 'thinner':
+				$data['judul_kat'] = "THINNER";
+				$data['desc_kat'] = $this->db->where('kd_kategori', 4)->get('kat_barang')->row_array();
+				$data['barangs'] = $this->db->where('kd_kategori',4)->get('barang')->result_array();
+				break;
+			case 'lain':
+				$data['judul_kat'] = "PRODUK LAIN - LAIN";
+				$data['desc_kat'] = $this->db->where('kd_kategori', 43)->get('kat_barang')->row_array();
+				$data['barangs'] = $this->db->where('kd_kategori',43)->get('barang')->result_array();
 				break;
 		}
 		if(isset($kat)){

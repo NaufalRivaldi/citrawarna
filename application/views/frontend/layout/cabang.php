@@ -1,5 +1,6 @@
+		
 			<br><br>
-			<h1 align="center">LOKASI KAMI</h1>
+			<h1 align="center" id="lokasi">LOKASI KAMI</h1>
 			<hr>
 			<p class="unggulan">"Temukan toko cat Citra Warna terdekat anda"</p>
 			

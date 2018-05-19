@@ -1,4 +1,4 @@
-				<h1 align="center">CONTACT US</h1>
+				<h1 align="center" id="contact">CONTACT US</h1>
 				<div class="row">
 					<div class="col-md-6">
 					<br>
