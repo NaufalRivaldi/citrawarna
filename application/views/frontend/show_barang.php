@@ -20,8 +20,6 @@
 						<p><b>*Data stok dan harga update per tanggal <?= $last_update['value'] ?></b></p>
 						<p><b>*klik nama barang untuk melihat stok di masing-masing cabang</b></p>
 					</div>
-					
-					
 				</div>
 			</div>
 			<br><br>

@@ -103,7 +103,7 @@
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-4">
-					<a href="<?= base_url('product/unggulan') ?>" class="btn btn-warning btn-block btn-lg">Lihat Semua Produk</a>
+					<a href="<?= base_url('product/kategori/unggulan') ?>" class="btn btn-warning btn-block btn-lg">Lihat Semua Produk</a>
 				</div>
 			</div>
 			<hr>

@@ -40,13 +40,27 @@ class Product extends CI_Controller
 		$this->load->view('template', $data);
 	}
 
-	public function unggulan(){
-		$data['barangs'] = $this->home_model->get_barang();
+	public function kategori($kat=null){
+		$kat = $this->uri->segment(3);
+		switch ($kat) {
+			case 'unggulan':
+				$data['barangs'] = $this->home_model->get_barang();
+				break;
+
+			case 'duco':
+				$data['barangs'] = $this->db->where('unggulan','n')->get('barang')->result_array();
+				break;
+		}
+		if(isset($kat)){
+			$data['content'] = 'frontend/index_kategori';
+		} else {
+			$data['content'] = 'frontend/list_kategori';
+		}
+		
 		$data['keywords'] = "citra warna, produk unggulan, toko cat citra warna";
 		$data['description'] = "Produk unggulan kami adalah produk yang berkualitas dengan harga yang sangat kompetitif ";
 		$data['title'] = 'Produk Unggulan';
 		$data['img'] = 'assets/img/cwa_banner.jpg';
-		$data['content'] = 'frontend/index_unggulan';
 		$this->load->view('template', $data);
 	}
 
