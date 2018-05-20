@@ -35,12 +35,19 @@
 							<th>Stock</th>
 						</thead>
 					</tr>
-					<?php $no=1; foreach($raw as $row) {  ?>
+					<?php $no=1; foreach($raw as $row) {  
+
+						$url = $row['nm_barang'];
+						if(strpos($url, '"')){
+							$url = str_replace('"', "~", $url);
+						} 
+
+						?>
 					<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">
 						<td><?= $no++ ?></td>
-						<td><a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $row['nm_barang']))) ?>"><?= $row['kd_barang'] ?></a></td>
+						<td><a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url))) ?>"><?= $row['kd_barang'] ?></a></td>
 						<td>
-							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
+							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url))) ?>"><?= $row['nm_barang'] ?></a>
 						</td>
 						<td><b><?= $row['harga'] ?></b></td>
 						<td style="<?= ($row['jumlah']>0 ? "color:green" : "color:red") ?>"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></td>
@@ -112,12 +119,17 @@
 									break;
 
 							}
+						$url = $row['nm_barang'];
+						if(strpos($url, '"')){
+							$url = str_replace('"', "~", $url);
+						} 
+
 						?>
 					<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">
 						<td><?= $no++ ?></td>
-						<td><a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $row['nm_barang']))) ?>"><?= $row['kd_barang'] ?></a></td>
+						<td><a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url))) ?>"><?= $row['kd_barang'] ?></a></td>
 						<td>
-							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $row['nm_barang']))) ?>"><?= $row['nm_barang'] ?></a>
+							<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url))) ?>"><?= $row['nm_barang'] ?></a>
 						</td>
 						<td><b><?= $row['harga'] ?></b></td>
 						<td style="<?= ($row['jumlah']>0 ? "color:green" : "color:red") ?>"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></td>

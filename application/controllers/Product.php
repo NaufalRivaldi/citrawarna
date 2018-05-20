@@ -19,9 +19,16 @@ class Product extends CI_Controller
 	}
 
 	public function detail($nm_barang){
+		//tambahan fungsi kampret gara2 character nama barang aneh2
+		if(strpos($nm_barang, "~")){
+			$namaBarang = str_replace('~', '"', $nm_barang);
+			$namaBarang = strtoupper(str_replace("_", " ", $namaBarang));
+		} else {
+			$namaBarang = strtoupper(str_replace("_", " ", $nm_barang));
+		}
 
-		$namaBarang = strtoupper(str_replace("_", " ", $nm_barang));
-		//get 1 row dulu untuk kd_merk
+		
+		//get 1 row dulu untuk kd_merk	
 		$row = $this->home_model->raw($namaBarang)->row_array();
 
 		$data['barang'] = $this->home_model->get_row_barang('kd_merk', $row['kd_merk']);
