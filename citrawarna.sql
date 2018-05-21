@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2018 at 10:32 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: 21 Mei 2018 pada 09.23
+-- Versi Server: 10.1.10-MariaDB
+-- PHP Version: 7.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artikel`
+-- Struktur dari tabel `artikel`
 --
 
 CREATE TABLE `artikel` (
@@ -41,18 +41,18 @@ CREATE TABLE `artikel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `artikel`
+-- Dumping data untuk tabel `artikel`
 --
 
 INSERT INTO `artikel` (`id_artikel`, `tanggal`, `judul`, `link`, `keyword`, `excerpt`, `isi`, `id_kategori`, `img`, `stat`, `click`) VALUES
-(1, '2018-05-11 15:36:13', 'Perbandingan Merk Cat Termurah', 'perbandingan-merk-cat-termurah', 'toko cat, toko cat bali, toko cat denpasar, toko cat ubud, cat tembok, weldon, harga cat, jual cat', 'Murah, mewah, meriah, dan kalau bisa ada kembaliannya.. Tentunya produk tersebut akan sangat diminati dong ya.. :D Di postingan kali ini kita akan melihat perbandingan harga produk-produk yang kami miliki, supaya kita bisa memilih produk yang diinginkan d', '<p>Murah, mewah, meriah, dan kalau bisa ada kembaliannya.. Tentunya produk tersebut akan sangat diminati dong ya.. :D Di postingan kali ini kita akan melihat perbandingan harga produk-produk yang kami miliki, supaya kita bisa memilih produk yang diinginkan dengan lebih mudah.</p>\r\n\r\n<ol>\r\n	<li><strong>Cat Tembok Interior</strong>&nbsp;<br />\r\n	-&nbsp;Weldon&nbsp;kemasan 1kg : Rp 27.500, kemasan galon 5kg :&nbsp;<strong>Rp 95.000</strong>, kemasan pail 25kg :&nbsp;<strong>Rp 450.000</strong><br />\r\n	-&nbsp;Envi&nbsp;kemasan 1kg :&nbsp;<strong>Rp 26.500</strong>, kemasan galon 5kg : Rp 100.000, kemasan pail 25kg : Rp 475.000<br />\r\n	-&nbsp;Vinilex&nbsp;kemasan galon 5kg: Rp 98.000, kemasan pail 25kg : Rp 470.000&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Cat Tembok Eksterior</strong>&nbsp;<br />\r\n	-&nbsp;Paladin Gold&nbsp;kemasan 2,5 liter :&nbsp;<strong>Rp 215.000</strong>, kemasan pail 20 liter : Rp 1.550.000<br />\r\n	-&nbsp;Belazo EF&nbsp;kemasan 2,5 liter : Rp 219.000, kemasan pail 20 liter : Rp 1.728.000<br />\r\n	-&nbsp;Dulux Weathershield Pro&nbsp;2,5 liter : Rp 219.000*, kemasan pail 20 liter (warna brilliant white) :&nbsp;<strong>Rp 1.540.000*</strong><br />\r\n	-&nbsp;Mowilex Weathercoat&nbsp;kemasan 2,5 liter : Rp 216.500*, kemasan pail 20 liter : Rp 1.618.000*&nbsp;<br />\r\n	<em>Note * : Cat tembok eksterior yang kisaran harganya cukup variatif, karena kebanyakan produk di kategori ini menggunakan warna mixing. Harga yang tercantum merupakan harga cat warna ready stok yang paling murah.</em>&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Cat Kayu Besi</strong>&nbsp;<br />\r\n	-&nbsp;Envilux&nbsp;kemasan&nbsp;<strong>1kg : Rp 50.000</strong>, kemasan 3,78kg : Rp 197.000<br />\r\n	-&nbsp;Ocean Gloss&nbsp;kemasan 0,8 liter : Rp 34.200<br />\r\n	-&nbsp;Danalac&nbsp;kemasan 0,9 liter :&nbsp;<strong>Rp 32.500*</strong><br />\r\n	-&nbsp;Emco&nbsp;kemasan 0,5 kg :&nbsp;<strong>Rp 27.500**</strong>, kemasan 1 kg : Rp 61.000**<br />\r\n	-&nbsp;Avian&nbsp;kemasan 0,5 kg : Rp 29.000, kemasan 1 kg : Rp 51.000&nbsp;<br />\r\n	<em>Note * : HARGA PROMO!! Stok terbatas. - ** : Produk dengan kisaran harga yang variatif. Harga yang tercantum adalah harga cat dengan warna termurah.</em>&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Cat Genteng</strong>&nbsp;<br />\r\n	-&nbsp;Danaroof&nbsp;kemasan 3,8 liter :&nbsp;<strong>Rp 95.000*</strong><br />\r\n	-&nbsp;Ocean Roof&nbsp;kemasan 3,8 liter : Rp 122.500<br />\r\n	-&nbsp;Envi Roof Paint&nbsp;kemasan 4 kg : Rp 153.000&nbsp;<br />\r\n	<em>Note * : HARGA PROMO!! Stok terbatas.</em>&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Waterproof</strong>&nbsp;<br />\r\n	-&nbsp;NoDrop&nbsp;kemasan 1kg :&nbsp;<strong>Rp 41.700</strong>, kemasan galon 4kg :&nbsp;<strong>Rp 158.000</strong>, kemasan pail 20kg :&nbsp;<strong>Rp 723.400</strong><br />\r\n	-&nbsp;Aquaproof&nbsp;kemasan 1kg : Rp 42.000, kemasan galon 4kg : Rp 158.500, kemasan pail 20kg : Rp 726.000<br />\r\n	-&nbsp;WelProof&nbsp;kemasan 1 kg : Rp 44.000, kemasan galon 4 kg : Rp 167.000, kemasan pail 20kg : Rp 750.000&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Plamir</strong>&nbsp;<br />\r\n	-&nbsp;Pillar&nbsp;kemasan 1 kg : Rp 13.500, kemasan galon 5kg : Rp 46.000, kemasan pail 25kg : Rp 220.500<br />\r\n	-&nbsp;Tartar&nbsp;kemasan 1 kg : Rp 12.500, kemasan galon 5 kg : Rp 37.500, kemasan pail 25 kg : Rp 162.500&nbsp;</li>\r\n</ol>\r\n\r\n<p>Demikian sebagian perbandingan harga produk yang dapat kami tampilkan.. Sebagai catatan, harga yang ditampilkan di halaman ini dapat berubah suatu saat nanti.. Karena itu tidak ada salahnya kita cek harga dan stok produk Citra Warna disini sebelum membelinya.&nbsp;</p>\r\n', 1, 'coba3.jpg', 1, 2),
-(2, '2018-05-11 15:28:10', 'Merk Cat Tembok berdasarkan Kebutuhan', 'merk-cat-tembok-berdasarkan-kebutuhan', 'toko cat, toko cat bali, toko cat denpasar', 'Ingin beli cat tembok, tapi nggak tahu merk apa yang harus dibeli sesuai kebutuhan. Memang hal itu sangat wajar, berhubung merk cat ada sangat banyak, dan spesifikasinya juga bermacam-macam tergantung kebutuhan Anda. Karena itu, saat ini kami akan membant', '<p>Ingin beli cat tembok, tapi nggak tahu merk apa yang harus dibeli sesuai kebutuhan. Memang hal itu sangat wajar, berhubung merk cat ada sangat banyak, dan spesifikasinya juga bermacam-macam tergantung kebutuhan Anda. Karena itu, saat ini kami akan membantu mengkategorikan cat yang anda perlukan berdasarkan kategori umum yang ada.</p>\n\n<ul>\n	<li><strong>Cat Untuk Luar Rumah (Eksterior)</strong>. Jika anda mencari cat untuk luar ruangan, sangat disarankan untuk memilih cat tembok eksterior, karena cat tembok eksterior memiliki daya tahan yang jauh lebih tinggi dari cat tembok interior. Memang harganya lebih mahal daripada tembok interior, tapi hasil yang diberikan juga jauh lebih memuaskan. Produk di kategori ini antara lain : Paladin Gold, Belazo EF, Dulux Weathershield, dan Mowilex Weathercoat.</li>\n	<li><strong>Cat untuk Dalam Rumah (Interior), Kualitas Premium</strong>. Cat untuk dalam rumah tidak semahal cat untuk luar rumah, karena tidak terlalu memperhatikan daya tahan seperti cat tembok eksterior. Sekalipun begitu, cat tembok dengan kualitas premium tetap memiliki kapasitas yang sangat baik sebagai cat tembok. Produk di kategori ini antara lain : Paladin Silver, Belazo ME, Dulux Pentalite dan Mowilex Emulsion.</li>\n	<li><strong>Cat Tembok Interior Oke dengan Harga Standar</strong>. Cat Tembok Interior dengan harga standar ini bukan berarti tidak lebih bagus dari cat yang lainnya, akan tetapi berusaha memberikan cat yang baik dengan harga yang mudah dijangkau masyarakat. Sangat banyak produk yang kami tawarkan di kategori ini: Weldon Wallpaint, Envi Wallpaint, Viniliex dan Dulux Catylac.</li>\n	<li><strong>Cat dengan Harga Ekonomis</strong>. Cat tembok satu ini menawarkan harga yang sangat murah dan terjangkau. Memiliki pilihan warna yang cukup banyak, tapi tetap diperhitungkan sebagai cat tembok yang baik. Produk yang kami tawarkan yaitu, Pillar Cat Tembok, Mawar</li>\n	<li><strong>Cat Tembok Anti Air (Waterproof)</strong>. Cat tembok anti air adalah cat tembok yang diaplikasikan di luar ruangan, yang berguna supaya tembok kita tidak bocor. produk dalam kategori ini antara lain&nbsp;Welproof,&nbsp;Top Seal,&nbsp;Aquaproof,&nbsp;No Drop</li>\n	<li><strong>Cat yang tidak Berbau Racun</strong>. Pada umumnya, rumah yang baru dicat memiliki bau yang tidak begitu enak dan berbahaya jika terlalu lama menghirup ruangan yang baru dicat. Wajar saja, karena pada umumnya cat tembok dibuat dengan bahan kimia yang demikian. Akan tetapi, ada cat tembok yang menawarkan hasil yang optimal, harga yang murah, dan tidak berbau. Cat tersebut adalah&nbsp;Envi. Tidak cuma baunya yang tidak beracun, Envi bahkan memberi sensasi keharuman dibandingkan semua cat tembok lainnya. Karena itu, cat tembok ini sangat cocok untuk rumah yang langsung ditempati ketika selesai dicat, maupun untuk memperbarui warna ruangan.</li>\n	<li><strong>Cat dengan Kualitas Terjamin dan Harga Murah</strong>. Tentunya setiap kita sangat ingin membeli cat tembok dengan harga yang terjangkau, akan tetapi tetap memberi hasil yang baik. Produk yang kami tawarkan dari spesifikasi ini adalah&nbsp;Weldon Wallpaint. Harganya tidak terlalu mahal, akan tetapi tetap memberikan hasil yang terbaik dengan daya sebar yang luas, dan daya tutup yang baik.</li>\n</ul>\n', 1, 'cat-cwa.jpg', 1, 7),
-(3, '2018-05-11 15:40:43', 'Tips Rumah yang Sehat dan Nyaman', 'tips-rumah-yang-sehat-dan-nyaman', 'toko cat, toko cat bali, toko cat denpasar, toko cat ubud, cat tembok, weldon, harga cat, jual cat', 'Rumah yang sehat adalah rumah yang praktis, tahan lama dan hemat energi, sehingga membuat hidup lebih terjamin, layak, dan mampu menghemat biaya hidup. Membuat rumah anda dengan lingkungannya yang baik, tentunya tidak selalu membutuhkan biaya besar. Pada ', '<p>Rumah yang sehat adalah rumah yang praktis, tahan lama dan hemat energi, sehingga membuat hidup lebih terjamin, layak, dan mampu menghemat biaya hidup. Membuat rumah anda dengan lingkungannya yang baik, tentunya tidak selalu membutuhkan biaya besar. Pada kenyataannya, ada beberapa tips rumah sehat dan nyaman yang dapat menghemat uang, sekaligus memanfaatkan sumber-sumber daya alam yang tersedia untuk keluarga Anda.</p>\r\n\r\n<p>Dengan merancang, merenovasi rumah dengan baik, akan membuat kualitas kehidupan penghuninya dapat ditingkatkan dan biaya hidup dapat lebih ditekan. Berikut ini adalah cara-cara meningkatkan kualitas rumah kita menjadi lebih sehat dan nyaman:</p>\r\n\r\n<ul>\r\n	<li>Buatlah tanaman merambat pada teralis di sekitar bagian luar rumah ( bisa dilakukan pada dinding dan atau pagar serta ruangan kosong di halaman ). Dapat menyejukkan rumah, bahkan menghasilkan makanan.</li>\r\n	<li>Menanam pohon besar sebagai tempat teduh yang produktif. Menyediakan pohon untuk berteduh dapat menyejukkan udara sekitar rumah</li>\r\n	<li>Menyaring sisa air limbah ke tempat penyaringan yang produktif. Setelah itu, air setelah disaring dapat dimanfaatkan kembali untuk menyiram tanaman.</li>\r\n	<li>Membuat ventilasi dan aliran udara dalam rumah yang baik (udara panas naik dan mengalir keluar lewat ventilasi atas dan udara sejuk masuk lewat bawah) untuk menjaga rumah tetap sejuk tanpa keluar biaya yang banyak.</li>\r\n	<li>Menggunakan jaring nyamuk pada ventilasi untuk mencegah nyamuk yang datang dari luar. Jika memungkinkan, dapat dipasang di seluruh bagian ruangan.</li>\r\n	<li>Pastikan letak jendela mendapat sinar dan atau cahaya matahari secara cukup. Karena cahaya matahari dapat mengurangi gangguan mata . Diusahakan memperbanyak cahaya matahari dan seminimal mungkin mengurangi sinar matahari yang masuk secara langsung</li>\r\n	<li>Membuat kolam ikan di sekitar rumah. Hal ini cukup membantu menampung genangan air yang berlebih.</li>\r\n</ul>\r\n\r\n<p>Demikian tips-tips yang dapat kami&nbsp;berikan, semoga tips-tips ini membantu kita memiliki rumah yang lebih sehat dan nyaman dari sebelumnya.</p>\r\n', 2, 'rumah_nyaman.JPG', 1, 10);
+(1, '2018-05-11 15:36:13', 'Perbandingan Merk Cat Termurah', 'perbandingan-merk-cat-termurah', 'toko cat, toko cat bali, toko cat denpasar, toko cat ubud, cat tembok, weldon, harga cat, jual cat', 'Murah, mewah, meriah, dan kalau bisa ada kembaliannya.. Tentunya produk tersebut akan sangat diminati dong ya.. :D Di postingan kali ini kita akan melihat perbandingan harga produk-produk yang kami miliki, supaya kita bisa memilih produk yang diinginkan d', '<p>Murah, mewah, meriah, dan kalau bisa ada kembaliannya.. Tentunya produk tersebut akan sangat diminati dong ya.. :D Di postingan kali ini kita akan melihat perbandingan harga produk-produk yang kami miliki, supaya kita bisa memilih produk yang diinginkan dengan lebih mudah.</p>\r\n\r\n<ol>\r\n	<li><strong>Cat Tembok Interior</strong>&nbsp;<br />\r\n	-&nbsp;Weldon&nbsp;kemasan 1kg : Rp 27.500, kemasan galon 5kg :&nbsp;<strong>Rp 95.000</strong>, kemasan pail 25kg :&nbsp;<strong>Rp 450.000</strong><br />\r\n	-&nbsp;Envi&nbsp;kemasan 1kg :&nbsp;<strong>Rp 26.500</strong>, kemasan galon 5kg : Rp 100.000, kemasan pail 25kg : Rp 475.000<br />\r\n	-&nbsp;Vinilex&nbsp;kemasan galon 5kg: Rp 98.000, kemasan pail 25kg : Rp 470.000&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Cat Tembok Eksterior</strong>&nbsp;<br />\r\n	-&nbsp;Paladin Gold&nbsp;kemasan 2,5 liter :&nbsp;<strong>Rp 215.000</strong>, kemasan pail 20 liter : Rp 1.550.000<br />\r\n	-&nbsp;Belazo EF&nbsp;kemasan 2,5 liter : Rp 219.000, kemasan pail 20 liter : Rp 1.728.000<br />\r\n	-&nbsp;Dulux Weathershield Pro&nbsp;2,5 liter : Rp 219.000*, kemasan pail 20 liter (warna brilliant white) :&nbsp;<strong>Rp 1.540.000*</strong><br />\r\n	-&nbsp;Mowilex Weathercoat&nbsp;kemasan 2,5 liter : Rp 216.500*, kemasan pail 20 liter : Rp 1.618.000*&nbsp;<br />\r\n	<em>Note * : Cat tembok eksterior yang kisaran harganya cukup variatif, karena kebanyakan produk di kategori ini menggunakan warna mixing. Harga yang tercantum merupakan harga cat warna ready stok yang paling murah.</em>&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Cat Kayu Besi</strong>&nbsp;<br />\r\n	-&nbsp;Envilux&nbsp;kemasan&nbsp;<strong>1kg : Rp 50.000</strong>, kemasan 3,78kg : Rp 197.000<br />\r\n	-&nbsp;Ocean Gloss&nbsp;kemasan 0,8 liter : Rp 34.200<br />\r\n	-&nbsp;Danalac&nbsp;kemasan 0,9 liter :&nbsp;<strong>Rp 32.500*</strong><br />\r\n	-&nbsp;Emco&nbsp;kemasan 0,5 kg :&nbsp;<strong>Rp 27.500**</strong>, kemasan 1 kg : Rp 61.000**<br />\r\n	-&nbsp;Avian&nbsp;kemasan 0,5 kg : Rp 29.000, kemasan 1 kg : Rp 51.000&nbsp;<br />\r\n	<em>Note * : HARGA PROMO!! Stok terbatas. - ** : Produk dengan kisaran harga yang variatif. Harga yang tercantum adalah harga cat dengan warna termurah.</em>&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Cat Genteng</strong>&nbsp;<br />\r\n	-&nbsp;Danaroof&nbsp;kemasan 3,8 liter :&nbsp;<strong>Rp 95.000*</strong><br />\r\n	-&nbsp;Ocean Roof&nbsp;kemasan 3,8 liter : Rp 122.500<br />\r\n	-&nbsp;Envi Roof Paint&nbsp;kemasan 4 kg : Rp 153.000&nbsp;<br />\r\n	<em>Note * : HARGA PROMO!! Stok terbatas.</em>&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Waterproof</strong>&nbsp;<br />\r\n	-&nbsp;NoDrop&nbsp;kemasan 1kg :&nbsp;<strong>Rp 41.700</strong>, kemasan galon 4kg :&nbsp;<strong>Rp 158.000</strong>, kemasan pail 20kg :&nbsp;<strong>Rp 723.400</strong><br />\r\n	-&nbsp;Aquaproof&nbsp;kemasan 1kg : Rp 42.000, kemasan galon 4kg : Rp 158.500, kemasan pail 20kg : Rp 726.000<br />\r\n	-&nbsp;WelProof&nbsp;kemasan 1 kg : Rp 44.000, kemasan galon 4 kg : Rp 167.000, kemasan pail 20kg : Rp 750.000&nbsp;<br />\r\n	&nbsp;</li>\r\n	<li><strong>Plamir</strong>&nbsp;<br />\r\n	-&nbsp;Pillar&nbsp;kemasan 1 kg : Rp 13.500, kemasan galon 5kg : Rp 46.000, kemasan pail 25kg : Rp 220.500<br />\r\n	-&nbsp;Tartar&nbsp;kemasan 1 kg : Rp 12.500, kemasan galon 5 kg : Rp 37.500, kemasan pail 25 kg : Rp 162.500&nbsp;</li>\r\n</ol>\r\n\r\n<p>Demikian sebagian perbandingan harga produk yang dapat kami tampilkan.. Sebagai catatan, harga yang ditampilkan di halaman ini dapat berubah suatu saat nanti.. Karena itu tidak ada salahnya kita cek harga dan stok produk Citra Warna disini sebelum membelinya.&nbsp;</p>\r\n', 1, 'coba3.jpg', 1, 3),
+(2, '2018-05-11 15:28:10', 'Merk Cat Tembok berdasarkan Kebutuhan', 'merk-cat-tembok-berdasarkan-kebutuhan', 'toko cat, toko cat bali, toko cat denpasar', 'Ingin beli cat tembok, tapi nggak tahu merk apa yang harus dibeli sesuai kebutuhan. Memang hal itu sangat wajar, berhubung merk cat ada sangat banyak, dan spesifikasinya juga bermacam-macam tergantung kebutuhan Anda. Karena itu, saat ini kami akan membant', '<p>Ingin beli cat tembok, tapi nggak tahu merk apa yang harus dibeli sesuai kebutuhan. Memang hal itu sangat wajar, berhubung merk cat ada sangat banyak, dan spesifikasinya juga bermacam-macam tergantung kebutuhan Anda. Karena itu, saat ini kami akan membantu mengkategorikan cat yang anda perlukan berdasarkan kategori umum yang ada.</p>\n\n<ul>\n	<li><strong>Cat Untuk Luar Rumah (Eksterior)</strong>. Jika anda mencari cat untuk luar ruangan, sangat disarankan untuk memilih cat tembok eksterior, karena cat tembok eksterior memiliki daya tahan yang jauh lebih tinggi dari cat tembok interior. Memang harganya lebih mahal daripada tembok interior, tapi hasil yang diberikan juga jauh lebih memuaskan. Produk di kategori ini antara lain : Paladin Gold, Belazo EF, Dulux Weathershield, dan Mowilex Weathercoat.</li>\n	<li><strong>Cat untuk Dalam Rumah (Interior), Kualitas Premium</strong>. Cat untuk dalam rumah tidak semahal cat untuk luar rumah, karena tidak terlalu memperhatikan daya tahan seperti cat tembok eksterior. Sekalipun begitu, cat tembok dengan kualitas premium tetap memiliki kapasitas yang sangat baik sebagai cat tembok. Produk di kategori ini antara lain : Paladin Silver, Belazo ME, Dulux Pentalite dan Mowilex Emulsion.</li>\n	<li><strong>Cat Tembok Interior Oke dengan Harga Standar</strong>. Cat Tembok Interior dengan harga standar ini bukan berarti tidak lebih bagus dari cat yang lainnya, akan tetapi berusaha memberikan cat yang baik dengan harga yang mudah dijangkau masyarakat. Sangat banyak produk yang kami tawarkan di kategori ini: Weldon Wallpaint, Envi Wallpaint, Viniliex dan Dulux Catylac.</li>\n	<li><strong>Cat dengan Harga Ekonomis</strong>. Cat tembok satu ini menawarkan harga yang sangat murah dan terjangkau. Memiliki pilihan warna yang cukup banyak, tapi tetap diperhitungkan sebagai cat tembok yang baik. Produk yang kami tawarkan yaitu, Pillar Cat Tembok, Mawar</li>\n	<li><strong>Cat Tembok Anti Air (Waterproof)</strong>. Cat tembok anti air adalah cat tembok yang diaplikasikan di luar ruangan, yang berguna supaya tembok kita tidak bocor. produk dalam kategori ini antara lain&nbsp;Welproof,&nbsp;Top Seal,&nbsp;Aquaproof,&nbsp;No Drop</li>\n	<li><strong>Cat yang tidak Berbau Racun</strong>. Pada umumnya, rumah yang baru dicat memiliki bau yang tidak begitu enak dan berbahaya jika terlalu lama menghirup ruangan yang baru dicat. Wajar saja, karena pada umumnya cat tembok dibuat dengan bahan kimia yang demikian. Akan tetapi, ada cat tembok yang menawarkan hasil yang optimal, harga yang murah, dan tidak berbau. Cat tersebut adalah&nbsp;Envi. Tidak cuma baunya yang tidak beracun, Envi bahkan memberi sensasi keharuman dibandingkan semua cat tembok lainnya. Karena itu, cat tembok ini sangat cocok untuk rumah yang langsung ditempati ketika selesai dicat, maupun untuk memperbarui warna ruangan.</li>\n	<li><strong>Cat dengan Kualitas Terjamin dan Harga Murah</strong>. Tentunya setiap kita sangat ingin membeli cat tembok dengan harga yang terjangkau, akan tetapi tetap memberi hasil yang baik. Produk yang kami tawarkan dari spesifikasi ini adalah&nbsp;Weldon Wallpaint. Harganya tidak terlalu mahal, akan tetapi tetap memberikan hasil yang terbaik dengan daya sebar yang luas, dan daya tutup yang baik.</li>\n</ul>\n', 1, 'cat-cwa.jpg', 1, 8),
+(3, '2018-05-11 15:40:43', 'Tips Rumah yang Sehat dan Nyaman', 'tips-rumah-yang-sehat-dan-nyaman', 'toko cat, toko cat bali, toko cat denpasar, toko cat ubud, cat tembok, weldon, harga cat, jual cat', 'Rumah yang sehat adalah rumah yang praktis, tahan lama dan hemat energi, sehingga membuat hidup lebih terjamin, layak, dan mampu menghemat biaya hidup. Membuat rumah anda dengan lingkungannya yang baik, tentunya tidak selalu membutuhkan biaya besar. Pada ', '<p>Rumah yang sehat adalah rumah yang praktis, tahan lama dan hemat energi, sehingga membuat hidup lebih terjamin, layak, dan mampu menghemat biaya hidup. Membuat rumah anda dengan lingkungannya yang baik, tentunya tidak selalu membutuhkan biaya besar. Pada kenyataannya, ada beberapa tips rumah sehat dan nyaman yang dapat menghemat uang, sekaligus memanfaatkan sumber-sumber daya alam yang tersedia untuk keluarga Anda.</p>\r\n\r\n<p>Dengan merancang, merenovasi rumah dengan baik, akan membuat kualitas kehidupan penghuninya dapat ditingkatkan dan biaya hidup dapat lebih ditekan. Berikut ini adalah cara-cara meningkatkan kualitas rumah kita menjadi lebih sehat dan nyaman:</p>\r\n\r\n<ul>\r\n	<li>Buatlah tanaman merambat pada teralis di sekitar bagian luar rumah ( bisa dilakukan pada dinding dan atau pagar serta ruangan kosong di halaman ). Dapat menyejukkan rumah, bahkan menghasilkan makanan.</li>\r\n	<li>Menanam pohon besar sebagai tempat teduh yang produktif. Menyediakan pohon untuk berteduh dapat menyejukkan udara sekitar rumah</li>\r\n	<li>Menyaring sisa air limbah ke tempat penyaringan yang produktif. Setelah itu, air setelah disaring dapat dimanfaatkan kembali untuk menyiram tanaman.</li>\r\n	<li>Membuat ventilasi dan aliran udara dalam rumah yang baik (udara panas naik dan mengalir keluar lewat ventilasi atas dan udara sejuk masuk lewat bawah) untuk menjaga rumah tetap sejuk tanpa keluar biaya yang banyak.</li>\r\n	<li>Menggunakan jaring nyamuk pada ventilasi untuk mencegah nyamuk yang datang dari luar. Jika memungkinkan, dapat dipasang di seluruh bagian ruangan.</li>\r\n	<li>Pastikan letak jendela mendapat sinar dan atau cahaya matahari secara cukup. Karena cahaya matahari dapat mengurangi gangguan mata . Diusahakan memperbanyak cahaya matahari dan seminimal mungkin mengurangi sinar matahari yang masuk secara langsung</li>\r\n	<li>Membuat kolam ikan di sekitar rumah. Hal ini cukup membantu menampung genangan air yang berlebih.</li>\r\n</ul>\r\n\r\n<p>Demikian tips-tips yang dapat kami&nbsp;berikan, semoga tips-tips ini membantu kita memiliki rumah yang lebih sehat dan nyaman dari sebelumnya.</p>\r\n', 2, 'rumah_nyaman.JPG', 1, 36);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `barang`
+-- Struktur dari tabel `barang`
 --
 
 CREATE TABLE `barang` (
@@ -71,32 +71,37 @@ CREATE TABLE `barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `barang`
+-- Dumping data untuk tabel `barang`
 --
 
 INSERT INTO `barang` (`id_barang`, `kd_merk`, `nm_barang`, `deskripsi`, `kd_kategori`, `kd_jenis`, `tag`, `foto`, `no_index`, `stat`, `unggulan`, `click`) VALUES
-(1, 'WLDN', 'Weldon Wallpaint', 'Weldon Wallpaint adalah cat tembok Acrylic Emulsion yang diformulasikan untuk pengecatan dalam ruangan dengan perpaduan warna – warna yang menarik sehingga menghadirkan keindahan dan kenyamanan.', 1, 1, 'Weldon, cat tembok, cat weldon', 'weldon.jpg', 1, 1, 'y', 130),
-(6, 'IDCEV', 'Envi Wall Paint', 'Envi adalah cat tembok sehat dengan bahan yang ramah lingkungan. Sangat cocok untuk orang yang tidak suka bau cat yang menyengat.', 1, 1, 'harum, tak berbau, dalam rumah, interior, envi', 'envi_baru.jpg', 2, 1, 'y', 13),
-(7, 'PLDN_G', 'Paladin Gold', 'Paladin Gold adalah cat tembok eksterior kelas premium yang memberikan hasil dan perlindungan maksimal untuk tembok luar ruangan anda.', 1, 2, 'paladin gold, cat tembok eksterior, premium', 'Paladin_Gold.jpg', 4, 1, 'y', 8),
-(8, 'IDCRP', 'Envi Roof Paint', 'Envi Roof Paint adalah cat genteng serba guna berbahan dasar 100% akrilik yang dapat digunakan untuk segala jenis permukaan genteng, tembok, asbes, eternit, plafon, lapangan tenis, marka jalan serta lantai gudang.', 5, 2, 'envi roof, envi cat genteng, envi', 'enviroof.jpg', 5, 1, 'y', 33),
-(10, 'NPNP', 'Nippe 2000', 'Nippe 2000 adalah cat duco yang sangat cocok untuk kendaraan, seperti mobil, motor dan lain lain, juga bisa diaplikasikan pada besi. Memiliki hasil yang maksimal dengan pilihan warna yang unik,', 3, 0, 'cat duco, nippe 2000, jual nippe 2000', 'nippe.jpg', 3, 1, 'n', 10),
-(11, 'PLDN_V', 'Paladin Silver', 'Paladin Silver adalah cat tembok interior kelas premium yang memberi perlindungan maksimal untuk tembok dalam ruangan Anda.', 1, 1, 'paladin, cat paladin, paladin silver', '1329Paladin_silver.jpg', 4, 1, 'y', 5),
-(12, 'BLZOCLI', 'Belazo Climagard', 'Belazo Climagard adalah cat tembok eksterior kelas premium yang sangat baik untuk digunakan pada tembok anda, memiliki daya tahan yang lebih lama dan bau yang tidak menyengat. Kami menjual segala jenis warna Belazo Climagard dengan mesin tinting. ', 1, 2, 'belazo, belazo climagard, belazo cat,, belazo ekst', 'climagard.jpg', 5, 1, 'y', 5),
-(13, 'BLZOMAX', 'Belazo Maxima', 'Kami menjual segala jenis warna Belazo Climagard dengan mesin tinting dengan harga yang bervariatif. ', 1, 1, 'belazo maxima, belazo interior, belazo cat, belazo', 'maxima.jpg', 0, 1, 'y', 3),
-(14, 'IDCTSL', 'Top Seal', 'TOP SEAL adalah pelapis anti alkali dan anti bocor yang memiliki sifat elastis, kedap air serta tahan cuaca sehingga sangat cocok digunakan pada permukaan tembok, beton, asbes, galvanis/seng, dan permukaan terakota.', 7, 0, 'top seal, cat waterproofing, indaco waterproofing,', 'top_seal_galon.jpg', 6, 1, 'y', 31),
+(1, 'WLDN', 'Weldon Wallpaint', 'Weldon Wallpaint adalah cat tembok Acrylic Emulsion yang diformulasikan untuk pengecatan dalam ruangan dengan perpaduan warna – warna yang menarik sehingga menghadirkan keindahan dan kenyamanan.', 1, 1, 'Weldon, cat tembok, cat weldon', 'weldon.jpg', 1, 1, 'y', 147),
+(6, 'IDCEV', 'Envi Wall Paint', 'Envi adalah cat tembok sehat dengan bahan yang ramah lingkungan. Sangat cocok untuk orang yang tidak suka bau cat yang menyengat.', 1, 1, 'harum, tak berbau, dalam rumah, interior, envi', 'envi_baru.jpg', 2, 1, 'y', 18),
+(7, 'PLDN_G', 'Paladin Gold', 'Paladin Gold adalah cat tembok eksterior kelas premium yang memberikan hasil dan perlindungan maksimal untuk tembok luar ruangan anda.', 1, 2, 'paladin gold, cat tembok eksterior, premium', 'Paladin_Gold.jpg', 4, 1, 'y', 10),
+(8, 'IDCRP', 'Envi Roof Paint', 'Envi Roof Paint adalah cat genteng serba guna berbahan dasar 100% akrilik yang dapat digunakan untuk segala jenis permukaan genteng, tembok, asbes, eternit, plafon, lapangan tenis, marka jalan serta lantai gudang.', 5, 2, 'envi roof, envi cat genteng, envi', 'enviroof.jpg', 5, 1, 'y', 35),
+(10, 'NPNP', 'Nippe 2000', 'Nippe 2000 adalah cat duco yang sangat cocok untuk kendaraan, seperti mobil, motor dan lain lain, juga bisa diaplikasikan pada besi. Memiliki hasil yang maksimal dengan pilihan warna yang unik,', 3, 0, 'cat duco, nippe 2000, jual nippe 2000', 'nippe.jpg', 3, 1, 'n', 11),
+(11, 'PLDN_V', 'Paladin Silver', 'Paladin Silver adalah cat tembok interior kelas premium yang memberi perlindungan maksimal untuk tembok dalam ruangan Anda.', 1, 1, 'paladin, cat paladin, paladin silver', '1329Paladin_silver.jpg', 4, 1, 'y', 7),
+(12, 'BLZOCLI', 'Belazo Climagard', 'Belazo Climagard adalah cat tembok eksterior kelas premium yang sangat baik untuk digunakan pada tembok anda, memiliki daya tahan yang lebih lama dan bau yang tidak menyengat. Kami menjual segala jenis warna Belazo Climagard dengan mesin tinting. ', 1, 2, 'belazo, belazo climagard, belazo cat,, belazo ekst', 'climagard.jpg', 5, 1, 'y', 15),
+(13, 'BLZOMAX', 'Belazo Maxima', 'Kami menjual segala jenis warna Belazo Climagard dengan mesin tinting dengan harga yang bervariatif. ', 1, 1, 'belazo maxima, belazo interior, belazo cat, belazo', 'maxima.jpg', 0, 1, 'y', 16),
+(14, 'IDCTSL', 'Top Seal', 'TOP SEAL adalah pelapis anti alkali dan anti bocor yang memiliki sifat elastis, kedap air serta tahan cuaca sehingga sangat cocok digunakan pada permukaan tembok, beton, asbes, galvanis/seng, dan permukaan terakota.', 7, 0, 'top seal, cat waterproofing, indaco waterproofing,', 'top_seal_galon.jpg', 6, 1, 'y', 35),
 (15, 'NPVN', 'Vinilex ', 'NIPPON VINILEX adalah cat serbaguna yang dapat digunakan untuk dinding interior dan eksterior serta langit-langit berbahan dasar asbes, batako, beton, papan, mortar dan lain sebagainya baik yang baru atau yang sudah pernah di cat.', 1, 1, 'cat tembok, vinilex, cat vinilex', 'Vinilex.jpg', 7, 1, 'n', 3),
 (16, 'AVAN', 'Avian ', 'Cat Avian adalah cat minyak dengan berbagai ukuran untuk mengecat kayu dan besi dengan pilihan warna yang menarik.', 2, 0, 'cat besi, cat kayu, cat kayu besi, avian cat kayu', 'avian.jpg', 8, 1, 'n', 3),
-(17, 'BLZOWS', 'Belazo Wood Stain', 'Belazo Woodstain - Green Wood Coating adalah pelapis kayu 100% akrilik berbahan dasar air dengan kandungan pigmen oksida transparan. Melapisi permukaan kayu dengan lapisan bening khusus sehingga keindahan serat kayu tetap terjaga dan terkesan alami. Dapat digunakan untuk interior dan eksterior', 8, 0, 'belazo wood stain, belazo ws, cat politur', 'BELAZO_WOODSTAIN_-_1_LITER.jpg', 3, 1, 'y', 7),
-(18, 'BLZORP', 'Belazo Roof Paint', 'Belazo Elastomeric Roof Paint adalah merupakan Cat genteng premium berbahan dasar air yang mengandung pewarna eksterior untuk perlindungan terhadap serangan sinar ultra violet.', 5, 2, 'belazo, cat genteng, belazo cat genteng, belazo ro', 'Belazo_ROOF_PAINT-600x600.jpg', 5, 1, 'y', 0),
+(17, 'BLZOWS', 'Belazo Wood Stain', 'Belazo Woodstain - Green Wood Coating adalah pelapis kayu 100% akrilik berbahan dasar air dengan kandungan pigmen oksida transparan. Melapisi permukaan kayu dengan lapisan bening khusus sehingga keindahan serat kayu tetap terjaga dan terkesan alami. Dapat digunakan untuk interior dan eksterior', 8, 0, 'belazo wood stain, belazo ws, cat politur', 'BELAZO_WOODSTAIN_-_1_LITER.jpg', 3, 1, 'y', 9),
+(18, 'BLZORP', 'Belazo Roof Paint', 'Belazo Elastomeric Roof Paint adalah merupakan Cat genteng premium berbahan dasar air yang mengandung pewarna eksterior untuk perlindungan terhadap serangan sinar ultra violet.', 5, 2, 'belazo, cat genteng, belazo cat genteng, belazo ro', 'Belazo_ROOF_PAINT-600x600.jpg', 5, 1, 'y', 2),
 (19, 'OXYGN', 'Oxygen ', 'Oxygen adalah cat spray serbaguna dengan warna yang menarik, dan harga yang terjangkau.', 31, 0, 'oxygen, cat semprot, cat spray, oxygen paint', 'Oxygen.jpg', 6, 1, 'y', 1),
 (20, 'WLS', 'Welstone', 'WelStone dapat masuk kedalam pori-pori substrat dan membentuk lapisan yang melekat kuat, tahan terhadap perubahan cuaca dan mencegah timbulnya jamur dan lumut,dengan demikian batu terlindungi dan memiliki tampilan yang indah, mengkilap, dan menonjolkan warna serta tekstur alami batu.', 42, 0, 'welstone, cat batu, cat batu alam', '1408Welstone_Ok.jpg', 8, 1, 'y', 3),
 (21, 'SPEEDY', 'Speedy', 'Thinner Speedy adalah thinner berkualitas serbaguna yang berguna sebagai pengencer segala jenis cat.', 4, 0, 'thinner, thinner speedy, speedy thinner', 'Speedy-600x600.jpg', 7, 1, 'n', 8),
-(22, 'XXTIKA', 'Kuas Tika', 'Kuas Tika adalah kuas dengan kualitas yang sangat baik', 43, 0, 'kuas tika, kuas, tika kuas', 'Tika_4-600x600.jpg', 7, 1, 'y', 0);
+(22, 'XXTIKA', 'Kuas Tika', 'Kuas Tika adalah kuas dengan kualitas yang sangat baik', 43, 0, 'kuas tika, kuas, tika kuas', 'Tika_4-600x600.jpg', 7, 1, 'y', 8),
+(23, 'CTTD', 'Dulux Catylac', 'Cat Tembok Catylac adalah cat tembok dengan pilihan warna yang menarik untuk menghiasi interior rumah.', 1, 1, 'catylac, catylac cat tembok, cat tembok interior', 'catylac_galon.jpg', 9, 1, 'n', 14),
+(24, 'DLPT', 'Dulux Pentalite', 'Dulux Pentalite adalah cat tembok interior kelas Premium dengan hasil yang maksimal. Note: harga diatas adalah harga untuk warna umum. Harga Dulux Pentalite warna khusus bisa lebih mahal.', 1, 1, 'pentalite, dulux pentalite, cat pentalite ', 'pentalite.jpg', 11, 1, 'n', 14),
+(25, 'DLWP', 'Dulux Weathershield', 'Dulux weathershield adalah cat tembok kelas premium dengan kualitas yang sangat baik untuk dinding eksterior anda serta tahan dari segala cuaca', 1, 2, 'dulux, dulux weathershield', 'wts.jpg', 12, 1, 'n', 4),
+(26, 'MWEM', 'Mowilex ', 'Mowilex Emulsion Standard adalah cat tembok kelas premium yang memberikan hasil tembok yang kuat dan maksimal untuk Interior ruangan.\r\nBagikan produk ini :', 1, 1, 'mowilex, cat tembok, mowilex emulsion', 'mowilek_galon.jpg', 12, 1, 'n', 5),
+(27, 'MMMW', 'Mawar', 'Cat tembok Mawar adalah cat tembok interior berkualitas dengan harga yang terjangkau.', 1, 1, 'mawar, mawar cat tembok', 'Mawar.jpg', 14, 1, 'n', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cabang`
+-- Struktur dari tabel `cabang`
 --
 
 CREATE TABLE `cabang` (
@@ -108,7 +113,7 @@ CREATE TABLE `cabang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `cabang`
+-- Dumping data untuk tabel `cabang`
 --
 
 INSERT INTO `cabang` (`id_cabang`, `nm_cbg`, `alamat`, `telp`, `stat`) VALUES
@@ -131,7 +136,7 @@ INSERT INTO `cabang` (`id_cabang`, `nm_cbg`, `alamat`, `telp`, `stat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jenis`
+-- Struktur dari tabel `jenis`
 --
 
 CREATE TABLE `jenis` (
@@ -140,7 +145,7 @@ CREATE TABLE `jenis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `jenis`
+-- Dumping data untuk tabel `jenis`
 --
 
 INSERT INTO `jenis` (`kd_jenis`, `nm_jenis`) VALUES
@@ -150,7 +155,7 @@ INSERT INTO `jenis` (`kd_jenis`, `nm_jenis`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -159,7 +164,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
@@ -169,7 +174,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kat_barang`
+-- Struktur dari tabel `kat_barang`
 --
 
 CREATE TABLE `kat_barang` (
@@ -177,57 +182,30 @@ CREATE TABLE `kat_barang` (
   `nm_kategori` varchar(30) NOT NULL,
   `desk_kategori` varchar(50) NOT NULL,
   `deskripsi_kat` varchar(500) NOT NULL,
-  `parent_of` varchar(32) DEFAULT NULL
+  `parent_of` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kat_barang`
+-- Dumping data untuk tabel `kat_barang`
 --
 
 INSERT INTO `kat_barang` (`kd_kategori`, `nm_kategori`, `desk_kategori`, `deskripsi_kat`, `parent_of`) VALUES
-(1, 'CTTB', 'Cat Tembok', 'Berikut adalah produk cat yang disarankan untuk diaplikasikan pada tembok bagian dalam (interior), maupun luar ruangan (eksterior).', '0'),
-(2, 'CLR', 'Cat Kayu Besi', 'Cat kayu besi adalah cat yang khusus digunakan untuk melapisi permukaan kayu / besi dengan pilihan warna yang menarik.', '0'),
-(3, 'CTDC', 'Cat Duco', 'Cat duco adalah cat yang khusus digunakan untuk melapisi kendaraan mobil / motor Anda. ', '0'),
-(4, 'THIN', 'Thinner', 'Thinner adalah cairan yang berguna untuk mengencerkan cat. Thinner dibedakan menjadi 2 jenis yang disesuaikan dengan  kebutuhan', '0'),
-(5, 'CTGT', 'Cat Genteng', 'Cat Genteng adalah cat yang digunakan untuk melapisi dan melindungi genteng maupun seng dari kerusakan akibat lumut, dan cuaca.', '0'),
-(7, 'WTRPF', 'Waterproof', 'Waterproof adalah pelapis anti air yang berguna melindungi obyek dari kebocoran.', '0'),
-(8, 'PLT', 'Politur', 'Politur adalah pewarna kayu yang bersifat transparan, dan tidak menutup serat kayu', '0'),
-(12, 'CTTB-INT', 'Interior', 'Berikut ini adalah produk cat tembok yang disarankan hanya diaplikasikan untuk di dalam ruangan saja.', '1'),
-(13, 'CTTB-EXT', 'Eksterior', 'Produk berikut ini adalah cat tembok yang mampu diaplikasikan pada tembok luar ruangan, karena memiliki pigmen warna yang lebih kuat daripada cat interior', '1'),
-(14, 'CTTB-INT-GLOSS', 'Glossy', 'Produk berikut ini adalah cat tembok yang diaplikasikan pada bagian dalam ruangan, dan memberikan hasil akhir yang mengkilap', '12'),
-(16, 'CLR-SOLBASE', 'Solvent Base', 'Berikut ini adalah cat kayu dan besi yang menggunakan campuran thinner B dengan komposisinya sesuai kemasan untuk hasil yang lebih optimal.', '2'),
-(17, 'CLR-WTRBASE', 'Water Based', 'Produk berikut ini adalah cat kayu dan besi yang menggunakan campuran air sesuai dengan komposisinya pada masing-masing kemasan.', '2'),
-(18, 'CTD-SOLBASE', 'Solvent Base', 'Berikut ini adalah cat duco yang menggunakan campuran thinner dengan komposisinya sesuai kemasan, dan disarankan menggunakan campuran Thinner A', '3'),
-(19, 'CTD-WTRBASE', 'Water Based', 'Produk berikut ini adalah cat duco yang menggunakan campuran air dengan komposisinya sesuai kemasan', '3'),
-(20, 'THIN-A', 'Thinner A', 'Produk berikut ini merupakan jenis thinner yang cepat kering. Biasanya digunakan sebagai campuran cat duco dan beberapa jenis politur', '4'),
-(21, 'THIN-B', 'Thinner B', 'Produk berikut ini merupakan jenis thinner yang lambat kering, yang biasanya digunakan sebagai campuran cat kayu besi', '4'),
-(22, 'CTGT-WTRBASE', 'Water Based', 'Berikut ini adalah cat genteng yang menggunakan campuran air dengan komposisinya sesuai kemasan.', '5'),
-(23, 'CTGT-SOLBASE', 'Solvent Base', 'Berikut ini adalah cat genteng yang menggunakan campuran thinner dengan komposisinya sesuai kemasan', '5'),
-(24, 'WTRPF-WTRBASE', 'Water Based', 'Produk berikut ini adalah pelapis anti bocor yang menggunakan campuran air dengan komposisinya sesuai kemasan.', '7'),
-(25, 'WTRPF-CMNBASE', 'Cement Based', 'Produk berikut ini adalah pelapis anti bocor dengan bahan dasar semen. Dapat diaplikasikan pada tembok, atap, kolam, dan sebagainya.', '7'),
-(26, 'PLT-WTRBASE', 'Water Based', 'Produk berikut ini adalah pewarna kayu yang menggunakan campuran air dengan komposisinya sesuai kemasan.', '8'),
-(27, 'PLT-SOLBASE', 'Solvent Base', 'Produk berikut ini adalah pewarna kayu yang menggunakan campuran thinner dengan komposisinya sesuai kemasan.', '8'),
-(28, 'PLT-SOLBASE-INT', 'Interior', 'Produk berikut ini adalah pewarna kayu yang menggunakan campuran thinner, dan diaplikasikan untuk interior.', '27'),
-(29, 'PLT-SOLBASE-EXT', 'Eksterior', 'Produk berikut ini adalah pewarna kayu yang menggunakan campuran thinner dengan komposisinya sesuai kemasan, dan dapat diaplikasikan untuk produk kayu eksterior', '27'),
-(30, 'LN-PLM', 'Plamir', 'Plamir / Dempul tembok adalah bahan pelapis yang berguna menambal tembok yang terlihat retak sehingga menjadi lebih rata sebelum dilakukan pengecatan.', '43'),
-(31, 'LN-CSPR', 'Cat Spray', 'Cat spray adalah cat serbaguna yang dapat diaplikasikan pada beberapa obyek dengan pilihan warna yang menarik dengan cara disemprot.', '43'),
-(32, 'LN-ALSE', 'Alkali Sealer', 'Alkali Sealer / Cat dasar berfungsi melindungi cat tembok dari kerusakan yang disebabkan kadar garam alkali pada tembok', '43'),
-(33, 'LN-PREM', 'Paint Remover', 'Paint Remover adalah cairan yang membantu memudahkan penghapusan / pengelupasan cat lama, supaya tembok dapat diberi warna baru', '43'),
-(34, 'KWAS', 'Kuas', 'Berikut ini adalah produk kuas, roll, maupun bulu roll yang wajib digunakan jika kita ingin melakukan pengecatan.', '43'),
-(35, 'AMP', 'Amplas', 'Berikut adalah produk amplas yang dapat digunakan untuk menghaluskan permukaan. Tersedia dalam berbagai ukuran', '43'),
-(37, 'LEM', 'Lem', 'Berikut adalah produk lem serbaguna yang dapat diaplikasikan untuk bangunan, maupun keperluan pribadi', '43'),
-(39, 'CTTB-INT-STN', 'Satin', 'Produk berikut ini adalah cat tembok interior dengan hasil akhir yang tidak begitu mengkilap dan juga tidak begitu doff (agak mengkilap).', '12'),
-(40, 'CTTB-INT-DF', 'Doff', 'Produk berikut ini adalah cat tembok interior dengan hasil akhir yang lebih kasar atau tidak mengkilap.', '12'),
-(41, 'CTTB-TXT', 'Tekstur', 'Berikut ini adalah produk cat tembok yang memberikan hasil akhir berupa tekstur unik tersendiri.', '1'),
-(42, 'CTBT', 'Cat Batu', 'Produk berikut ini adalah cat yang dapat diaplikasikan untuk batu. Tersedia dengan hasil akhir doff, glossy, atau satin.', '0'),
-(43, 'LN', 'Lain-lain', '', '0'),
-(44, 'all', '', 'Kami menjual segala kebutuhan pengecatan anda', NULL),
-(45, 'unggulan', '', 'Produk unggulan kami memiliki kualitas yang lebih baik dari produk lain', NULL);
+(1, 'CTTB', 'Cat Tembok', 'Berikut adalah produk cat yang disarankan untuk diaplikasikan pada tembok bagian dalam (interior), maupun luar ruangan (eksterior).', 3),
+(2, 'CLR', 'Cat Kayu Besi', 'Cat kayu besi adalah cat yang khusus digunakan untuk melapisi permukaan kayu / besi dengan pilihan warna yang menarik.', 4),
+(3, 'CTDC', 'Cat Duco', 'Cat duco adalah cat yang khusus digunakan untuk melapisi kendaraan mobil / motor Anda. ', 5),
+(4, 'THIN', 'Thinner', 'Thinner adalah cairan yang berguna untuk mengencerkan cat. Thinner dibedakan menjadi 2 jenis yang disesuaikan dengan  kebutuhan', 10),
+(5, 'CTGT', 'Cat Genteng', 'Cat Genteng adalah cat yang digunakan untuk melapisi dan melindungi genteng maupun seng dari kerusakan akibat lumut, dan cuaca.', 6),
+(7, 'WTRPF', 'Cat Waterproofing', 'Waterproof adalah pelapis anti air yang berguna melindungi obyek dari kebocoran.', 7),
+(8, 'PLT', 'Politur', 'Politur adalah pewarna kayu yang bersifat transparan, dan tidak menutup serat kayu', 8),
+(42, 'CTBT', 'Cat Batu', 'Produk berikut ini adalah cat yang dapat diaplikasikan untuk batu. Tersedia dengan hasil akhir doff, glossy, atau satin.', 9),
+(43, 'LN', 'Lain-lain', '', 11),
+(44, 'all', 'Semua Produk Kami', 'Kami menjual segala kebutuhan pengecatan anda', 2),
+(45, 'unggulan', 'Produk Unggulan', 'Produk unggulan kami memiliki kualitas yang lebih baik dari produk lain', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login_log`
+-- Struktur dari tabel `login_log`
 --
 
 CREATE TABLE `login_log` (
@@ -241,7 +219,7 @@ CREATE TABLE `login_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `raw`
+-- Struktur dari tabel `raw`
 --
 
 CREATE TABLE `raw` (
@@ -258,7 +236,7 @@ CREATE TABLE `raw` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `raw`
+-- Dumping data untuk tabel `raw`
 --
 
 INSERT INTO `raw` (`kd_raw`, `kd_gudang`, `kd_barang`, `nm_barang`, `jumlah`, `harga`, `order`, `kd_merk`, `kd_golongan`, `kemasan`) VALUES
@@ -29254,7 +29232,7 @@ INSERT INTO `raw` (`kd_raw`, `kd_gudang`, `kd_barang`, `nm_barang`, `jumlah`, `h
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting`
+-- Struktur dari tabel `setting`
 --
 
 CREATE TABLE `setting` (
@@ -29264,7 +29242,7 @@ CREATE TABLE `setting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `setting`
+-- Dumping data untuk tabel `setting`
 --
 
 INSERT INTO `setting` (`param`, `value`, `description`) VALUES
@@ -29277,7 +29255,7 @@ INSERT INTO `setting` (`param`, `value`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slideshow`
+-- Struktur dari tabel `slideshow`
 --
 
 CREATE TABLE `slideshow` (
@@ -29291,17 +29269,18 @@ CREATE TABLE `slideshow` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `slideshow`
+-- Dumping data untuk tabel `slideshow`
 --
 
 INSERT INTO `slideshow` (`id_slideshow`, `tanggal`, `judul`, `url`, `img`, `z-index`, `stat`) VALUES
-(6, '2018-05-03', 'Coba gan', '', 'Ramadhan.jpg', 2, 1),
-(7, '2018-05-10', 'Slideshow baru', '', 'Beauty.jpg', 1, 1);
+(6, '2018-05-03', 'Coba gan', '', 'Ramadhan.jpg', 2, 0),
+(7, '2018-05-10', 'Slideshow baru', '', 'Beauty.jpg', 1, 0),
+(8, '2018-05-21', 'Ramadan', '', 'ramadhan_2017.jpg', 3, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -29312,7 +29291,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `stat`) VALUES
@@ -29402,7 +29381,7 @@ ALTER TABLE `artikel`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `cabang`
 --
@@ -29437,7 +29416,7 @@ ALTER TABLE `raw`
 -- AUTO_INCREMENT for table `slideshow`
 --
 ALTER TABLE `slideshow`
-  MODIFY `id_slideshow` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_slideshow` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `user`
 --
