@@ -4,7 +4,7 @@ class Product extends CI_Controller
 {
 	public function view($kd_merk){
 		$data['barang'] = $this->home_model->get_row_barang('kd_merk',$kd_merk);
-		$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk like '$kd_merk' group by nm_barang")->result_array();
+		$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk like '$kd_merk' and harga != 0 group by nm_barang")->result_array();
 
 		$data['title'] = $data['barang']['nm_barang'];
 		$data['keywords'] = $data['barang']['tag'];
@@ -50,90 +50,23 @@ class Product extends CI_Controller
 	public function kategori($kat=null){
 		$kat = $this->uri->segment(3);
 		$data['title'] = "Produk Kami";
-		switch ($kat) {
-			case 'all' :
-				$data['title'] = 'Semua Produk';
-				$data['judul_kat'] = "PRODUK KAMI";
-				$data['barangs'] = $this->db->get('barang')->result_array();
+
+		if($kat){
+			$kategori = $this->db->where('kd_kategori', $kat)->get('kat_barang')->row_array();
+			$data['judul_kat'] = $kategori['desk_kategori'];
+			$data['title'] = $kategori['desk_kategori'];
+			$data['barangs'] = $this->home_model->get_list_barang($kat);
+			$data['desc_kat'] = $this->db->where('kd_kategori', $kat)->get('kat_barang')->row_array();
+			//kalau semua produk (44 adalah kd_kategori)
+			if($kat == 44){
+				$data['barangs'] = $this->home_model->get_all_barang($kat);
 				$data['desc_kat'] = $this->db->where('kd_kategori', 44)->get('kat_barang')->row_array();
-			break;
-
-			case 'unggulan':
-				$data['title'] = 'Produk Unggulan';
-				$data['judul_kat'] = "	PRODUK UNGGULAN KAMI";
+			} else if($kat == 45){
 				$data['barangs'] = $this->home_model->get_barang_unggulan(0);
-				$data['desc_kat'] = $this->db->where('kd_kategori', 45)->get('kat_barang')->row_array();	
-				break;
-
-			case 'tembok':
-				$data['title'] = 'Cat Tembok';
-				$data['judul_kat'] = "	PRODUK CAT TEMBOK KAMI";
-				$data['barangs'] = $this->db->where('kd_kategori','1')->get('barang')->result_array();
-				$data['desc_kat'] = $this->db->where('kd_kategori', 1)->get('kat_barang')->row_array();	
-				break;
-
-			case 'kayu_besi':
-				$data['title'] = 'Cat Kayu Besi';
-				$data['judul_kat'] = "	PRODUK CAT KAYU & BESI ";
-				$data['barangs'] = $this->db->where('kd_kategori','2')->get('barang')->result_array();
-				$data['desc_kat'] = $this->db->where('kd_kategori', 2)->get('kat_barang')->row_array();;	
-				break;
-
-			case 'politur':
-				$data['title'] = 'Cat Politur';
-				$data['judul_kat'] = "	PRODUK CAT POLITUR ";
-				$data['barangs'] = $this->db->where('kd_kategori','8')->get('barang')->result_array();
-				$data['desc_kat'] = $this->db->where('kd_kategori', 8)->get('kat_barang')->row_array();;	
-				break;
-
-			case 'genteng':
-				$data['title'] = 'Cat Genteng';
-				$data['judul_kat'] = "	PRODUK CAT POLITUR ";
-				$data['barangs'] = $this->db->where('kd_kategori',5)->get('barang')->result_array();
-				$data['desc_kat'] = $this->db->where('kd_kategori', 5)->get('kat_barang')->row_array();;	
-				break;
-
-			case 'waterproofing':
-				$data['title'] = 'Cat Waterproofing';
-				$data['judul_kat'] = "	PRODUK CAT POLITUR ";
-				$data['barangs'] = $this->db->where('kd_kategori',7)->get('barang')->result_array();
-				$data['desc_kat'] = $this->db->where('kd_kategori', 7)->get('kat_barang')->row_array();;	
-				break;
-
-			case 'spray':
-				$data['title'] = 'Cat Spray';
-				$data['judul_kat'] = "	PRODUK CAT SPRAY / SEMPROT ";
-				$data['barangs'] = $this->db->where('kd_kategori',31)->get('barang')->result_array();
-				$data['desc_kat'] = $this->db->where('kd_kategori', 31)->get('kat_barang')->row_array();;	
-				break;
-			
-			case 'duco':
-				$data['title'] = 'Cat Duco';
-				$data['judul_kat'] = "CAT DUCO";
-				$data['desc_kat'] = $this->db->where('kd_kategori', 3)->get('kat_barang')->row_array();
-				$data['barangs'] = $this->db->where('kd_kategori','3')->get('barang')->result_array();
-				break;
-
-			case 'batu':
-				$data['title'] = 'Cat Batu';
-				$data['judul_kat'] = "CAT BATU";
-				$data['desc_kat'] = $this->db->where('kd_kategori', 42)->get('kat_barang')->row_array();
-				$data['barangs'] = $this->db->where('kd_kategori',42)->get('barang')->result_array();
-				break;
-
-			case 'thinner':
-				$data['title'] = 'Thinner';
-				$data['judul_kat'] = "THINNER";
-				$data['desc_kat'] = $this->db->where('kd_kategori', 4)->get('kat_barang')->row_array();
-				$data['barangs'] = $this->db->where('kd_kategori',4)->get('barang')->result_array();
-				break;
-			case 'lain':
-				$data['title'] = 'Produk Lain - Lain';
-				$data['judul_kat'] = "PRODUK LAIN - LAIN";
-				$data['desc_kat'] = $this->db->where('kd_kategori', 43)->get('kat_barang')->row_array();
-				$data['barangs'] = $this->db->where('kd_kategori',43)->get('barang')->result_array();
-				break;
+				$data['desc_kat'] = $this->db->where('kd_kategori', 45)->get('kat_barang')->row_array();
+			}
 		}
+
 		if(isset($kat)){
 			$data['content'] = 'frontend/index_kategori';
 		} else {

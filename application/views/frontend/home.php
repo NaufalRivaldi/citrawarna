@@ -1,4 +1,7 @@
-<img src="<?= base_url('upload/slideshow/Beauty.jpg') ?>" alt="" class="img-fluid img-position" id="img-position">
+<?php $img = $this->db->order_by('tanggal', 'desc')->where('stat', 1)->get('slideshow')->row_array(); ?>
+
+<img src="<?= base_url('upload/slideshow/'.$img['img']) ?>" alt="sampul" class="img-fluid img-position" id="img-position">
+
 
 	<div class="container-fluid">
 		<br>
@@ -94,7 +97,7 @@
 							</div>
 						</div>
 						<p class="product-name"><?= $barang['nm_barang'] ?> </p>	
-						<p class="kat-name">Cat Tembok</p>
+						<p class="kat-name"><?= $barang['desk_kategori'] ?></p>
 					</a>
 				</div>
 				<?php } ?>
@@ -103,7 +106,7 @@
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-4">
-					<a href="<?= base_url('product/kategori/unggulan') ?>" class="btn btn-warning btn-block btn-lg">Lihat Semua Produk</a>
+					<a href="<?= base_url('product/kategori/45') ?>" class="btn btn-warning btn-block btn-lg">Lihat Semua Produk</a>
 				</div>
 			</div>
 			<hr>

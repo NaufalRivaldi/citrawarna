@@ -18,7 +18,7 @@ class Home_model extends CI_Model
 	}
 
 	public function get_barang_unggulan($limit=null){
-		return $this->db->where('stat', 1)->where('unggulan', 'y')->get('barang', $limit)->result_array();
+		return $this->db->join('kat_barang', 'kat_barang.kd_kategori = barang.kd_kategori')->where('stat', 1)->where('unggulan', 'y')->get('barang', $limit)->result_array();
 	}
 
 	public function updateClick($tbl,$field,$value){
@@ -36,6 +36,16 @@ class Home_model extends CI_Model
 		return $this->db->where('nm_barang', $nm_barang)->get('raw');
 	}
 
+	public function get_list_barang($kat){
+		return $this->db->join('kat_barang', 'kat_barang.kd_kategori = barang.kd_kategori')->where('barang.kd_kategori', $kat)->get('barang')->result_array();
+	}
+
+	public function get_all_barang($kat){
+		return $this->db->join('kat_barang', 'kat_barang.kd_kategori = barang.kd_kategori')->get('barang')->result_array();
+	}
+
+
+ 
 
 
 }

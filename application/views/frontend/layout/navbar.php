@@ -30,14 +30,17 @@
 		<div class="flex-container-second">
 			<div class="container">
 				<ul>
-					<li class="list"><a href="<?= base_url('product/kategori/unggulan') ?>">Product Unggulan</a></li>
-					<li class="list"><a href="<?= base_url('product/kategori/all') ?>">Semua Kategori</a></li>
-					<li class="list"><a href="<?= base_url('product/kategori/tembok') ?>">Cat Tembok</a></li>
-					<li class="list"><a href="<?= base_url('product/kategori/genteng') ?>">Cat Genteng</a></li>
-					<li class="list"><a href="<?= base_url('product/kategori/waterproofing') ?>">Cat Waterproofing</a></li>
-					<li class="list"><a href="<?= base_url('product/kategori/kayu_besi') ?>">Cat Kayu & Besi</a></li>
-					<li class="list"><a href="<?= base_url('product/kategori/duco') ?>">Cat Duco</a></li>
-					<li class="list"><a href="<?= base_url('product/kategori/thinner') ?>">Thinner</a></li>
+					<?php $nav = $this->db->order_by('parent_of', 'asc')->get('kat_barang')->result_array(); 
+						foreach($nav as $link) {
+					?>
+					<li class="list">
+						<a href="<?= base_url('product/kategori/'.$link['kd_kategori']) ?>">
+							<?= $link['desk_kategori'] ?>		
+						</a>
+					</li>
+					
+					<?php } ?>
+					<!-- coding buat navbar kalo sewaktu diperlukan
 					<li class="list"><a href="<?= base_url('product/kategori/lain') ?>">Lain - Lain</a>
 						<div class="dropdown">
 							<a href=""></a>
@@ -45,7 +48,7 @@
 							<a href="#">Link 1</a>
 							<a href="#">Link 1</a>
 						</div>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
@@ -59,20 +62,19 @@
 		<li><a href="#contact">CONTACT</a></li>
 		<hr>
 		<b> - Kategori - </b>
-		<li class="list"><a href="<?= base_url('product/kategori/unggulan') ?>">Product Unggulan</a></li>
-		<li class="list"><a href="<?= base_url('product/kategori/all') ?>">Semua Kategori</a></li>
-		<li class="list"><a href="<?= base_url('product/kategori/tembok') ?>">Cat Tembok</a></li>
-		<li class="list"><a href="<?= base_url('product/kategori/genteng') ?>">Cat Genteng</a></li>
-		<li class="list"><a href="<?= base_url('product/kategori/waterproofing') ?>">Cat Waterproofing</a></li>
-		<li class="list"><a href="<?= base_url('product/kategori/kayu_besi') ?>">Cat Kayu & Besi</a></li>
-		<li class="list"><a href="<?= base_url('product/kategori/duco') ?>">Cat Duco</a></li>
-		<li class="list"><a href="<?= base_url('product/kategori/thinner') ?>">Thinner</a></li>
-		<li class="list"><a href="<?= base_url('product/kategori/lain') ?>">Lain - Lain</a>
-			<div class="dropdown">
+		<?php $nav = $this->db->order_by('parent_of', 'asc')->get('kat_barang')->result_array(); 
+				foreach($nav as $link) { ?>
+			<li class="list">
+				<a href="<?= base_url('product/kategori/'.$link['kd_kategori']) ?>">
+					<?= $link['desk_kategori'] ?>		
+				</a>
+			</li>			
+		<?php } ?>
+			<!-- <div class="dropdown">
 				<a href=""></a>
 				<a href="#">Modacon</a>
 				<a href="#">Link 1</a>
 				<a href="#">Link 1</a>
-			</div>
+			</div> -->
 		</li>
 	</ul>

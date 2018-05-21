@@ -13,7 +13,7 @@
 							</div>
 						</div>
 						<p class="product-name"><?= $barang['nm_barang'] ?> </p>	
-						<p class="kat-name">Cat Tembok</p>
+						<p class="kat-name"><a href="<?= base_url('product/kategori/'.$barang['kd_kategori']) ?>"><?= $barang['desk_kategori'] ?></a></p>
 					</a>
 				</div>
 				<?php } ?>

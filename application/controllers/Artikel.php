@@ -18,7 +18,7 @@ class Artikel extends CI_Controller
 	}
 
 	public function read($link){
-		$data['artikel'] = $this->db->where('link', $link)->get('artikel')->row_array();
+		$data['artikel'] = $this->db->join('kategori', 'kategori.id_kategori=artikel.id_kategori')->where('link', $link)->get('artikel')->row_array();
 		$data['title'] = $data['artikel']['judul'];
 		$data['keywords'] = $data['artikel']['keyword'];
 		$data['img'] = 'upload/artikel/'.$data['artikel']['img'];
