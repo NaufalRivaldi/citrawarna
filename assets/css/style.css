@@ -341,6 +341,7 @@ h2 {
 	box-shadow: 0px 0px 2px #222222;
 	padding: 8px;
 	transition: 0.5s;
+	margin-top: 20px;
 }
 
 .body-article a:hover{
@@ -398,7 +399,7 @@ h2 {
 	height: auto;
 	border-radius: 10px;
 	box-shadow: 0px 0px 3px #222222;
-	padding-top: 70px;
+	padding-top: 100px;
 	text-align: center;
 	background-color:white;
 }
@@ -426,7 +427,7 @@ h2 {
 .body-barang {
 	border-radius: 10px;
 	box-shadow: 0px 0px 3px #222222;
-	padding-top: 85px;
+	padding-top: 100px;
 	padding-left: 30px;
 	padding-right: 30px;
 }
@@ -529,4 +530,69 @@ h2 {
     border-style: inset;
     border-width: 1px;
     padding-top:2px;
+}
+
+
+.list-kategori {
+	text-align: left;
+}
+.list-kategori ul {
+	padding-left: 15px;
+
+}
+.list-kategori ul li {
+	background-color: #F1F1F1;
+	width: 100%;
+	list-style: none;
+	margin-top: 10px;
+	border-radius: 10px;
+	transition: 0.3s;
+}
+
+.list-kategori li a {
+	display: block;
+	padding:10px 0 10px 15px;
+	color:black;
+}
+
+.list-kategori li a:hover {
+	text-decoration: none;
+	color:red;
+	transition: 0.3s;
+}
+
+.list-kategori li:hover{
+	background: yellow;
+	
+	display: block;
+	transition: 0.3s;
+}
+
+
+.artikels {
+	width: 100%;
+	background-color: white;
+	padding: 8px;
+	position: relative;
+}
+
+
+.text-artikels {
+	position: absolute;
+	top: 70%;
+    left: 50%
+	font-size: 20px;
+	text-transform:capitalize;
+	color:white;
+	background:rgb(0,0,0,0.5);
+	width: 335px;
+	height: 50px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.gmbr-artikels {
+  width: 335px;
+  height: 180px;
+  transition: 0.5s;
 }

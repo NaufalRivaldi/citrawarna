@@ -25,7 +25,7 @@
 					<?php $last_update = $this->home_model->get_setting('last_raw_update'); ?>
 					<div class="keterangan-barang">
 						<p><b>*Data stok dan harga update per tanggal <?= $last_update['value'] ?></b></p>
-						<p><b>*Harga dapat berubah sewaktu-waktu</b></p>
+						<p><b>*Stock & Harga dapat berubah sewaktu-waktu</b></p>
 						<p><b>*klik nama barang untuk melihat stok di masing-masing cabang</b></p>
 					</div>
 				</div>
@@ -124,6 +124,12 @@
 									break;
 								case 'CA5' : 
 									$lokasi = " Citra Warna Singaraja";
+									break;
+								case 'CA6' :
+									$lokasi = " Citra Warna Tibubeneng Canggu";
+									break;
+								default : 
+									$lokasi = "undefined";
 									break;
 
 							}

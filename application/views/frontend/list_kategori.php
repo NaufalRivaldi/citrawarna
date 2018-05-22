@@ -2,17 +2,18 @@
 	<div class="container body-artikel">	
 		<h1>PILIH KATEGORI PRODUK</h1>
 		<br>	
+
 		<div class="row">
-			<?php $kategori = $this->db->order_by('parent_of', 'asc')->get('kat_barang')->result_array(); 
-				foreach($kategori as $list) {
-			?>
-			<div class="col-md-4">
-				<a href="<?= base_url('product/kategori/'.$list['kd_kategori']) ?>">
-					<img src="<?= base_url('assets/img/unggulan.jpg') ?>" alt="" class="img-fluid">
-					<h2><?= $list['desk_kategori'] ?></h2>
-				</a>
+			<div class="col-md-12">
+				<div class="list-kategori">
+					<ul>
+					<?php $kategori = $this->db->order_by('parent_of', 'asc')->get('kat_barang')->result_array(); 
+						foreach($kategori as $list) { ?>
+						<li><a href="<?= base_url('product/kategori/'.$list['kd_kategori']) ?>"><i class="fa fa-angle-double-right"></i> <?= $list['desk_kategori'] ?></a></li>
+						<?php } ?>
+					</ul>
+				</div>
 			</div>
-		<?php } ?>
-			
+	
 		</div>
 	</div>

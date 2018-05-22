@@ -9,6 +9,10 @@ class Home_model extends CI_Model
 						->get('artikel',$limit)->result_array();
 	}
 
+	public function get_random_artikel($limit){
+		return $this->db->query("SELECT * FROM artikel INNER JOIN kategori on kategori.id_kategori = artikel.id_kategori order by rand() LIMIT $limit")->result_array();
+	}
+
 	public function get_cabang(){
 		return $this->db->where('stat', 1)->get('cabang')->result_array();
 	}

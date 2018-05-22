@@ -45,21 +45,19 @@
 			
 			<div class="row">
 				
-				<?php $articles = $this->home_model->get_home_artikel(3);
+				<?php $articles = $this->home_model->get_random_artikel(3);
 
 				foreach($articles as $artikel) { ?>
 				<div class="col-md-4">
-					<div class="body-article">
+					<div class="artikels">
 						<a href="<?= base_url('artikel/read/').$artikel['link'] ?>">
-							<div class="img-article" style="background: url('<?= base_url() ?>/upload/artikel/thumbs/<?= $artikel['img'] ?>') no-repeat; background-position: center; background-size: cover;"></div>
-							<div class="judul-article">
+							<div class="gmbr-artikels" style="background: url('<?= base_url() ?>/upload/artikel/thumbs/<?= $artikel['img'] ?>') no-repeat; background-position: center; background-size: cover;">
+							<div class="text-artikels">
 								<b><?= $artikel['judul'] ?></b>
 							</div>
-							<hr>
+							</div>
 						</a> 
-						<div class="desc-article">
-							<p>Published : <?= $artikel['tanggal'] ?> <br> Kategori : <?= $artikel['nama_kategori'] ?></p>
-						</div>
+			
 					</div>
 				</div>
 				<?php } ?>

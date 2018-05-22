@@ -8,7 +8,7 @@ class Artikel extends CI_Controller
 	}
 
 	public function index(){
-		$data['artikels'] = $this->home_model->get_home_artikel(3);
+		$data['artikels'] = $this->home_model->get_home_artikel(0);
 		$data['title'] = "Artikel ";
 		$data['keywords'] = "Artikel Citra Warna, cwa artikel";
 		$data['description'] = "Berikut adalah artikel dari kami";
