@@ -7,8 +7,18 @@ class Artikel extends CI_Controller
 
 	}
 
-	public function index(){
-		$data['artikels'] = $this->home_model->get_home_artikel(0);
+	public function index($page=null){
+		$per_halaman = 6;
+		//menghitung offset (data dalam table)
+		if($page == null) {
+			$offset = 0;
+		} else {
+			$offset = ($page * $per_halaman) - $per_halaman;
+		}
+
+		$data['artikels'] = $this->home_model->get_home_artikel($per_halaman, $offset);
+		$art = $this->db->get('artikel')->num_rows();
+		$data['paginate'] = $this->home_model->pagination_artikel($art);
 		$data['title'] = "Artikel ";
 		$data['keywords'] = "Artikel Citra Warna, cwa artikel";
 		$data['description'] = "Berikut adalah artikel dari kami";

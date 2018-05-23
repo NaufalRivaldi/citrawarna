@@ -44,11 +44,15 @@
 						</thead>
 					</tr>
 					<?php $no=1; foreach($raw as $row) {  
-
+						//nama barang yang aneh2 harus direplace lalu dikembalikan lagi untuk where
 						$url = $row['nm_barang'];
 						if(strpos($url, '"')){
 							$url = str_replace('"', "~", $url);
-						} 
+						} else if(strpos($url, "(")){
+							$url = str_replace(str_split('()'), str_split('<>'), $url);
+						} else if(strpos($url, "/")){
+							$url = str_replace('/', "^", $url);
+						}
 
 						?>
 					<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">

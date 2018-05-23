@@ -115,7 +115,7 @@
 			<h1 align="center">ARTIKEL TERBARU</h1>
 			<hr>
 			<div class="row">
-				<?php $articles = $this->home_model->get_home_artikel(3); 
+				<?php $articles = $this->home_model->get_new_artikel(3); 
 				foreach($articles as $artikel) { ?>
 				<div class="col-md-4">
 					<div class="body-article">
@@ -133,6 +133,36 @@
 				</div>
 				<?php } ?>
 			</div>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-4">
+					<a href="<?= base_url('artikel') ?>" class="btn btn-warning btn-block btn-lg">Tampilkan Lebih Banyak</a>
+				</div>
+			</div>
+
+			<br><br>
+			<h1 align="center">ARTIKEL TERPOPULER</h1>
+			<hr>
+			<div class="row">
+				<?php $popularArticles = $this->home_model->get_popular_artikel(); 
+				foreach($popularArticles as $article) { ?>
+				<div class="col-md-4">
+					<div class="body-article">
+						<a href="<?= base_url('artikel/read/').$article['link'] ?>">
+							<div class="img-article" style="background: url('upload/artikel/thumbs/<?= $article['img'] ?>') no-repeat; background-position: center; background-size: cover;"></div>
+							<div class="judul-article">
+								<b><?= $article['judul'] ?></b>
+							</div>
+							<hr>
+						</a> 
+						<div class="desc-article">
+							<p>Published : <?= $article['tanggal'] ?> <br> Kategori : <?= $article['nama_kategori'] ?></p>
+						</div>
+					</div>
+				</div>
+				<?php } ?>
+			</div>
+
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-4">

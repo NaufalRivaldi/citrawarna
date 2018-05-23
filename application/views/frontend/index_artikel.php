@@ -9,7 +9,7 @@
 				<div class="col-md-4">
 					<div class="body-article">
 						<a href="<?= base_url('artikel/read/').$artikel['link'] ?>">
-							<div class="img-article" style="background: url('upload/artikel/thumbs/<?= $artikel['img'] ?>') no-repeat; background-position: center; background-size: cover;"></div>
+							<div class="img-article" style="background: url('<?= base_url() ?>upload/artikel/thumbs/<?= $artikel['img'] ?>') no-repeat; background-position: center; background-size: cover;"></div>
 							<div class="judul-article">
 								<b><?= $artikel['judul'] ?></b>
 							</div>
@@ -21,7 +21,16 @@
 					</div>
 				</div>
 				<?php } ?>
-			</div>
-	<br>
+		</div>
+		<br><br>
+		<div class="row justify-content-center">
+			<nav>
+			  <ul class="pagination pagination-md">
+			    <?= $paginate; ?>
+			  </ul>
+			</nav>
+			
+		</div>
+		<br>
 	</div>
 </div>

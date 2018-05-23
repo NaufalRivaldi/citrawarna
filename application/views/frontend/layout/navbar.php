@@ -9,9 +9,21 @@
 						</a>
 					</div>
 					<ul>
-						<li><a href="<?= base_url() ?>">HOME</a></li>
-						<li><a href="<?= base_url('product/kategori') ?>">PRODUK</a></li>
-						<li><a href="<?= base_url('artikel') ?>">ARTIKEL</a></li>
+						<li>
+							<a href="<?= base_url() ?>" <?= ($this->uri->segment(1)=='')?"style='color:yellow'":"style=''" ?>>
+								HOME
+							</a>
+						</li>
+						<li>
+							<a href="<?= base_url('product/kategori') ?>" <?= ($this->uri->segment(1)=='product')?"style='color:yellow'":"style=''" ?>>
+								PRODUK
+							</a>
+						</li>
+						<li>
+							<a href="<?= base_url('artikel') ?>" <?= ($this->uri->segment(1)=='artikel')?"style='color:yellow'":"style=''" ?>>
+								ARTIKEL
+							</a>
+						</li>
 						<li><a href="#lokasi">LOKASI KAMI</a></li>
 						<li><a href="#contact">CONTACT</a></li>
 					</ul>

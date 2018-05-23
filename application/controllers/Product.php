@@ -23,6 +23,13 @@ class Product extends CI_Controller
 		if(strpos($nm_barang, "~")){
 			$namaBarang = str_replace('~', '"', $nm_barang);
 			$namaBarang = strtoupper(str_replace("_", " ", $namaBarang));
+		} else if(strpos($nm_barang, "%3Cplamir%3E")){
+			//plamir sompret kenapa mesti ada karakter aneh lagi sih
+			$namaBarang = str_replace("%3Cplamir%3E", "(plamir)", $nm_barang);
+			$namaBarang = strtoupper(str_replace("_", " ", $namaBarang));
+		} else if(strpos($nm_barang,'%5E')){
+			$namaBarang = str_replace("%5E", "/", $nm_barang);
+			$namaBarang = strtoupper(str_replace("_", " ", $namaBarang));
 		} else {
 			$namaBarang = strtoupper(str_replace("_", " ", $nm_barang));
 		}
