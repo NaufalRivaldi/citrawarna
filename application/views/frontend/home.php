@@ -12,7 +12,7 @@
 				<div class="col-md-7">
 					<p class="about"><b class="sorot"> CITRA WARNA </b> adalah toko cat terbesar di Bali, yang menyediakan produk-produk berkualitas, dan menjamin harga termurah. Cabang kami tersebar didaerah Denpasar, Nusadua, Ubud, Tabanan, Singaraja dan akan terus berkembang. </p>
 					<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-					    <img src="<?= base_url('assets/img/visimisi.jpg') ?>" alt="visimisi" width="360px">
+					    <img src="<?= base_url('assets/img/visimisi.jpg') ?>" alt="visimisi" width="100%">
 					</a>
 					<div class="collapse" id="collapseExample">
 					  <div class="card-theme card-body " style="">
@@ -30,7 +30,7 @@
 					</div>
 					<br><br>
 					<a data-toggle="collapse" href="#collapseBudaya" role="button" aria-expanded="false" aria-controls="collapseBudaya">
-					    <img src="<?= base_url('assets/img/budaya.jpg') ?>" alt="visimisi" width="360px">
+					    <img src="<?= base_url('assets/img/budaya.jpg') ?>" alt="visimisi" width="100%">
 					</a>
 					<div class="collapse" id="collapseBudaya">
 					  <div class="card-theme card-body " style="">

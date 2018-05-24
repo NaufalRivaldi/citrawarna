@@ -1,6 +1,6 @@
 	<div class="container-fluid">
 		<br>
-		<div class="container body-artikel">	
+		<div class="container body-list">	
 		<h1><?= $judul_kat ?></h1>
 		<p class="unggulan">"<?= $desc_kat['deskripsi_kat'] ?>"</p>
 		<br>	

@@ -3,7 +3,7 @@
 					<div class="col-md-6">
 					<br>
 					<center>
-						<img src="<?= base_url('assets/img/cs.png') ?>" alt="cs" width="360px">
+						<img src="<?= base_url('assets/img/cs.png') ?>" alt="cs" width="100%">
 					</center>
 					</div>
 					<div class="col-md-6">

@@ -1,5 +1,6 @@
 body {
 	font-family: 'Montserrat', sans-serif;
+	max-width: 100%;
 	overflow-x: hidden;
 }
 
@@ -57,6 +58,7 @@ h2 {
 
 @media (max-width: 460px) {
 	body {
+		max-width: 100%;
 		overflow-x: hidden;
 	}
 	.navbar ul {
@@ -117,6 +119,160 @@ h2 {
 		width: 415px;
 	}
 
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	body {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+	.navbar ul {
+		display: none;
+	}
+
+	.btn-cok {
+		display: block;
+		
+	}
+	.mobile-responsive {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		
+	}
+
+	.menu-mobile {
+		display: block;
+		height: 100%
+	}
+
+	.active-mobile {
+		padding-top:60px;
+		height: 100%;
+		background: rgba(0,0,0,0.7);
+		display: none;
+	}
+
+	.list {
+		color: red;
+	}
+
+	.list a {
+		color: red;
+		font-size: 13px;
+	}
+
+	.nav-second {
+		display: none;
+	}
+
+	.container-mobile {
+		width: 100%;
+	}
+
+	#img-position {
+		padding-top: 46px;
+	}
+
+	.img-artikel {
+		width: 80%;
+		padding:20px;
+	}
+
+	.body-barang {
+		width: 85%;
+	}
+	.text-product {
+		width: 100% !important;
+		height: 250px;
+	}
+
+	.img-product {
+		width: 100% !important;
+	}
+
+	.img-article {
+	    width: 100% !important;
+	    height: 180px;
+	    transition: 0.5s;
+	}
+
+	.size-txt {
+		font-style: 8px !important;
+	}
+
+	.gmbr-artikels {
+	  width: 102% !important;
+	}
+
+}
+
+@media (max-width: 767px) {
+	body {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+	.navbar ul {
+		display: none;
+	}
+
+	.btn-cok {
+		display: block;
+		
+	}
+	.mobile-responsive {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		
+	}
+
+	.menu-mobile {
+		display: block;
+		height: 100%
+	}
+
+	.active-mobile {
+		padding-top:60px;
+		height: 100%;
+		background: rgba(0,0,0,0.7);
+		display: none;
+	}
+
+	.list {
+		color: red;
+	}
+
+	.list a {
+		color: red;
+		font-size: 13px;
+	}
+
+	.nav-second {
+		display: none;
+	}
+
+	.container-mobile {
+		width: 100%;
+	}
+
+	#img-position {
+		padding-top: 46px;
+	}
+
+	.img-artikel {
+		width: 80%;
+		padding:20px;
+	}
+
+	.body-barang {
+		width: 415px;
+	}
 }
 
 .toggle{
@@ -364,7 +520,7 @@ h2 {
 }
 
 .img-article {
-  width: 335px;
+  width: 100%;
   height: 180px;
   transition: 0.5s;
 }
@@ -394,6 +550,16 @@ h2 {
 	padding-bottom: 16px;
 }
 
+
+.body-list {
+	/*width: inherit;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px #222222;*/
+	padding-top: 100px;
+	text-align: center;
+	background-color:white;
+}
 
 .body-artikel {
 	width: inherit;
@@ -586,14 +752,14 @@ h2 {
 	text-transform:capitalize;
 	color:white;
 	background:rgb(0,0,0,0.5);
-	width: 335px;
+	width: 95%;
 	height: 50px;
 	padding-left: 3px;
 	padding-right: 3px;
 }
 
 .gmbr-artikels {
-  width: 335px;
+  width: 100%;
   height: 180px;
   transition: 0.5s;
 }

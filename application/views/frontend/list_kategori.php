@@ -1,5 +1,5 @@
 <br>
-	<div class="container body-artikel">	
+	<div class="container body-list">	
 		<h1>PILIH KATEGORI PRODUK</h1>
 		<br>	
 
