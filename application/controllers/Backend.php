@@ -79,40 +79,93 @@ class Backend extends CI_Controller
 	}
 
 
-	public function artikel(){
+	public function artikel($page = null){
 		$this->login_model->cek_login();
+		$per_halaman = 8;
+		if($page == null){
+			$offset = 0;
+		} else {
+			$offset = ($page * $per_halaman) - $per_halaman;
+		}
+
+		$artikel = $this->db->get('artikel')->num_rows();
+
 		$laman = [
 			'content' => 'backend/artikel/index',
 			'title' => 'Artikel',
 			'menu' => 2
 		];
-		$laman['artikel'] = $this->backend->get_artikel();
+		$laman['artikel'] = $this->backend->get_artikel($per_halaman, $offset);
+		$laman['pagination'] = $this->backend->makePagination($artikel, 'artikel');
 
+		if(isset($_GET['keywords'])){
+			$keywords = $this->input->get('keywords');
+			$laman['artikel'] = $this->db->join('kategori', 'kategori.id_kategori = artikel.id_kategori')
+							->like('judul', $keywords)
+							->get('artikel')
+							->result_array();
+		
+			$laman['pagination'] = null;
+		}
 
 		$this->load->view('backend/template', $laman);
 
 	}
 
-	public function slideshow(){
+	public function slideshow($page=null){
 		$this->login_model->cek_login();
+
+		$per_halaman = 8;
+		if($page == null){
+			$offset = 0;
+		} else {
+			$offset = ($page * $per_halaman) - $per_halaman;
+		}
+		$slide = $this->db->get('slideshow')->num_rows();
 		$laman = [
 			'content' => 'backend/slideshow/index',
 			'title' => 'Slideshow ',
 			'menu' => 3
 		];
-		$laman['slideshow'] = $this->backend->get_slideshow();
+
+		
+		$laman['slideshow'] = $this->backend->get_slideshow($per_halaman, $offset);
+		$laman['paginate'] = $this->backend->makePagination($slide, 'slideshow');
+		
 		$this->load->view('backend/template', $laman);
 	}
 
 
-	public function barang(){
+	public function barang($page = null){
+
+		$per_halaman = 8;
+		if($page == null) {
+			$offset = 0;
+		} else {
+			$offset = ($page * $per_halaman) - $per_halaman;
+		}
+
 		$this->login_model->cek_login();
+		$brg = $this->db->get('barang')->num_rows();
 		$laman = [
 			'content' => 'backend/barang/index',
 			'title' => 'Barang',
 			'menu' => 4,
-			'barang' => $this->backend->get_barang()
+			'barang' => $this->backend->get_barang($per_halaman, $offset),
+			'pagination' => $this->backend->makePagination($brg, 'barang')
 		];
+
+		//fungsi untuk search data
+		if(isset($_GET['keywords'])){
+			$keywords = $this->input->get('keywords');
+			$laman['barang'] = $this->db->join('kat_barang', 'kat_barang.kd_kategori = barang.kd_kategori')
+							->join('jenis', 'jenis.kd_jenis = barang.kd_jenis', 'left')
+							->like('nm_barang', $keywords)
+							->get('barang')
+							->result_array();
+
+			$laman['pagination'] = null;
+		}
 
 		$this->load->view('backend/template', $laman);
 	}

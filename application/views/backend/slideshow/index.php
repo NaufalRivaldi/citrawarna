@@ -30,6 +30,12 @@
 	<?php } ?>
 </table>
 
+<nav>
+  <ul class="pagination">
+      <?= $paginate ?>
+  </ul>
+</nav>
+
 <style>
 .disabled {
    	color:grey;

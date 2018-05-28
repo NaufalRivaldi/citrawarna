@@ -99,3 +99,29 @@ body {
   text-decoration: none;
   color: #222222;
 }
+
+.my-page-link a {
+   position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: black;
+    background-color: #fff;
+    border: 1px solid #FFC118;
+    text-decoration: none;
+}
+
+.my-page-link a:hover {
+  background-color: #F1F1F1;
+}
+
+.page-item.active .my-page-link {
+    z-index: 1;
+    color: white;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    background-color: #FFC118;
+    border: 1px solid #FFC118;
+}

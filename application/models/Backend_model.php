@@ -2,8 +2,34 @@
 
 class Backend_model extends CI_Model
 {
-	public function get_artikel(){
-		return $this->db->join('kategori', 'kategori.id_kategori = artikel.id_kategori')->where('stat', 1)->get('artikel')->result_array();
+	public function get_artikel($per_halaman, $offset){
+		return $this->db->join('kategori', 'kategori.id_kategori = artikel.id_kategori')
+				->where('stat', 1)
+				->limit($per_halaman, $offset)
+				->get('artikel')->result_array();
+	}
+
+	public function makePagination($totRows, $laman){
+		$config['base_url'] = base_url("backend/$laman/");
+		$config['total_rows'] = $totRows;
+		$config['per_page'] = 8;
+		$config['use_page_numbers'] = true;
+
+		$config['num_tag_open'] = "<li class='page-item'><div class='my-page-link'>";
+		$config['num_tag_close'] = "</div></li>";
+		$config['cur_tag_open'] = "<li class='page-item active'><div class='my-page-link'>";
+		$config['cur_tag_close'] = "</div></li>";
+		$config['next_tag_open'] = "<li class='page-item'><div class='my-page-link'>";
+		$config['next_tag_close'] = "</div></li>";
+		$config['prev_tag_open'] = "<li class='page-item'><div class='my-page-link'>";
+		$config['prev_tag_close'] = "</div></li>";
+		$config['last_tag_open'] = "<li class='page-item'><div class='my-page-link'>";
+		$config['last_tag_close'] = "</div></li>";
+		$config['first_tag_open'] = "<li class='page-item'><div class='my-page-link'>";
+		$config['first_tag_close'] = "</div></li>";
+
+		$this->pagination->initialize($config);
+		return $this->pagination->create_links();
 	}
 
 	public function defaultArtikel(){
@@ -131,8 +157,8 @@ class Backend_model extends CI_Model
 		$del_log = $this->db->where('username', $username)->delete('login_log');
 	}
 
-	public function get_slideshow(){
-		return $this->db->get('slideshow')->result_array();
+	public function get_slideshow($per_halaman, $offset){
+		return $this->db->limit($per_halaman, $offset)->get('slideshow')->result_array();
 	}
 
 	public function default_slideshow(){
@@ -155,10 +181,11 @@ class Backend_model extends CI_Model
 	}
 
 
-	public function get_barang(){
+	public function get_barang($per_halaman, $offset){
 		return $this->db->join('kat_barang', 'kat_barang.kd_kategori = barang.kd_kategori')
 						->join('jenis', 'jenis.kd_jenis = barang.kd_jenis', 'left')
 						->where('stat', 1)
+						->limit($per_halaman, $offset)
 						->get('barang')->result_array();
 	}
 

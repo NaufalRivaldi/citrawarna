@@ -1,6 +1,16 @@
 <h3>Data Artikel</h3>
-<a href="<?= base_url('crud/artikel_add') ?>" class="btn btn-primary">Tambah Artikel</a>
-<br><br>
+<div class="row">
+	<div class="col-md-9">
+		<a href="<?= base_url('crud/artikel_add') ?>" class="btn btn-primary">Tambah Artikel</a>
+	</div>
+	<div class="col-md-3">
+		<form action="<?= base_url('backend/artikel') ?>" method="get">
+		 	<input type="text" name="keywords" required>
+		 	<input type="submit" value="search" class="btn btn-sm">
+		</form>
+	</div>
+</div>
+<br>
 <table class="table table-sm">
 	<tr>
 		<th>No</th>
@@ -51,4 +61,11 @@
 	</tr>
 	<?php } ?>
 </table>
+
+<nav>
+  <ul class="pagination">
+      <?= $pagination ?>
+  </ul>
+</nav>
+
 

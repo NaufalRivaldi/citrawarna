@@ -1,6 +1,19 @@
 <h3>Data Barang</h3>
-<a href="<?= base_url('crud/barang_add') ?>" class="btn btn-primary">Tambah Barang</a>
-<br><br>
+
+
+<div class="row">
+	<div class="col-md-9">
+		<a href="<?= base_url('crud/barang_add') ?>" class="btn btn-primary">Tambah Barang</a>
+	</div>
+	<div class="col-md-3">
+		<form action="<?= base_url('backend/barang') ?>" method="get">
+		 	<input type="text" name="keywords" required>
+		 	<input type="submit" value="search" class="btn btn-sm">
+		</form>
+	</div>
+</div>
+<br>
+
 <table class="table table-sm">
 	<tr>
 		<th>No</th>
@@ -31,3 +44,10 @@
 	<?php } ?>
 	
 </table>
+
+
+<nav>
+  <ul class="pagination">
+      <?= $pagination ?>
+  </ul>
+</nav>
