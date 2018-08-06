@@ -13,7 +13,6 @@
 	</div>
 </div>
 <br>
-
 <table class="table table-sm">
 	<tr>
 		<th>No</th>

@@ -18,9 +18,10 @@ class Raw extends CI_Controller
 		$data['get_last_upload'] = $this->raw_model->get_setting('last_raw_upload');
 		$data['get_last_update'] = $this->raw_model->get_setting('last_raw_update');
 		if($_POST){
+		    //update last upload gw pindah diatas, gara2 sering telat input sama name filenya
+		    $this->raw_model->updateLastUpload();
 			$upload = $this->raw_model->upload_csv('./upload/raw/');
 			if($upload['result'] == "success"){ 
-				$this->raw_model->updateLastUpload();
 				echo "<script>alert('Berhasil mengupload raw data'); location.href ='raw'; </script>";
 				
 			} else {

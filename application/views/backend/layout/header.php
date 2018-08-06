@@ -19,7 +19,6 @@
     <script src="<?= base_url('assets/ckeditor/ckeditor.js') ?>"></script>
     <script src="<?= base_url('assets/js/jquery-3.2.1.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
-    <script type="text/javascript" src="<?= base_url('assets/DataTables/datatables.min.js') ?>"></script>
   </head>
 
   <body>

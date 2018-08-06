@@ -1,7 +1,7 @@
 <div class="row">
 				<div class="col-md-12">
 					<br>
-					<script src="http://maps.google.com/maps/api/js?key=AIzaSyC4xI03S7A49UtfJRr8cyE7IMptn3XTPKw" 
+					<script src="https://maps.google.com/maps/api/js?key=AIzaSyC4xI03S7A49UtfJRr8cyE7IMptn3XTPKw" 
 	          type="text/javascript"></script>
 					<div id="map" style="width: 100%; height: 250px;"></div>
 					<script type="text/javascript">

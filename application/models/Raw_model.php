@@ -62,10 +62,20 @@ class Raw_model extends CI_Model
 
 		if($a > $b){
 			$loc = "upload/raw/$fileName";
+			
 			require_once("class/excel_reader2.php");
 			require_once("class/SpreadsheetReader.php");
 			//membaca file csv
-			$reader = new SpreadsheetReader($loc);
+			try
+            {
+                $reader = new SpreadsheetReader($loc);
+            }
+            catch (Exception $E)
+            {
+                echo $E -> getMessage();
+                die();
+            }
+			//$reader = new SpreadsheetReader($loc);
 			$no = 1;
 
 			//menghapus record sebelumnya

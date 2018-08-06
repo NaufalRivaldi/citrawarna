@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="<?= $keywords ?> Toko cat, jual cat, weldon, citra warna, cwa">
+	<!-- <meta property="og:url" content="https://www.cwabali.com"> -->
 	<meta property="og:title" content="<?= $title ?> - Toko Cat Citra Warna">
 	<meta property="og:image" content="<?= base_url().$img ?>">
 	<meta property="image" content="<?= base_url().$img ?>">

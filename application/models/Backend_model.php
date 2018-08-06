@@ -6,6 +6,7 @@ class Backend_model extends CI_Model
 		return $this->db->join('kategori', 'kategori.id_kategori = artikel.id_kategori')
 				->where('stat', 1)
 				->limit($per_halaman, $offset)
+				->order_by('tanggal', 'desc')
 				->get('artikel')->result_array();
 	}
 

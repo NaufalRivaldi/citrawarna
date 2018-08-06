@@ -26,7 +26,7 @@
 	?>
 	<tr>
 		<td><?= $no++ ?></td>
-		<td><?= $row['judul'] ?></td>
+		<td><?= substr($row['judul'],0, 40) ?>[...]</td>
 		<td><?= $row['tanggal'] ?></td>
 		<td><?= substr($row['excerpt'], 0, 35) ?> [...]</td>
 		<td><?= $row['nama_kategori'] ?></td>
