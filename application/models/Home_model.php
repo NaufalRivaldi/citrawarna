@@ -85,6 +85,67 @@ class Home_model extends CI_Model
 		$this->pagination->initialize($config);
 		return $this->pagination->create_links();
 	}
+//kalau cabang nambah, tulis disini 
+	public function cabang_name($cbg){
+		$lokasi = '';
+		switch ($cbg) {
+			case 'CW1':
+				$lokasi = " Citra Warna Imam Bonjol 1";
+				break;
+			case 'CW2':
+				$lokasi = " Citra Warna Imam Bonjol 2";
+				break;
+			case 'CW3':
+				$lokasi = " Citra Warna Buluh Indah";
+				break;
+			case 'CW4':
+				$lokasi = " Citra Warna Canggu";
+				break;
+			case 'CW5':
+				$lokasi = " Citra Warna Teuku Umar";
+				break;
+			case 'CW6' : 
+				$lokasi = " Citra Warna Sunset Road";
+				break;
+			case 'CW7' : 
+				$lokasi = " Citra Warna Gatot Subroto  ";
+				break;
+			case 'CW8' : 
+				$lokasi = " Citra Warna Ubud ";
+				break;
+			case 'CW9' : 
+				$lokasi = " Citra Warna Mumbul Nusa Dua ";
+				break;
+			case 'CA0' : 
+				$lokasi = " Citra Warna Mahendradata ";
+				break;
+			case 'CA1' : 
+				$lokasi = " Citra Warna Semabaung Gianyar  ";
+				break;
+			case 'CA2' : 
+				$lokasi = " Citra Warna Kediri Tabanan";
+				break;
+			case 'CA3' : 
+				$lokasi = " Citra Warna Panjer";
+				break;
+			case 'CA4' : 
+				$lokasi = " Citra Warna Dalung";
+				break;
+			case 'CA5' : 
+				$lokasi = " Citra Warna Singaraja";
+				break;
+			case 'CA6' :
+				$lokasi = " Citra Warna Tibubeneng Canggu";
+				break;
+			case 'CA7' :
+				$lokasi = " Citra Warna WR Supratman ";
+				break;
+			default : 
+				$lokasi = "undefined";
+				break;
+		}
+		return $lokasi;
+	}
 
 
  

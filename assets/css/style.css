@@ -565,7 +565,6 @@ h2 {
 	width: inherit;
 	height: auto;
 	border-radius: 10px;
-	box-shadow: 0px 0px 3px #222222;
 	padding-top: 100px;
 	text-align: center;
 	background-color:white;
@@ -593,7 +592,6 @@ h2 {
 
 .body-barang {
 	border-radius: 10px;
-	box-shadow: 0px 0px 3px #222222;
 	padding-top: 100px;
 	padding-left: 30px;
 	padding-right: 30px;
