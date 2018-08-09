@@ -257,6 +257,24 @@ class Backend_model extends CI_Model
 			'telp' => '',
 		];
 	}
+
+	public function defaultDetail(){
+		return [
+			'id_dtl' => '',
+			'kd_merk' => '',
+			'detail_teks' => ''
+		];
+	}
+
+	public function get_detail_barang(){
+		return $this->db->join('barang b','b.kd_merk = det.kd_merk')->where('det.stat', 1)->get('detail_barang det')->result_array();
+	}
+
+	public function detail_barang($param){
+		return $this->db->where('kd_merk', $param)->get('detail_barang')->result_array();
+	}
+
+	
 }
 
  ?>

@@ -181,6 +181,17 @@ class Backend extends CI_Controller
 
 		$this->load->view('backend/template', $laman);
 	}
+
+
+	//new featured detail barang update 09-08-2018
+	public function detail_barang(){
+		$this->login_model->cek_login();
+		$laman['content'] = 'backend/barang/index_detail';
+		$laman['title'] = "Detail Barang";
+		$laman['menu'] = 7;
+		$laman['detail_barang'] = $this->backend->get_detail_barang(); 
+		$this->load->view('backend/template', $laman);
+	}
 }
 
  ?>

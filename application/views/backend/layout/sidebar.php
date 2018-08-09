@@ -28,6 +28,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link <?php if($menu == 7) echo "active" ?>" href="<?= base_url('backend/detail_barang') ?>">
+              <i class="fa fa-eye"></i>&nbsp; 
+              Detail Barang
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link <?php if($menu == 5) echo "active" ?>" href="<?= base_url('raw') ?>">
               <i class="fa fa-database"></i>&nbsp; 
               Raw Data

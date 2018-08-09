@@ -9,6 +9,7 @@ h1 {
 	-webkit-text-decoration-color: red;
 	text-decoration-color: #f9ca24;
 	text-underline-position: under;
+	font-family: 'Signika', sans-serif;
 }
 
 h2 {
@@ -16,6 +17,7 @@ h2 {
 	-webkit-text-decoration-color: red;
 	text-decoration-color: #f9ca24;
 	text-underline-position: under;
+	font-family: 'Signika', sans-serif;
 }
 
 .btn-cok {
@@ -32,7 +34,22 @@ h2 {
 	border: 1px solid white;
 	margin-top: 4px;
 }
+.font-product {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	width: 100%;
+}
 
+.font-product tr a{
+	color:#3a3a3a;
+	text-decoration: none;
+	display: block;
+}
+
+
+.font-product tr:hover {
+	text-decoration:none;
+	background: #f3f3f3;
+}
 .menu-mobile {
 	width: 150px;
 	margin-right: -250px;
@@ -593,7 +610,7 @@ h2 {
 .body-barang {
 	border-radius: 10px;
 	padding-top: 100px;
-	padding-left: 30px;
+	/* padding-left: 30px; */
 	padding-right: 30px;
 }
 

@@ -19,6 +19,8 @@
 	
 	<link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Signika|Archivo+Narrow|Ubuntu+Condense" rel="stylesheet">
+
 	<link rel="stylesheet" href="<?= base_url('assets/font-awesome/css/font-awesome.css'); ?>">
 
 	<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">

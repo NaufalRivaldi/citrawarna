@@ -2,6 +2,23 @@ body {
   font-size: .875rem;
 }
 
+.merk-ul {
+  cursor: pointer;
+  background: #f3f3f3;
+  margin:0;
+  padding:0;
+}
+
+.merk-li {
+  list-style: none;
+  padding:5px 0px 5px 10px;
+  display: block; 
+}
+
+.merk-li:hover{
+  background: rgb(223, 223, 223);
+}
+
 .feather {
   width: 16px;
   height: 16px;

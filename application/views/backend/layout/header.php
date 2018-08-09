@@ -19,6 +19,9 @@
     <script src="<?= base_url('assets/ckeditor/ckeditor.js') ?>"></script>
     <script src="<?= base_url('assets/js/jquery-3.2.1.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
+
+    <!-- DATA TABLE -->
+	  <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   </head>
 
   <body>

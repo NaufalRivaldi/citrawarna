@@ -224,6 +224,71 @@ class Crud extends CI_Controller
 		$this->session->set_flashdata('success', 'Data berhasil dihapus');
 		redirect('backend/cabang');
 	}
+
+	public function detail_add(){
+		$laman = [
+			'content' => 'backend/barang/form_detail',
+			'title' => 'Add Detail Barang',
+			'menu' => 7,
+			'form_action' => 'crud/detail_add'
+		];
+
+		if(!$_POST){
+			$laman['input'] = (array) $this->backend->defaultDetail();
+		} else {
+			$laman['input'] = (array) $this->input->post();
+			$this->db->insert('detail_barang', $laman['input']);
+			$this->session->set_flashdata('success', 'Data berhasil ditambah');
+			redirect('backend/detail_barang');
+		}
+
+		$this->load->view('backend/template', $laman);
+
+	}
+
+	public function detail_edit($param){
+		$laman = [
+			'content' => 'backend/barang/form_detail',
+			'title' => 'Edit Detail Barang',
+			'menu' => 7,
+			'form_action' => 'crud/detail_edit/'.$param
+		];
+
+		if(!$_POST){
+			$laman['input'] = $this->db->where('kd_merk', $param)->get('detail_barang')->row_array();
+		} else {
+			$laman['input'] = (array) $this->input->post();
+			$this->db->where('kd_merk', $param)->update('detail_barang', $laman['input']);
+			$this->session->set_flashdata('success', 'Data berhasil diedit');
+			redirect('backend/detail_barang');
+		}
+
+		$this->load->view('backend/template', $laman);
+	}
+
+	public function detail_delete($param){
+		$this->db->where('kd_merk', $param)->set('stat', 0)->update('detail_barang');
+		$this->session->set_flashdata('success', 'Data berhasil dihapus');
+		redirect('backend/detail_barang');
+	}
+
+	public function search_produk(){
+		$get = $this->input->get('data');
+		$data = $this->db->like('nm_barang', $get)
+							->or_like('kd_merk', $get)
+							->get('barang')->result_array();
+		$output = "<ul class='merk-ul'>";
+		if($data){
+			foreach($data as $row){
+				$output .= "<li class='merk-li'>".$row['kd_merk']. " - ". $row['nm_barang'] ."</li>";
+			}
+		} else {
+			$output .= "<li class='merk-li'>Tidak ada data</li>";
+		}
+
+		echo $output;
+	}
+
 }
 
  ?>
