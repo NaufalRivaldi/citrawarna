@@ -237,6 +237,8 @@ class Crud extends CI_Controller
 			$laman['input'] = (array) $this->backend->defaultDetail();
 		} else {
 			$laman['input'] = (array) $this->input->post();
+			$laman['input']['cc'] = $_FILES['cc']['name'];
+			$this->backend->upload_cover('./upload/cc/', 'cc');
 			$this->db->insert('detail_barang', $laman['input']);
 			$this->session->set_flashdata('success', 'Data berhasil ditambah');
 			redirect('backend/detail_barang');
@@ -258,6 +260,16 @@ class Crud extends CI_Controller
 			$laman['input'] = $this->db->where('kd_merk', $param)->get('detail_barang')->row_array();
 		} else {
 			$laman['input'] = (array) $this->input->post();
+			$laman['input']['cc'] = $_FILES['cc']['name'];
+			if ($laman['input']['cc'] == ''){
+				//kalau edit ga pake foto, jadi nama foto nya yg lama ga ilang
+				$data = $this->db->where('kd_merk', $param)->get('detail_barang')->row_array();
+				$laman['input']['cc'] = $data['cc'];
+			} else {
+				//kalo edit pake foto
+				$laman['input']['cc'] = $_FILES['cc']['name'];
+				$this->backend->upload_cover('./upload/cc/', 'cc');
+			}
 			$this->db->where('kd_merk', $param)->update('detail_barang', $laman['input']);
 			$this->session->set_flashdata('success', 'Data berhasil diedit');
 			redirect('backend/detail_barang');

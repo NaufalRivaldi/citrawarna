@@ -1,6 +1,6 @@
 <h4><?= $title ?></h4>
 <hr>
-<form action="<?= base_url($form_action) ?>" method="post">
+<form action="<?= base_url($form_action) ?>" method="post" enctype="multipart/form-data">
 	<div class="row">
 		<div class="col-md-12">
 			Nama Barang
@@ -12,6 +12,10 @@
 			Detail Barang :
 			<textarea class="form-control" name="detail_teks"><?= $input['detail_teks'] ?></textarea>
 		</div>
+        <div class="col-md-12">
+            Foto CC
+            <input type="file" class="form-control" name="cc" value="<?= $input['cc'] ?>">
+        </div>
 		
 		<div class="col-md-12">
 		<br>

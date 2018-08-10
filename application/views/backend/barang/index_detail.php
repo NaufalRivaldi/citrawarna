@@ -12,15 +12,23 @@
             <th>No</th>
             <th>Nama Barang</th>
             <th>Detail</th>
+            <th>CC</th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <?php $no=1; foreach($detail_barang as $row)  : ?>
+        <?php $no=1; foreach($detail_barang as $row)  : 
+            if($row['cc'] != ''){
+                $cc = "<i class='fa fa-check'></i>";
+            } else {
+                $cc = "<i class='fa fa-times'></i>";
+            }
+            ?>
         <tr>
             <td><?= $no++ ?></td>
             <td><?= $row['kd_merk']." - ". $row['nm_barang'] ?></td>
             <td><?= substr(strip_tags($row['detail_teks']), 0, 30) ?>[...]</td>
+            <td><?= $cc ?></td>
             <td>
                 <a href="<?= base_url('crud/detail_edit/'.$row['kd_merk']) ?>" class="btn btn-sm btn-warning" ><i class="fa fa-cog"></i></a> |
                 <a href="<?= base_url('crud/detail_delete/'.$row['kd_merk']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('yakin akan menghapus data?')" ><i class="fa fa-trash"></i></a>

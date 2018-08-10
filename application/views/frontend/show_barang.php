@@ -40,8 +40,18 @@
 						$tekniss = true;
 					?>
 						<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-teknis" role="tab" aria-controls="nav-teknis" aria-selected="false">Teknis</a>
-					<?php } else { $tekniss=false; } ?>
-					<!-- <a class="nav-item nav-link" id="nav-warna-tab" data-toggle="tab" href="#nav-warna" role="tab" aria-controls="nav-warna" aria-selected="false">Warna</a> -->
+					<?php
+						if($data_teknis['cc'] != ''){
+							echo '<a class="nav-item nav-link" id="nav-warna-tab" data-toggle="tab" href="#nav-warna" role="tab" aria-controls="nav-warna" aria-selected="false">Warna</a>';
+							$cc = true;
+						} else {
+							$cc = false;
+						}
+					 } else { 
+						 $tekniss=false;
+						 $cc = false; 
+					} ?>
+					
 				</div>
 			</nav>
 
@@ -130,13 +140,16 @@
 					<br>
 					<?php echo $data_teknis['detail_teks'] ?>
 				</div>
+					<?php if($cc==true)  { ?>
+						<div class="tab-pane fade" id="nav-warna" role="tabpanel" aria-labelledby="nav-warna-tab">
+							<br>
+							<a href="<?= base_url('upload/cc/'.$data_teknis['cc']) ?>" target="_blank" ><img src="<?= base_url('upload/cc/'.$data_teknis['cc']) ?>" alt="something wrong" class="img-fluid" ></a>
+							<hr>
+						</div> 
+					<?php } ?>
 				<?php } ?>
-				<!--
-				<div class="tab-pane fade" id="nav-warna" role="tabpanel" aria-labelledby="nav-warna-tab">
-					<br>
-					SHOW WARNA
-					<hr>
-				</div> -->
+				
+				
 			</div>
 
 			
