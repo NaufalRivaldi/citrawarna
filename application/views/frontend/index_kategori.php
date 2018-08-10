@@ -19,5 +19,13 @@
 				<?php } ?>
 				
 			</div>
+			<div class="row justify-content-center">
+				<nav>
+					<ul class="pagination pagination-md">
+						<?= $paginate; ?>
+					</ul>
+				</nav>
+				
+			</div>
 		</div>
 	</div>

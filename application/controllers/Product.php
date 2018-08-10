@@ -11,6 +11,7 @@ class Product extends CI_Controller
 		$data['img'] = 'upload/produk/'.$data['barang']['foto'];
 		$data['description'] = $data['barang']['deskripsi'];
 		$data['detail'] = 0;
+		$data['teknis'] = $this->db->where('kd_merk', $kd_merk)->get('detail_barang');
 		//update jumlah klik pada record
 		$this->home_model->updateClick('barang', 'kd_merk', $kd_merk);
 
@@ -40,13 +41,20 @@ class Product extends CI_Controller
 
 		$data['barang'] = $this->home_model->get_row_barang('kd_merk', $row['kd_merk']);
 
-		$data['raw'] = $this->db->query("SELECT * FROM raw WHERE nm_barang='".$namaBarang. "' AND kd_gudang != 'GUDANG' ")->result_array();
+		 
+		$query = $this->db->query("SELECT * FROM raw WHERE nm_barang='".$namaBarang. "' AND kd_gudang != 'GUDANG' ");
+		$data['raw'] = $query->result_array();
 
 		$data['title'] = $data['barang']['nm_barang'];
 		$data['keywords'] = $data['barang']['tag'];
 		$data['img'] = 'upload/produk/'.$data['barang']['foto'];
 		$data['description'] = $data['barang']['deskripsi'];
 		$data['detail'] = 1;
+		//data teknis
+
+		$select_kode_barang = $query->row_array();
+
+		$data['teknis'] = $this->db->where('kd_merk', $select_kode_barang['kd_merk'])->where('stat', 1)->get('detail_barang');
 		//update jumlah klik pada record
 		$this->home_model->updateClick('barang', 'kd_merk', $row['kd_merk']);
 
@@ -55,6 +63,7 @@ class Product extends CI_Controller
 	}
 
 	public function kategori($kat=null){
+		
 		$kat = $this->uri->segment(3);
 		$data['title'] = "Produk Kami";
 

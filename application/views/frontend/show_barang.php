@@ -34,8 +34,14 @@
 			<nav>
 				<div class="nav nav-tabs" id="nav-tab" role="tablist">
 					<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-product" role="tab" aria-controls="nav-product" aria-selected="true">Product</a>
-					<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-teknis" role="tab" aria-controls="nav-teknis" aria-selected="false">Teknis</a>
-					<a class="nav-item nav-link" id="nav-warna-tab" data-toggle="tab" href="#nav-warna" role="tab" aria-controls="nav-warna" aria-selected="false">Warna</a>
+					<?php 
+						if($teknis->num_rows() != 0){ 
+						$data_teknis = $teknis->row_array();
+						$tekniss = true;
+					?>
+						<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-teknis" role="tab" aria-controls="nav-teknis" aria-selected="false">Teknis</a>
+					<?php } else { $tekniss=false; } ?>
+					<!-- <a class="nav-item nav-link" id="nav-warna-tab" data-toggle="tab" href="#nav-warna" role="tab" aria-controls="nav-warna" aria-selected="false">Warna</a> -->
 				</div>
 			</nav>
 
@@ -119,27 +125,18 @@
 							</div>			
 						</div>						
 				</div>
+				<?php if($tekniss == true){ ?>
 				<div class="tab-pane fade" id="nav-teknis" role="tabpanel" aria-labelledby="nav-teknis-tab">
 					<br>
-					DESCRIPTION
-					<hr>
-					Envi Latex Wall Paint adalah cat tembok yang memberikan permukaan yang halus dan mudah dibersihkan dengan air. Envi Latex Wall Paint dapat diaplikasikan untuk segala jenis permukaan tembok dan plafon yang terbuat dari beton, plaster, fiber, triplex maupun kayu.
-					<br><br>
-					CARA PEMAKAIAN :
-					<hr>
-					Permukaan yang akan dicat perlu diamplas dan bersihkan dahulu dengan baik. Supaya mendapatkan hasil akhir yang terbaik dana wet bagi permukaan tembok, beton atau permukaan lainnya, sebaiknya diberikan waktu pengeringan secukupnya sebelum pengecatan. Untuk permukaan tembok baru sebaiknya diberikan waktu pengeringan semen minimal 1 bulan dengan kadar air maksimum 20% dan maksimum pH8. Untuk permukaan tembok lama, periksa dahulu daya rekat cat tembok yang lama. Jika diperlukan, lakukan pengerokan kemudian dibersihkan kembali.
-
-					Berilah satu lapis Envi Alkali Sealer sebelum mengecat permukaan tersebut dengan Envi Latex Wall Paint terutama pada permukaan tembok baru atau pada permukaan tembok lama yang mempunyai kelembapan tinggi atau terdapat rembesan air.
-					<br><br>
-					TERSEDIA DALAM KEMASAN :
-					<hr>
-					1Kg, 5Kg, dan 25Kg
+					<?php echo $data_teknis['detail_teks'] ?>
 				</div>
+				<?php } ?>
+				<!--
 				<div class="tab-pane fade" id="nav-warna" role="tabpanel" aria-labelledby="nav-warna-tab">
-				<br>
-				SHOW WARNA
-				<hr>
-				</div>
+					<br>
+					SHOW WARNA
+					<hr>
+				</div> -->
 			</div>
 
 			
