@@ -6,25 +6,45 @@
 	<div class="container-fluid">
 		<br>
 		<div class="container body-artikel">
-			<div class="row justify-content-center">
-				<h1><?= $artikel['judul'] ?></h1>
-			</div>
-			<div class="row justify-content-center">
-				Post : <?= $artikel['tanggal'] ?>. Kategori : <?= $artikel['nama_kategori'] ?>
-				<img src="<?= base_url('upload/artikel/').$artikel['img'] ?>" alt="<?= $artikel['img'] ?>" class="img-artikel">
-			</div>
 			<div class="row">
-				<div class="isi-artikel">
-					<?= $artikel['isi'] ?>
-					<br>
-					<?php //share facebook button 
-					$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http"). "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+				<div class="col-md-9">
+					<div class="row justify-content-center">
+						<h1><?= $artikel['judul'] ?></h1>
+					</div>
+					<div class="row justify-content-center">
+						Post : <?= $artikel['tanggal'] ?>. Kategori : <?= $artikel['nama_kategori'] ?>
+						<img src="<?= base_url('upload/artikel/').$artikel['img'] ?>" alt="<?= $artikel['img'] ?>" class="img-artikel">
+					</div>
+					<div class="row">
+						<div class="isi-artikel">
+							<?= $artikel['isi'] ?>
+							<br>
+							<?php //share facebook button 
+							$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http"). "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
 
-					<iframe src="https://www.facebook.com/plugins/share_button.php?href=<?= $actual_link ?>&layout=button_count&size=small&mobile_iframe=true&appId=140351823309332&width=81&height=20" width="81" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+							<iframe src="https://www.facebook.com/plugins/share_button.php?href=<?= $actual_link ?>&layout=button_count&size=small&mobile_iframe=true&appId=140351823309332&width=81&height=20" width="81" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 hidden-phone">
+					<h2>Baca Juga</h2>
+					<br>
+					<?php $articles = $this->home_model->get_random_artikel(3);
+
+					foreach($articles as $artikel) { ?>
+						<div class="artikels">
+							<a href="<?= base_url('artikel/read/').$artikel['link'] ?>">
+								<div class="gmbr-artikels" style="background: url('<?= base_url() ?>/upload/artikel/thumbs/<?= $artikel['img'] ?>') no-repeat; background-position: center; background-size: cover;">
+								<div class="text-artikels">
+									<b><?= $artikel['judul'] ?></b>
+								</div>
+								</div>
+							</a> 
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 
-			
 				<div id="disqus_thread"></div>
 					<script>
 
@@ -48,14 +68,14 @@
 			
 			
 			<div class="row">
-				<h2 style="margin:8px 0px 18px 18px">Baca Juga</h2>
+				<h2 style="margin:8px 0px 18px 18px">Artikel Populer</h2>
 			</div>
 			
 			<div class="row">
 				
-				<?php $articles = $this->home_model->get_random_artikel(3);
+				<?php $popular = $this->home_model->get_popular_artikel(); 
 
-				foreach($articles as $artikel) { ?>
+				foreach($popular as $artikel) { ?>
 				<div class="col-md-4">
 					<div class="artikels">
 						<a href="<?= base_url('artikel/read/').$artikel['link'] ?>">

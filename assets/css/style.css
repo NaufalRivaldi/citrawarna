@@ -804,3 +804,38 @@ h2 {
     background-color: yellow;
     border: 1px solid #dee2e6;
 }
+
+.right-article {
+	width: 100%;
+	height: auto;
+	transition: 0.2s;
+}
+
+.right-article:hover{
+	transition: 0.2s;
+	box-shadow: 0.3px 1.5px 2.6px grey;
+}
+
+.right-img-article{
+	position: relative;
+  	width: 90px;
+  	height: 75px;
+  	overflow: hidden;
+}
+
+.right-img-article img {
+	position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  height: 100%;
+	  width: auto;
+	  -webkit-transform: translate(-50%,-50%);
+	      -ms-transform: translate(-50%,-50%);
+	          transform: translate(-50%,-50%);
+	
+}
+
+.right-img-article img.portrait {
+  width: 100%;
+  height: auto;
+}

@@ -262,7 +262,8 @@ class Backend_model extends CI_Model
 		return [
 			'id_dtl' => '',
 			'kd_merk' => '',
-			'detail_teks' => ''
+			'detail_teks' => '',
+			'cc' => ''
 		];
 	}
 
