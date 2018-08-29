@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed!');
 
 class Kategori extends CI_Controller
 {
-	public function list($param) {
+	public function lists($param) {
 		if($param==null){
 			redirect('kategori');
 		} else {

@@ -15,7 +15,7 @@ $this->load->view('frontend/layout/header'); ?>
 						<h1><?= $artikel['judul'] ?></h1>
 					</div>
 					<div class="row justify-content-center">
-						Post : <?= $artikel['tanggal'] ?>. Kategori : &nbsp; <a href="<?= base_url('kategori/list/'). $artikel['id_kategori'] ?>"> <?= $artikel['nama_kategori'] ?> </a>
+						Post : <?= $artikel['tanggal'] ?>. Kategori : &nbsp; <a href="<?= base_url('kategori/lists/'). $artikel['id_kategori'] ?>"> <?= $artikel['nama_kategori'] ?> </a>
 						<img src="<?= base_url('upload/artikel/').$artikel['img'] ?>" alt="<?= $artikel['img'] ?>" class="img-artikel">
 					</div>
 					<div class="row">
