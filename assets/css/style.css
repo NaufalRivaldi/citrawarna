@@ -385,6 +385,35 @@ h2 {
 	color:red;
 }
 
+.dropdown-list {
+	display: none;
+	position:absolute;
+	background: black;
+	color: white;
+	z-index: 1;
+	height: auto;
+}
+.dropdown-list a {
+	display: block;
+	height: auto;
+	padding:3px;
+}
+
+.list .dropdown-list a:hover {
+	color:red;
+}
+
+.list:hover .dropdown-list {
+	padding-left:4px;
+	padding-right:4px;
+	display: block;
+	height: auto;
+	background: #363C42;
+}
+
+
+
+
 .dropdown {
 	display: none;
 	position:absolute;

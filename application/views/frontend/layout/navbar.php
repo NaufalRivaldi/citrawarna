@@ -19,10 +19,20 @@
 								PRODUK
 							</a>
 						</li>
-						<li>
-							<a href="<?= base_url('artikel') ?>" <?= ($this->uri->segment(1)=='artikel')?"style='color:yellow'":"style=''" ?>>
+						<li class="list">
+							<a href="<?= base_url('artikel') ?>" <?= ($this->uri->segment(1)=='artikel' || $this->uri->segment(1)=='kategori')?"style='color:yellow'":"style=''" ?>>
 								ARTIKEL
 							</a>
+							<div class="dropdown-list">
+								<a href="#"></a>
+								<?php 
+									$kat = $this->home_model->get_kategori();
+									foreach($kat as $row) { 
+								 ?>
+									<a href="<?= base_url('kategori/list/').strtolower($row['id_kategori']) ?>"><?= $row['nama_kategori'] ?></a>
+									
+								<?php } ?>
+							</div>
 						</li>
 						<li><a href="#lokasi">LOKASI KAMI</a></li>
 						<li><a href="#contact">CONTACT</a></li>

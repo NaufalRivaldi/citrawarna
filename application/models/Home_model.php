@@ -148,6 +148,11 @@ class Home_model extends CI_Model
 	}
 
 
+	public function get_kategori(){
+		return $this->db->get('kategori')->result_array();
+	}
+
+
  
 
 
