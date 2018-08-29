@@ -1,5 +1,8 @@
+
 <!-- LOAD HEADER -->
-<?php $this->load->view('frontend/layout/header'); ?>
+<?php 
+
+$this->load->view('frontend/layout/header'); ?>
 	<!-- LOAD NAVBAR -->
 	<?php $this->load->view('frontend/layout/navbar'); ?>
 

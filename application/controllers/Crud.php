@@ -27,13 +27,17 @@ class Crud extends CI_Controller
 			$laman['input'] = (array) $this->backend->defaultArtikel();
 		} else {
 			//jika tombol di klik 
+
+			
       		$upload = $this->backend->upload_cover('./upload/artikel/', 'img');
 		    if($upload['result'] == "success"){ 
 		    	$this->backend->insert_artikel($upload);
 		    	$resize = $this->backend->do_resize('img', "./upload/artikel/".$upload['file']['file_name'],'./upload/artikel/thumbs/');
 		    	//print_r($upload['file']['file_name']);
 		        $this->session->set_flashdata('success', 'Data artikel berhasil ditambah');
+		        
 		        redirect('backend/artikel'); 
+
 		    }else{ 
 		    	$laman['input'] = (array) $this->input->post();
 		        $this->session->set_flashdata('danger', 'Terjadi kesalahan saat menyimpan data');
@@ -301,6 +305,7 @@ class Crud extends CI_Controller
 		echo $output;
 	}
 
+	
 }
 
  ?>

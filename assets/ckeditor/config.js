@@ -4,35 +4,30 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-	// Define changes to default configuration here.
-	// For complete reference see:
-	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
-
-	// The toolbar groups arrangement, optimized for two toolbar rows.
+	config.filebrowserBrowseUrl = '../assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=files';
+   	config.filebrowserImageBrowseUrl = '../assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images';
+   	config.filebrowserFlashBrowseUrl = '../assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash';
+   	config.filebrowserUploadUrl = '../assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=files';
+   	config.filebrowserImageUploadUrl = '../assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=images';
+   	config.filebrowserFlashUploadUrl = '../assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash';
+   	
 	config.toolbarGroups = [
-		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
-		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
-		{ name: 'links' },
-		{ name: 'insert' },
-		{ name: 'forms' },
-		{ name: 'tools' },
-		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
-		{ name: 'others' },
+		{ name: 'document', groups: [ 'doctools', 'document', 'mode' ] },
+		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+		{ name: 'forms', groups: [ 'forms' ] },
+		{ name: 'insert', groups: [ 'insert' ] },
+		{ name: 'tools', groups: [ 'tools' ] },
 		'/',
 		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
-		{ name: 'styles' },
-		{ name: 'colors' },
-		{ name: 'about' }
+		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+		{ name: 'links', groups: [ 'links' ] },
+		'/',
+		{ name: 'styles', groups: [ 'styles' ] },
+		{ name: 'colors', groups: [ 'colors' ] },
+		{ name: 'others', groups: [ 'others' ] },
+		{ name: 'about', groups: [ 'about' ] }
 	];
 
-	// Remove some buttons provided by the standard plugins, which are
-	// not needed in the Standard(s) toolbar.
-	config.removeButtons = 'Underline,Subscript,Superscript';
-
-	// Set the most common block elements.
-	config.format_tags = 'p;h1;h2;h3;pre';
-
-	// Simplify the dialog windows.
-	config.removeDialogTabs = 'image:advanced;link:advanced';
+	config.removeButtons = 'Underline,Subscript,Superscript,Save,NewPage,Preview,Print,Templates,Flash,HorizontalRule,Smiley,Find,Replace,SelectAll,Form,Radio,TextField,Textarea,Button,ImageButton,HiddenField,Checkbox,ShowBlocks,EasyImageUpload';
 };

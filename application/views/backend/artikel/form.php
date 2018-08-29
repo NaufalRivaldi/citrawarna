@@ -1,3 +1,4 @@
+
 <h4><?= $title ?></h4>
 <hr>
 <form action="<?= base_url($form_action) ?>" method="post" enctype="multipart/form-data">
@@ -36,8 +37,8 @@
 	</div>
 </form>
 <br><br><br>
-
 <script>
-	 CKEDITOR.replace( 'isi' );
+	CKEDITOR.replace( 'isi');
+	
 
 </script>
