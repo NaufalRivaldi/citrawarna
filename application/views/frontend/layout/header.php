@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +15,7 @@
 	<link rel="icon" href="<?= base_url() ?>assets/img/icon.png">
 	<link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
 	
-	<link rel="stylesheet" href="<?= base_url('assets/css/style.css?v=2') ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/style.css?v=3') ?>">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Signika|Archivo+Narrow|Ubuntu+Condense" rel="stylesheet">
 
