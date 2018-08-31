@@ -19,7 +19,10 @@
 					      ['Citra Warna Semabaung', -8.534997, 115.307913, 11],
 					      ['Citra Warna Dalung', -8.635750, 115.175192],
 					      ['Citra Warna Panjer', -8.677053, 115.239976],
-					      ['Citra Warna Kediri Tabanan', -8.549910, 115.123622]
+					      ['Citra Warna Kediri Tabanan', -8.549910, 115.123622],
+					      ['Citra Warna Singaraja', -8.120536, 115.072607],
+					      ['Citra Warna Tibubeneng', -8.640428, 115.152664],
+					      ['Citra Warna WR. Supratman', -8.640707, 115.252245]
 					    ];
 
 					    var map = new google.maps.Map(document.getElementById('map'), {
