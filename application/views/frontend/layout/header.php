@@ -22,6 +22,9 @@
 	<link rel="stylesheet" href="<?= base_url('assets/font-awesome/css/font-awesome.css'); ?>">
 
 	<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+	<!-- 3d carousel -->
+	<link rel="stylesheet" href=" <?= base_url('assets/carousel-3d/dist/styles/jquery.carousel-3d.default.css') ?>" />
+
 	
 </head>
 <body>

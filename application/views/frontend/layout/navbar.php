@@ -34,6 +34,11 @@
 								<?php } ?>
 							</div>
 						</li>
+						<li>
+							<a href="<?= base_url('inspirasi') ?>" <?= ($this->uri->segment(1)=='inspirasi')?"style='color:yellow'":"style=''" ?>>
+								INSPIRASI
+							</a>
+						</li>
 						<li><a href="#lokasi">LOKASI KAMI</a></li>
 						<li><a href="#contact">CONTACT</a></li>
 					</ul>
@@ -80,7 +85,8 @@
 		<li><a href="<?= base_url() ?>">HOME</a></li>
 		<li><a href="<?= base_url('product/kategori') ?>">PRODUK</a></li>
 		<li><a href="<?= base_url('artikel') ?>">ARTIKEL</a></li>
-		<li><a href="#lokasi">LOKASI KAMI</a></li>
+		<li><a href="<?= base_url('inspirasi') ?>">INSPIRASI</a></li>
+		<li><a href="#lokasi">LOKASI</a></li>
 		<li><a href="#contact">CONTACT</a></li>
 		<hr>
 		<b> - Kategori - </b>
