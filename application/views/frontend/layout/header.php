@@ -25,6 +25,12 @@
 	<!-- 3d carousel -->
 	<link rel="stylesheet" href=" <?= base_url('assets/carousel-3d/dist/styles/jquery.carousel-3d.default.css') ?>" />
 
+	<style type="text/css">
+		.menu-active a{
+			color: red !important;
+		}
+	</style>
+
 	
 </head>
 <body>

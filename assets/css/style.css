@@ -51,8 +51,8 @@ h2 {
 	background: #f3f3f3;
 }
 .menu-mobile {
-	width: 150px;
-	margin-right: -250px;
+	width: 280px;
+	margin-right: -300px;
 	transition: all .3s;
 	position:fixed;
 	right: 0;
@@ -60,16 +60,34 @@ h2 {
 	padding-right:15px; 
 	background: #f1f2f6;
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 15%;
 	display: none;
 	z-index: 2;
 	overflow: scroll;
+	text-decoration: none;
+	list-style-type: none;
+	box-shadow: 0 0 5px;
 }
 
-
+.menu-mobile > li{
+	padding: 10px;
+}
 
 .menu-mobile a{
 	color: black;
+}
+
+.menu-mobile > .list a{
+	color: black;
+}
+
+.menu-mobile a:hover{
+	color: #f39c12;
+	text-decoration: none;
+}
+
+.cabang_mobile{
+	display: none;
 }
 
 
@@ -146,6 +164,8 @@ h2 {
 		max-width: 100%;
 		overflow-x: hidden;
 	}
+
+
 	.navbar ul {
 		display: none;
 	}
@@ -289,6 +309,13 @@ h2 {
 
 	.body-barang {
 		width: 415px;
+	}
+
+	.cabang_pc{
+		display: none;
+	}
+	.cabang_mobile{
+		display: inline;
 	}
 }
 

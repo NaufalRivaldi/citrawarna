@@ -159,7 +159,7 @@ class Backend_model extends CI_Model
 	}
 
 	public function get_slideshow($per_halaman, $offset){
-		return $this->db->limit($per_halaman, $offset)->get('slideshow')->result_array();
+		return $this->db->order_by('tanggal', 'desc')->limit($per_halaman, $offset)->get('slideshow')->result_array();
 	}
 
 	public function default_slideshow(){
@@ -177,7 +177,7 @@ class Backend_model extends CI_Model
 	public function insert_slideshow($upload){
 		$data = $this->input->post();
 		$data['img'] = $upload['file']['file_name'];
-
+		$data['stat'] = 1;
 		$this->db->insert('slideshow', $data);
 	}
 

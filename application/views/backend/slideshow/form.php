@@ -22,13 +22,7 @@
 			Img
 			<input type="file" name="img" class="form-control">
 		</div>
-		<div class="col-md-6">
-			Status
-			<select name="stat" class="form-control">
-				<option value="1" <?php if($input['stat'] == 1) echo "selected" ?>>Aktif</option>
-				<option value="0" <?php if($input['stat'] == 0) echo "selected" ?>>Tidak aktif</option>
-			</select>
-		</div>
+		
 		<div class="col-md-12">
 			<br>
 			<input type="submit" value="Simpan" class="btn btn-primary btn-block">

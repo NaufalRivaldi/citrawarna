@@ -95,11 +95,20 @@ class Crud extends CI_Controller
 		if(!$_POST){
 			$laman['input'] = (array) $this->backend->default_slideshow();
 		} else {
+			
 			$upload = $this->backend->upload_cover('./upload/slideshow/', 'img');
 		    if($upload['result'] == "success"){ 
-		    	$this->backend->insert_slideshow($upload);
+				//disable all record
+				$this->db->set('stat', 0)->where('stat', 1)->update('slideshow');
+				//insert to db
+				$this->backend->insert_slideshow($upload);
+				//resize
 		    	$resize = $this->backend->do_resize('img', "./upload/slideshow/".$upload['file']['file_name'], './upload/slideshow/thumbs/');
-		        $this->session->set_flashdata('success', 'Data Slideshow berhasil ditambah');
+				//get last id for active
+				$last_id = $this->db->query('SELECT count(id_slideshow) as id from slideshow ')->row();
+				//update active to last upload
+				$set_active = $this->db->set('stat', 1)->where('id_slideshow', $last_id->id)->update('slideshow');
+				$this->session->set_flashdata('success', 'Data Slideshow berhasil ditambah');
 		        redirect('backend/slideshow'); 
 		    }else{ 
 		    	$laman['input'] = (array) $this->input->post();
@@ -108,6 +117,21 @@ class Crud extends CI_Controller
 		}
 
 		$this->load->view('backend/template', $laman);
+	}
+
+	public function hapus_slideshow(){
+		$id = $this->input->post('id_slideshow');
+		$slideshow = $this->db->where('id_slideshow', $id)->get('slideshow')->row();
+		$old_pict = 'upload/slideshow/'. $slideshow->img;
+		$old_thumb = 'upload/slideshow/thumbs/'. $slideshow->img;
+		echo $old_pict;
+		
+		unlink($old_pict);
+		unlink($old_thumb);
+
+		$this->db->where('id_slideshow', $id)->delete('slideshow');
+		$this->session->set_flashdata('success', 'Hapus data berhasil');
+		redirect('backend/slideshow'); 
 	}
 
 	public function disable_slide($id){

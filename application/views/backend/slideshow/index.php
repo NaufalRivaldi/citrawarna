@@ -24,7 +24,11 @@
 		<td>
 			<a href="<?= base_url('crud/enable_slide/').$row['id_slideshow'] ?>" class="<?php if($row['stat'] == 1) echo "disabled"; ?>">Aktifkan</a><br>
 			<a href="<?= base_url('crud/disable_slide/').$row['id_slideshow'] ?>" class="<?php if($row['stat'] == 0) echo "disabled"; ?>">Nonaktifkan</a> <br>
-			<a href="#">Hapus</a>
+			<form action="<?= base_url('crud/hapus_slideshow') ?>" method="post"  onsubmit="return confirm('Yakin?')">
+				<input type="hidden" value="<?= $row['id_slideshow'] ?>" name="id_slideshow">
+				<button type="submit">Hapus</button>
+			</form>
+			
 		</td>
 	</tr>
 	<?php } ?>

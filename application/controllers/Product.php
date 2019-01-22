@@ -95,6 +95,25 @@ class Product extends CI_Controller
 		$this->load->view('template', $data);
 	}
 
+	public function search(){
+		$post = $this->input->get();
+		$keyword = $post['search'];
+
+		$data['title'] = "Produk Kami";
+
+		if($keyword){
+			$data['judul_kat'] = 'Cari Produk : '.$keyword;
+			$data['title'] = 'Cari Barang';
+			$data['barangs'] = $this->home_model->get_search_barang($keyword);
+		}
+		
+		$data['content'] = 'frontend/index_search';
+		$data['keywords'] = "";
+		$data['description'] = " ";
+		$data['img'] = 'assets/img/cwa_banner.jpg';
+		$this->load->view('template', $data);
+	}
+
 	
 }
 

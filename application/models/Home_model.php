@@ -30,6 +30,10 @@ class Home_model extends CI_Model
 		return $this->db->where('stat', 1)->get('cabang')->result_array();
 	}
 
+	public function getLast_cabang(){
+		return $this->db->limit(1)->order_by('id_cabang', 'DESC')->where('stat', 1)->get('cabang')->row();
+	}
+
 	public function get_setting($param){
 		return $this->db->where('param', $param)->get('setting')->row_array();
 	}
@@ -55,6 +59,10 @@ class Home_model extends CI_Model
 
 	public function get_list_barang($kat){
 		return $this->db->join('kat_barang', 'kat_barang.kd_kategori = barang.kd_kategori')->where('barang.kd_kategori', $kat)->get('barang')->result_array();
+	}
+
+	public function get_search_barang($key){
+		return $this->db->join('kat_barang', 'kat_barang.kd_kategori = barang.kd_kategori')->like('barang.nm_barang', $key)->get('barang')->result_array();
 	}
 
 	public function get_all_barang($kat){
@@ -151,6 +159,38 @@ class Home_model extends CI_Model
 	public function get_kategori(){
 		return $this->db->get('kategori')->result_array();
 	}
+
+	public function emailValidation() {
+    $validationRules = [
+      [
+        'field' => 'name',
+        'label' => 'name',
+        'rules' => 'required'
+      ],
+      [
+      	'field' => 'email',
+      	'label' => 'email',
+      	'rules' => 'required'
+      ],
+      [
+      	'field' => 'no_telp',
+      	'label' => 'no_telp',
+      	'rules' => 'required'
+      ],
+      [
+      	'field' => 'subject',
+      	'label' => 'subject',
+      	'rules' => 'required'
+      ],
+      [
+      	'field' => 'message',
+      	'label' => 'message',
+      	'rules' => 'required'
+      ],
+      
+    ];
+    return $validationRules;
+  }
 
 
  

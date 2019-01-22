@@ -34,11 +34,6 @@
 								<?php } ?>
 							</div>
 						</li>
-						<li>
-							<a href="<?= base_url('inspirasi') ?>" <?= ($this->uri->segment(1)=='inspirasi')?"style='color:yellow'":"style=''" ?>>
-								INSPIRASI
-							</a>
-						</li>
 						<li><a href="#lokasi">LOKASI KAMI</a></li>
 						<li><a href="#contact">CONTACT</a></li>
 					</ul>
@@ -60,13 +55,19 @@
 					<?php $nav = $this->db->order_by('parent_of', 'asc')->get('kat_barang')->result_array(); 
 						foreach($nav as $link) {
 					?>
-					<li class="list">
+					<li class="list <?= $this->uri->segment(3) == $link['kd_kategori'] ? 'menu-active' : '' ?>">
 						<a href="<?= base_url('product/kategori/'.$link['kd_kategori']) ?>">
-							<?= $link['desk_kategori'] ?>		
+							<?= $link['desk_kategori'] ?>	
 						</a>
 					</li>
 					
 					<?php } ?>
+
+					<li>
+						<button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalSearch">
+							<i class="fa fa-search"></i>
+						</button>
+					</li>
 					<!-- coding buat navbar kalo sewaktu diperlukan
 					<li class="list"><a href="<?= base_url('product/kategori/lain') ?>">Lain - Lain</a>
 						<div class="dropdown">
@@ -82,10 +83,14 @@
 	</nav>
 	<!-- menu mobile -->
 	<ul class="menu-mobile" type="circle">
+		<li>
+			<button class="btn btn-warning btn-block" data-toggle="modal" data-target="#modalSearch">
+				<i class="fa fa-search"></i>
+			</button>
+		</li>
 		<li><a href="<?= base_url() ?>">HOME</a></li>
 		<li><a href="<?= base_url('product/kategori') ?>">PRODUK</a></li>
 		<li><a href="<?= base_url('artikel') ?>">ARTIKEL</a></li>
-		<li><a href="<?= base_url('inspirasi') ?>">INSPIRASI</a></li>
 		<li><a href="#lokasi">LOKASI</a></li>
 		<li><a href="#contact">CONTACT</a></li>
 		<hr>
