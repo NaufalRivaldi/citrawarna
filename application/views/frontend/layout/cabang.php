@@ -32,15 +32,17 @@
 
 			<!-- cabang mobile -->
 			<div class="cabang_mobile">
-				<div class="row">
-					<?php $cabang = $this->home_model->get_cabang(); 
-						foreach($cabang as $toko) {	?>
-						<div class="col-md-4">
-							<strong><?= $toko['nm_cbg'] ?></strong>
-							<br>
-							<?= $toko['alamat'] ?> <br> Telp : <?= $toko['telp'] ?>
-							<hr>
-						</div>
-					<?php } ?>
+				<div class="container">
+					<div class="row">
+						<?php $cabang = $this->home_model->get_cabang(); 
+							foreach($cabang as $toko) {	?>
+							<div class="col-md-4">
+								<strong><?= $toko['nm_cbg'] ?></strong>
+								<br>
+								<?= $toko['alamat'] ?> <br> Telp : <?= $toko['telp'] ?>
+								<hr>
+							</div>
+						<?php } ?>
+					</div>
 				</div>
 			</div>
