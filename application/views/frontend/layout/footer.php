@@ -1,6 +1,6 @@
 	<div class="row justify-content-center">
 			<div class="footer">	
-				&copy; Refo Junior - 2018
+				&copy; Refo Junior & Naufal Rivaldi - 2018
 			</div>	
 		</div>	
 	</div>	

@@ -4,7 +4,29 @@ class Product extends CI_Controller
 {
 	public function view($kd_merk){
 		$data['barang'] = $this->home_model->get_row_barang('kd_merk',$kd_merk);
-		$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk like '$kd_merk' and harga != 0 group by nm_barang")->result_array();
+		$data['location'] = '';
+		if(isset($_GET['location'])){
+			$get = $this->input->get();
+			$location = $get["location"];
+			$data['location'] = $location;
+
+			// switch location -> tambah jika ada cabang baru ya..
+			switch ($location) {
+				case 'bali':
+					$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk LIKE '$kd_merk' AND kd_gudang NOT IN (SELECT kd_gudang FROM raw WHERE kd_gudang LIKE '%CL%') AND harga != 0 GROUP BY nm_barang")->result_array();
+					break;
+
+				case 'lombok':
+					$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk like '$kd_merk' and harga != 0 and kd_gudang like '%CL%' group by nm_barang")->result_array();
+					break;
+				
+				default:
+					# code...
+					break;
+			}
+		}else{
+			$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk like 'default' and harga != 0 group by nm_barang")->result_array(); 
+		}
 
 		$data['title'] = $data['barang']['nm_barang'];
 		$data['keywords'] = $data['barang']['tag'];
@@ -12,6 +34,7 @@ class Product extends CI_Controller
 		$data['description'] = $data['barang']['deskripsi'];
 		$data['detail'] = 0;
 		$data['teknis'] = $this->db->where('kd_merk', $kd_merk)->get('detail_barang');
+		$data['kd_merk'] = $kd_merk;
 		//update jumlah klik pada record
 		$this->home_model->updateClick('barang', 'kd_merk', $kd_merk);
 
@@ -19,7 +42,7 @@ class Product extends CI_Controller
 		$this->load->view('template', $data);
 	}
 
-	public function detail($nm_barang){
+	public function detail($nm_barang, $location){
 		//tambahan fungsi kampret gara2 character nama barang aneh2
 		if(strpos($nm_barang, "~")){
 			$namaBarang = str_replace('~', '"', $nm_barang);
@@ -41,8 +64,19 @@ class Product extends CI_Controller
 
 		$data['barang'] = $this->home_model->get_row_barang('kd_merk', $row['kd_merk']);
 
-		 
-		$query = $this->db->query("SELECT * FROM raw WHERE nm_barang='".$namaBarang. "' AND kd_gudang != 'GUDANG' ");
+		switch ($location) {
+			case 'bali':
+				$query = $this->db->query("SELECT * FROM raw WHERE nm_barang='".$namaBarang. "' AND kd_gudang != 'GUDANG' AND kd_gudang NOT like '%CL%' ");
+				break;
+
+			case 'lombok':
+				$query = $this->db->query("SELECT * FROM raw WHERE nm_barang='".$namaBarang. "' AND kd_gudang != 'GUDANG' AND kd_gudang like '%CL%' ");
+				break;
+			
+			default:
+				# code...
+				break;
+		}
 		$data['raw'] = $query->result_array();
 
 		$data['title'] = $data['barang']['nm_barang'];

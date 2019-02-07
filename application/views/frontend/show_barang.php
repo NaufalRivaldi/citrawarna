@@ -62,6 +62,22 @@
 							<div class="col-md-12 font-product">
 							
 							<?php if($detail==0) { ?>
+								<h3><?= (empty($location)) ? 'Pilih Provinsi Terlebih Dahulu.' : 'List Harga : '.ucwords($location) ?></h3>
+								<div class="row">
+									<div class="col-6">
+										<form action="<?= base_url('product/view/'.$kd_merk) ?>" method="GET" id="form-location">
+											<div class="input-groups">
+												<label for="location">Pilih Provinsi :</label>
+												<select name="location" id="location" class="form-control">
+													<option value="">Pilih</option>
+													<option value="bali">Bali</option>
+													<option value="lombok">Lombok</option>
+												</select>
+											</div>
+										</form>
+									</div>
+								</div>
+								<br>
 								<table class="table " id="myTable">
 									<thead class="thead-light">
 										<tr>
@@ -87,9 +103,9 @@
 										?>
 										<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">
 											<td><?= $no++ ?></td>
-											<td><a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url))) ?>"><?= $row['kd_barang'] ?></a></td>
+											<td><a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url)).'/'.$location) ?>"><?= $row['kd_barang'] ?></a></td>
 											<td>
-												<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url))) ?>"><?= $row['nm_barang'] ?></a>
+												<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url)).'/'.$location) ?>"><?= $row['nm_barang'] ?></a>
 											</td>
 											<td><b>Rp. <?= number_format($row['harga']) ?></b></td>
 											<td style="<?= ($row['jumlah']>0 ? "color:green" : "color:red") ?>"><?= ($row['jumlah']>0 ? "Ada" : "Kosong") ?></td>
@@ -98,6 +114,7 @@
 									</tbody>
 								</table>
 							<?php } else { ?>
+								<h3>List Harga : <?= ucwords($this->uri->segment(4)) ?></h3>
 								<table class="table table-sm table-striped table-hover" id="myTable">
 									<thead>
 										<tr>

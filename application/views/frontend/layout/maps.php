@@ -22,7 +22,9 @@
 					      ['Citra Warna Kediri Tabanan', -8.549910, 115.123622],
 					      ['Citra Warna Singaraja', -8.120536, 115.072607],
 					      ['Citra Warna Tibubeneng', -8.640428, 115.152664],
-					      ['Citra Warna WR. Supratman', -8.640707, 115.252245]
+					      ['Citra Warna WR. Supratman', -8.640707, 115.252245],
+								['Citra Warna Waturenggong', -8.678151, 115.224420],
+								['Citra Warna Mataram', -8.587264, 116.126844]
 					    ];
 
 					    var map = new google.maps.Map(document.getElementById('map'), {
