@@ -34,6 +34,7 @@
 								<?php } ?>
 							</div>
 						</li>
+						<li><a href="https://konsultasi.cwabali.com/">KONSULTASI WARNA</a></li>
 						<li><a href="#lokasi">LOKASI KAMI</a></li>
 						<li><a href="#contact">CONTACT</a></li>
 					</ul>
@@ -91,6 +92,7 @@
 		<li><a href="<?= base_url() ?>">HOME</a></li>
 		<li><a href="<?= base_url('product/kategori') ?>">PRODUK</a></li>
 		<li><a href="<?= base_url('artikel') ?>">ARTIKEL</a></li>
+		<li><a href="https://konsultasi.cwabali.com/">KONSULTASI WARNA</a></li>
 		<li><a href="#lokasi">LOKASI</a></li>
 		<li><a href="#contact">CONTACT</a></li>
 		<hr>
