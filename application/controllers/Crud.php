@@ -247,6 +247,27 @@ class Crud extends CI_Controller
 		$this->load->view('backend/template', $laman);
 	}
 
+	public function cabang_edit($id = null){
+		$laman = [
+			'content' => 'backend/cabang/edit',
+			'title' => 'edit cabang',
+			'menu' => 4,
+			'form_action' => 'crud/cabang_edit/'.$id,
+			'data' => $this->backend->get_cabang_id($id)
+		];
+
+		if(!$_POST){
+			$laman['input'] = (array) $this->backend->defaultCabang();
+		} else {
+      		$laman['input'] = (array) $this->input->post();
+      		$this->db->where('id_cabang', $id)->update('cabang', $laman['input']);
+      		$this->session->set_flashdata('success', 'Data berhasil diedit');
+      		redirect('backend/cabang');
+		}
+
+		$this->load->view('backend/template', $laman);
+	}
+
 	public function cabang_delete($id){
 		$this->db->set('stat', 0)->where('id_cabang', $id)->update('cabang');
 		$this->session->set_flashdata('success', 'Data berhasil dihapus');

@@ -250,6 +250,10 @@ class Backend_model extends CI_Model
 		return $this->db->where('stat', 1)->get('cabang')->result_array();
 	}
 
+	public function get_cabang_id($id){
+		return $this->db->where('stat', 1)->where('id_cabang', $id)->get('cabang')->row();
+	}
+
 	public function defaultCabang(){
 		return [
 			'nm_cbg' => '',
