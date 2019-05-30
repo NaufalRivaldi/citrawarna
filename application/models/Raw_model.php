@@ -81,10 +81,17 @@ class Raw_model extends CI_Model
 			//menghapus record sebelumnya
 			$del = $this->db->query("TRUNCATE TABLE raw");
 			$query = "INSERT INTO raw VALUES";
+			$no = 1;
 			foreach($reader as $row){
+				
 				//row[0] = kd_gudang, row[1] = kd_barang dsbnya, looping value setelah query insert diatas
+				$kata = $this->db->escape($row[2]);
+				$split = str_replace('/','-',$kata);
+				$split = str_replace('(',' ',$split);
+				$split = str_replace(')',' ',$split);
+
 				$query .= "(NULL,
-				'$row[0]', '$row[1]', ".$this->db->escape($row[2]).", '$row[3]', 
+				'$row[0]', '$row[1]', ".$split.", '$row[3]', 
 				'$row[4]', '$row[6]', '$row[7]', '$row[8]', '$row[9]'), ";
 			}
 			$query = substr($query, 0, -2);
