@@ -62,17 +62,20 @@
 							<div class="col-md-12 font-product">
 							
 							<?php if($detail==0) { ?>
-								<h3><?= (empty($location)) ? 'Pilih Provinsi Terlebih Dahulu.' : 'List Harga : '.ucwords($location) ?></h3>
 								<div class="row">
-									<div class="col-6">
+									<div class="col-12">
 										<form action="<?= base_url('product/view/'.$kd_merk) ?>" method="GET" id="form-location">
-											<div class="input-groups">
-												<label for="location">Pilih Provinsi :</label>
-												<select name="location" id="location" class="form-control">
-													<option value="">Pilih</option>
-													<option value="bali">Bali</option>
-													<option value="lombok">Lombok</option>
-												</select>
+											<div class="row">
+												<div class="col-md-6" style="text-align:right">
+													<h2><?= (empty($location)) ? 'Pilih Provinsi Terlebih Dahulu :' : 'List Harga : '.ucwords($location) ?></h2>
+												</div>
+												<div class="col-md-6">
+													<select name="location" id="location" class="form-control col-10">
+														<option value="">Pilih</option>
+														<option value="bali">Bali</option>
+														<option value="lombok">Lombok</option>
+													</select>
+												</div>
 											</div>
 										</form>
 									</div>
