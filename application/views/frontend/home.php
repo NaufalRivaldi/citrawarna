@@ -67,7 +67,7 @@
 				</div>
 				<div class="col-md-4">
 					<center><img src="<?= base_url('assets/img/features-4.png') ?>" alt="features-3" class="service"></center>
-					<h5 align="center" class="service-title"><b>Jasa Pengecekan Tembok</b></h5>
+					<h5 align="center" class="service-title"><b>Jasa Tes Kesehatan Tembok</b></h5>
 					<p align="center">Menyediakan layanan jasa pengecekan kesiapan atau kesehatan tembok sebelum melakukan pengecatan, GRATIS tidak dipungut biaya (Khusus area denpasar)</p>
 				</div>
 				<div class="col-md-4" class="service-title">
