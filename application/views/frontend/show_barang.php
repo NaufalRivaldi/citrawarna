@@ -140,9 +140,9 @@
 										?>
 										<tr class="<?=($row['jumlah']>0 ? '' : 'not-active') ?>">
 											<td><?= $no++ ?></td>
-											<td><a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url))) ?>"><?= $row['kd_barang'] ?></a></td>
+											<td><?= $row['kd_barang'] ?></td>
 											<td>
-												<a href="<?= base_url('product/detail/'.strtolower(str_replace(" ", "_", $url))) ?>"><?= $row['nm_barang'] ?></a>
+												<?= $row['nm_barang'] ?>
 											</td>
 											<td><b>Rp. <?= number_format($row['harga']) ?></b></td>
 											<td align="center" style="<?= ($row['jumlah']>0 ? "color:green" : "color:red") ?>"><b><?= ($row['jumlah']>0 ? $row['jumlah']: "Kosong") ?></b></td>
