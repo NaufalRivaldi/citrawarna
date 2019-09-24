@@ -74,6 +74,7 @@
 														<option value="">Pilih</option>
 														<option value="bali">Bali</option>
 														<option value="lombok">Lombok</option>
+														<option value="makassar">Makassar</option>
 													</select>
 												</div>
 											</div>

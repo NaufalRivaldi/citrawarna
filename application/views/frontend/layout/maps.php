@@ -6,26 +6,26 @@
 					<div id="map" style="width: 100%; height: 250px;"></div>
 					<script type="text/javascript">
 					    var locations = [
-					      ['Citra Warna Imam Bonjol 1', -8.6831194,115.1961952, 1],
-					      ['Citra Warna Imam Bonjol 2', -8.6980697,115.1855397, 2],
-					      ['Citra Warna Buluh Indah', -8.6500855,115.1953654, 3],
-					      ['Citra Warna Canggu', -8.6464189,115.1656472, 4],
-					      ['Citra Warna Teuku Umar Barat', -8.6720333,115.1731858, 5],
-					      ['Citra Warna Sunset Road', -8.696235,115.1758945, 6],
-					      ['Citra Warna Gatot Subroto', -8.6357431,115.2299356, 7],
-					      ['Citra Warna Ubud', -8.5258281,115.271246, 8],
-					      ['Citra Warna Nusa Dua', -8.784843, 115.195003, 9],
-					      ['Citra Warna Mahendradatta', -8.664949, 115.189706, 10],
-					      ['Citra Warna Semabaung', -8.534997, 115.307913, 11],
-					      ['Citra Warna Dalung', -8.635750, 115.175192],
-					      ['Citra Warna Panjer', -8.677053, 115.239976],
-					      ['Citra Warna Kediri Tabanan', -8.549910, 115.123622],
-					      ['Citra Warna Singaraja', -8.120536, 115.072607],
-					      ['Citra Warna Tibubeneng', -8.640428, 115.152664],
-					      ['Citra Warna WR. Supratman', -8.640707, 115.252245],
-								['Citra Warna Waturenggong', -8.678151, 115.224420],
-								['Citra Warna Mataram', -8.587264, 116.126844],
-								['Citra Warna Ahmad Yani', -8.626979, 115.207801]
+							['Citra Warna Imam Bonjol 1', -8.6831194,115.1961952, 1],
+							['Citra Warna Imam Bonjol 2', -8.6980697,115.1855397, 2],
+							['Citra Warna Buluh Indah', -8.6500855,115.1953654, 3],
+							['Citra Warna Canggu', -8.6464189,115.1656472, 4],
+							['Citra Warna Teuku Umar Barat', -8.6720333,115.1731858, 5],
+							['Citra Warna Sunset Road', -8.696235,115.1758945, 6],
+							['Citra Warna Gatot Subroto', -8.6357431,115.2299356, 7],
+							['Citra Warna Ubud', -8.5258281,115.271246, 8],
+							['Citra Warna Nusa Dua', -8.784843, 115.195003, 9],
+							['Citra Warna Mahendradatta', -8.664949, 115.189706, 10],
+							['Citra Warna Semabaung', -8.534997, 115.307913, 11],
+							['Citra Warna Dalung', -8.635750, 115.175192],
+							['Citra Warna Panjer', -8.677053, 115.239976],
+							['Citra Warna Kediri Tabanan', -8.549910, 115.123622],
+							['Citra Warna Singaraja', -8.120536, 115.072607],
+							['Citra Warna Tibubeneng', -8.640428, 115.152664],
+							['Citra Warna WR. Supratman', -8.640707, 115.252245],
+							['Citra Warna Waturenggong', -8.678151, 115.224420],
+							['Citra Warna Mataram', -8.587264, 116.126844],
+							['Citra Warna Ahmad Yani', -8.626979, 115.207801]
 					    ];
 
 					    var map = new google.maps.Map(document.getElementById('map'), {

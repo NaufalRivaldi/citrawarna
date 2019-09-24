@@ -20,6 +20,10 @@ class Product extends CI_Controller
 					$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk like '$kd_merk' and harga != 0 and kd_gudang like '%CL%' group by nm_barang")->result_array();
 					break;
 				
+				case 'makassar':
+					$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk like '$kd_merk' and harga != 0 and kd_gudang like '%CS%' group by nm_barang")->result_array();
+					break;
+
 				default:
 					# code...
 					break;

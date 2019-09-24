@@ -157,6 +157,9 @@ class Home_model extends CI_Model
 			case 'CL1' :
 				$lokasi = " Citra Warna Mataram - Lombok ";
 				break;
+			case 'CS1' :
+				$lokasi = " Citra Warna Makassar - Sulawesi Selatan ";
+				break;
 			default : 
 				$lokasi = "undefined";
 				break;
