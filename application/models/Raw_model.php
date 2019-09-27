@@ -121,6 +121,7 @@ class Raw_model extends CI_Model
 						"CA8",
 						"CA9",
 						"CL1",
+						"CS1",
 						"GUDANG"
 					);
 				$data_cabang = implode("','", $cabang);

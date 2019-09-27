@@ -76,7 +76,11 @@ class Product extends CI_Controller
 			case 'lombok':
 				$query = $this->db->query("SELECT * FROM raw WHERE nm_barang='".$namaBarang. "' AND kd_gudang != 'GUDANG' AND kd_gudang like '%CL%' ");
 				break;
-			
+
+			case 'makassar':
+				$query = $this->db->query("SELECT * FROM raw WHERE nm_barang='".$namaBarang. "' AND kd_gudang != 'GUDANG' AND kd_gudang like '%CS%' ");
+				break;
+
 			default:
 				# code...
 				break;
