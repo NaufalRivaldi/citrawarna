@@ -5,7 +5,7 @@
 				<div class="flex-container">
 					<div class="nav-brand">
 						<a href="<?= base_url() ?>">
-							<img src="<?= base_url('assets/img/logo-new.jpg') ?>" alt="logo" class="logo-brand">
+							<img src="<?= base_url('assets/img/logo-new.png') ?>" alt="logo" class="logo-brand">
 						</a>
 					</div>
 					<ul>
