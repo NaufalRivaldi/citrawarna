@@ -45,6 +45,18 @@
               Cabang
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link <?php if($menu == 8) echo "active" ?>" href="<?= base_url('admin/testimoni') ?>">
+              <i class="fa fa-globe"></i>&nbsp; 
+              Testimoni
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <?php if($menu == 9) echo "active" ?>" href="<?= base_url('admin/lowongan') ?>">
+              <i class="fa fa-globe"></i>&nbsp; 
+              Lowongan
+            </a>
+          </li>
         </ul>
       </div>
       <p style="font-size:12px;" align="center">Copyright 2018 - Refo Junior</p>

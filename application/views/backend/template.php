@@ -13,7 +13,16 @@
 
  <?php $this->load->view($content) ?>
 
-
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready( function () {
+      $('.myTable').DataTable();
+  } );
+</script>
 
 
 

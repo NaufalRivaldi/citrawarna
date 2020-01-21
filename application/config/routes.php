@@ -55,4 +55,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['artikel/(:num)'] = "artikel/index/$1";
 
+// backend route control
+$route['admin/testimoni'] = "admin/testimoni";
+
 

@@ -29,4 +29,9 @@ class Welcome extends CI_Controller {
 		$data['content'] = 'frontend/home';
 		$this->load->view('template', $data);
 	}
+
+	public function home()
+	{
+		$this->load->view('template2020');
+	}
 }
