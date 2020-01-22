@@ -1,6 +1,15 @@
-<title>Toko Cat Citra Warna</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="<?= $keywords ?> Toko cat, jual cat, weldon, citra warna, cwa">
+<!-- <meta property="og:url" content="https://www.cwabali.com"> -->
+<meta property="og:title" content="<?= $title ?> - Toko Cat Citra Warna">
+<meta property="og:image" content="<?= base_url().$img ?>">
+<meta property="image" content="<?= base_url().$img ?>">
+<meta property="description" content="<?= $description ?> ">
+<meta name="description" content="<?= $description ?>">
+<meta property="og:description" content="<?= $description ?>">
+<title><?= $title ?> - Toko Cat Citra Warna</title>
+<link rel="icon" href="<?= base_url() ?>assets/img/icon.png">
 
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
 

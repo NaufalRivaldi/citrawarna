@@ -11,31 +11,20 @@
 
     <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="produk.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</a>
+            <li class="nav-item active"><a href="<?= base_url('/') ?>" class="nav-link">Home</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="produk.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="produk.html#produkunggulan">Produk Unggulan</a>
-                <a class="dropdown-item" href="produk.html#cattembok">Cat</a>
-                <a class="dropdown-item" href="#">Politur</a>
-                <a class="dropdown-item" href="#">Thinner</a>
-                <a class="dropdown-item" href="#">Lain - lain</a>
+                <?php $nav = $this->db->order_by('parent_of', 'asc')->get('kat_barang')->result_array(); ?>
+                <?php foreach($nav as $link) { ?>	
+                    <a class="dropdown-item" href="<?= base_url('product/kategori/'.$link['kd_kategori']) ?>"><?= $link['desk_kategori'] ?></a>		
+                <?php } ?>
                 </div>
-        </li>
-        <li class="nav-item"><a href="blog.html" class="nav-link">Artikel</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Konsultasi Warna</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">Tentang Kami</a></li>
-        <!-- <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> -->
-        <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="portfolio.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="portfolio.html">Portfolio</a>
-                <a class="dropdown-item" href="portfolio-single.html">Portfolio Single</a>
-            </div>
-        </li> -->
-        <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Case Studies</a></li> -->
-        <li class="nav-item"><a href="contact.html" class="nav-link">Kontak</a></li>
-        <!-- <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Get in touch</span></a></li> -->
+            </li>
+            <li class="nav-item"><a href="<?= base_url('artikel') ?>" class="nav-link">Artikel</a></li>
+            <li class="nav-item"><a href="https://konsultasi.cwabali.com/" class="nav-link">Konsultasi Warna</a></li>
+            <li class="nav-item"><a href="<?= base_url('aboutus') ?>" class="nav-link">Tentang Kami</a></li>
+            <li class="nav-item"><a href="<?= base_url('contact') ?>" class="nav-link">Kontak</a></li>
         </ul>
     </div>
     </div>
