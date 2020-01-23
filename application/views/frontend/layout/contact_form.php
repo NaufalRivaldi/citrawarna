@@ -18,11 +18,11 @@
 					         <label class="label" for="email">E-mail</label>
 					      </div>
 					      <div class="form-field col x-100">
-					         <input id="no_telp" name="no_telp" class="input-text js-input" type="text" >
+					         <input id="no_telp" name="no_telp" class="input-text js-input" type="text">
 					         <label class="label" for="no_telp">No Telp</label>
 					      </div>
 					      <div class="form-field col x-100">
-					         <input id="subject" name="subject" class="input-text js-input" type="text" >
+					         <input id="subject" name="subject" class="input-text js-input" type="text">
 					         <label class="label" for="subject">Subject</label>
 					      </div>
 					      <div class="form-field col x-100">
