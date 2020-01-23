@@ -12,7 +12,7 @@
         <section class="ftco-section contact-section ftco-degree-bg mt-5">
             <div class="container mt-5">
                 <div class="row no-gutters justify-content-center">
-                    <div class="col-md-7 text-center heading-section ftco-animate">
+                    <div class="col-md-7 text-center heading-section">
                         <h2>Lokasi Kami</h2>
                         <p class="mb-4">
                         "Temukan toko cat Citra Warna terdekat anda"
@@ -24,7 +24,7 @@
                             $last_cabang = $this->home_model->getLast_cabang();
                             foreach($cabang as $toko) {	?>
                                 <?php if ($toko['id_cabang'] == $no1): ?>
-                                    <div class="row">
+                                    <div class="row ftco-animate">
                                 <?php $no1 += 3; endif ?>
                                 <div class="col-md-4">
                                     <strong><?= $toko['nm_cbg'] ?></strong>
