@@ -13,7 +13,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="<?= base_url('/') ?>" class="nav-link">Home</a></li>
             <li class="nav-item dropdown">
-                <a class="nav-link" href="produk.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</a>
+                <a class="nav-link" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <?php $nav = $this->db->order_by('parent_of', 'asc')->get('kat_barang')->result_array(); ?>
                 <?php foreach($nav as $link) { ?>	
@@ -21,7 +21,16 @@
                 <?php } ?>
                 </div>
             </li>
-            <li class="nav-item"><a href="<?= base_url('artikel') ?>" class="nav-link">Artikel</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artikel</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <?php $kat = $this->home_model->get_kategori(); ?>
+                <a class="dropdown-item" href="<?= base_url('artikel') ?>">Semua Artikel</a>
+                <?php foreach($kat as $row) { ?>	
+                    <a class="dropdown-item" href="<?= base_url('kategori/lists/').strtolower($row['id_kategori']) ?>"><?= $row['nama_kategori'] ?></a>	
+                <?php } ?>
+                </div>
+            </li>
             <li class="nav-item"><a href="https://konsultasi.cwabali.com/" class="nav-link">Konsultasi Warna</a></li>
             <li class="nav-item"><a href="<?= base_url('aboutus') ?>" class="nav-link">Tentang Kami</a></li>
             <li class="nav-item"><a href="<?= base_url('contact') ?>" class="nav-link">Kontak</a></li>

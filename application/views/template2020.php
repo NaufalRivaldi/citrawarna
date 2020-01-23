@@ -258,14 +258,18 @@
                     <div class="col-md-3 ftco-animate">
                         <div class="media block-6 services d-block text-center">
                             <div class="d-flex justify-content-center">
-                                <div class="icon color-2 d-flex justify-content-center mb-3">
-                                    <span class="align-self-center font-icon">
-                                        <i class="fas fa-users"></i>
-                                    </span>
-                                </div>
+                                <a href="<?= site_url('lowongan/detail/'. $lowongan->id) ?>">
+                                    <div class="icon color-2 d-flex justify-content-center mb-3">
+                                        <span class="align-self-center font-icon">
+                                            <i class="fas fa-users"></i>
+                                        </span>
+                                    </div>
+                                </a>
                             </div>
                             <div class="media-body p-2 mt-3">
-                                <h3 class="heading"><?= $lowongan->judul ?></h3>
+                                <a href="<?= site_url('lowongan/detail/'. $lowongan->id) ?>">
+                                    <h3 class="heading"><?= $lowongan->judul ?></h3>
+                                </a>
                                 <p><?= date('d F Y', strtotime($lowongan->tgl)) ?></p>
                             </div>
                         </div>      
