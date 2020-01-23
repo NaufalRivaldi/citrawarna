@@ -23,3 +23,16 @@
 
 <!-- font awesome -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"></script>
+
+<!-- data table -->
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+
+        $('#location').change(function () {
+            $('#form-location').submit();
+        });
+    } );
+</script>

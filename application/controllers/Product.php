@@ -42,8 +42,8 @@ class Product extends CI_Controller
 		//update jumlah klik pada record
 		$this->home_model->updateClick('barang', 'kd_merk', $kd_merk);
 
-		$data['content'] = 'frontend/show_barang';
-		$this->load->view('template', $data);
+		$data['content'] = 'frontend/new/show_barang';
+		$this->load->view('frontend/new/product/show_barang', $data);
 	}
 
 	public function detail($nm_barang, $location){
@@ -101,7 +101,7 @@ class Product extends CI_Controller
 		$this->home_model->updateClick('barang', 'kd_merk', $row['kd_merk']);
 
 		$data['content'] = 'frontend/show_barang';
-		$this->load->view('template', $data);
+		$this->load->view('frontend/new/product/show_barang', $data);
 	}
 
 	public function kategori($kat=null){
@@ -134,7 +134,7 @@ class Product extends CI_Controller
 		$data['keywords'] = "citra warna, produk unggulan, toko cat citra warna";
 		$data['description'] = "Produk unggulan kami adalah produk yang berkualitas dengan harga yang sangat kompetitif ";
 		$data['img'] = 'assets/img/cwa_banner.jpg';
-		$this->load->view('template', $data);
+		$this->load->view('frontend/new/product/index_kategori', $data);
 	}
 
 	public function search(){

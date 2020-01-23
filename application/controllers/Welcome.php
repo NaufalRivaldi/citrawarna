@@ -27,18 +27,6 @@ class Welcome extends CI_Controller {
 		$data['title'] = 'Welcome';
 		$data['img'] = 'assets/img/cwa_banner.jpg';
 		$data['content'] = 'frontend/home';
-		$this->load->view('template', $data);
-	}
-
-	public function home()
-	{
-		$key = $this->home_model->get_setting('keywords');
-		$desk = $this->home_model->get_setting('description');
-		$data['keywords'] = $key['value'];
-		$data['description'] = $desk['value'];
-		$data['title'] = 'Welcome';
-		$data['img'] = 'assets/img/cwa_banner.jpg';
-		$data['content'] = 'frontend/home';
 		$this->load->view('template2020', $data);
 	}
 }

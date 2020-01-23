@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark <?= (!empty($this->uri->segment(1)))? 'ftco-navbar-dark' : 'ftco-navbar-light' ?>" id="ftco-navbar">
     <div class="container">
     <a class="navbar-brand" href="index.html">
         <img src="<?= base_url('assets/newtemplate2020/images/logo.png') ?>" alt="logo" class="logo-img">

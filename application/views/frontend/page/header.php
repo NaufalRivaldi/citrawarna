@@ -31,3 +31,5 @@
 <link rel="stylesheet" href="<?= base_url('assets/newtemplate2020/css/flaticon.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/newtemplate2020/css/icomoon.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/newtemplate2020/css/style.css') ?>">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">

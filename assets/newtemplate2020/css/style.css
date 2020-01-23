@@ -71,6 +71,19 @@ body {
 .font-icon{
   font-size: 2em;;
 }
+
+.konten{
+  margin-top: 10%;
+}
+
+.img-barang{
+  width: 80%;
+}
+
+.keterangan-barang{
+  font-size: .8em;
+}
+
 /* mystyle */
 
 hr {
@@ -7290,7 +7303,7 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #ee76ad; }
+  color: #000000; }
   a:hover {
     text-decoration: none;
     color: #ee76ad; }
