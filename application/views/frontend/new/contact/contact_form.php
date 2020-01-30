@@ -114,6 +114,7 @@
                 <div class="col-md-6">
                     <img style="max-width: 100%; height: auto;" src="<?= base_url('assets/newtemplate2020/images/cs.png')?>" alt="">
                 </div>
+					<?php echo validation_errors(); ?>
                 <div class="col-md-6 pr-md-5">
                     <form action="<?= base_url('send_email'); ?>" method="post" class="contact-form">
                     <div class="form-group">
