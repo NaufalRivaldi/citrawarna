@@ -12,11 +12,11 @@
                     <h2 class="ftco-heading-2">Link</h2>
                     <ul class="list-unstyled">
                         <li><a href="<?= site_url('/') ?>" class="py-2 d-block">Home</a></li>
-                        <li><a href="#" class="py-2 d-block">Produk</a></li>
-                        <li><a href="#" class="py-2 d-block">Artikel</a></li>
-                        <li><a href="#" class="py-2 d-block">Konsultasi Warna</a></li>
-                        <li><a href="#" class="py-2 d-block">Tentang Kami</a></li>
-                        <li><a href="#" class="py-2 d-block">Kontak</a></li>
+                        <li><a href="<?= base_url('product/kategori/45') ?>" class="py-2 d-block">Produk Unggulan</a></li>
+                        <li><a href="<?= base_url('artikel') ?>" class="py-2 d-block">Artikel</a></li>
+                        <li><a href="https://konsultasi.cwabali.com/" class="py-2 d-block">Konsultasi Warna</a></li>
+                        <li><a href="<?= base_url('aboutus') ?>" class="py-2 d-block">Tentang Kami</a></li>
+                        <li><a href="<?= base_url('contact') ?>" class="py-2 d-block">Kontak</a></li>
                     </ul>
                 </div>
             </div>

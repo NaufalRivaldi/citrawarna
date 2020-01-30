@@ -7688,8 +7688,9 @@ h1, h2, h3, h4, h5,
     background-attachment: fixed;
     /* background: rgb(59,59,59); */
     /* background: linear-gradient(180deg, rgba(59,59,59,1) 0%, rgba(142,142,142,1) 22%, rgba(255,255,255,0) 100%); */
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.43461134453781514) 23%, rgba(0,0,0,0.3533788515406162) 40%, rgba(255,255,255,0) 100%), url('../images/bg1.jpg');
     
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.43461134453781514) 23%, rgba(0,0,0,0.3533788515406162) 40%, rgba(255,255,255,0) 100%), url('../images/depan.jpg');
+    
 
     /* background: #ee76ad;
     background: -moz-linear-gradient(45deg, #ee76ad 0%, #efac78 100%);

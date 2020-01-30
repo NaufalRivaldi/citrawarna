@@ -19,7 +19,7 @@ class Send_email extends CI_Controller
 			}
 
 			$this->email->from($email, $name);
-			$this->email->to('refojunior5@gmail.com, citrawarnabali@gmail.com');
+			$this->email->to('naufal.rivaldi33@gmail.com, citrawarnabali@gmail.com');
 			$this->email->subject($subject);
 			$this->email->message($message . " No Telp Pengirim : " .$no_telp. " - send via contact form www.cwabali.com");
 

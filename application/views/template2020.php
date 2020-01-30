@@ -7,7 +7,6 @@
         <!-- navbar -->
         <?php $this->load->view('frontend/page/navbar') ?>
         <!-- navbar -->
-
         <div class="hero-wrap js-fullheight">
             <div class="overlay"></div>
                 <div id=""></div>
@@ -16,7 +15,6 @@
                     <div class="col-md-8 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                         <h1 class="" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>TOKO CAT CITRA WARNA</strong></h1>
                         <h5 class="mb-5" style="color: white;">Kami hadir untuk memenuhi kebutuhan pengecatan anda.</h5>
-                        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="#starter" class="btn btn-primary py-3 px-5">Tentang Kami</a></p>
                     </div>
                 </div>
             </div>
