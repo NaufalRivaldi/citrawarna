@@ -69,16 +69,17 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <form action="<?= base_url('product/view/'.$kd_merk) ?>" method="GET" id="form-location">
-                                            <div class="row">
-                                                <div class="col-md-6" style="text-align:right">
+                                            <div class="row text-center">
+                                                <div class="col-md-6">
                                                     <h2><?= (empty($location)) ? 'Pilih Provinsi Terlebih Dahulu :' : 'List Harga : '.ucwords($location) ?></h2>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <select name="location" id="location" class="form-control col-10">
+                                                    <select name="location" id="location" class="form-control">
                                                         <option value="">Pilih</option>
                                                         <option value="bali">Bali</option>
                                                         <option value="lombok">Lombok</option>
                                                         <option value="makassar">Makassar</option>
+                                                        <option value="palembang">Palembang</option>
                                                     </select>
                                                 </div>
                                             </div>

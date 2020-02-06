@@ -9,11 +9,18 @@
         <!-- navbar -->
 
         <!-- content -->
-        <section class="ftco-section konten">
+        <section class=" konten">
             <div class="container">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Lowongan : <?= $title ?></h3>
+                <div class="card mb-3 text-dark">
+                    <div class="card-header row">
+                        <div class="col-md-1">
+                            <span class="align-self-center font-icon">
+                                <i class="fas fa-users"></i>
+                            </span>
+                        </div>
+                        <div class="col-md-11">
+                            <h3>Lowongan : <?= $title ?></h3>
+                        </div>
                     </div>
                     <div class="card-body">
                         <p>

@@ -119,16 +119,18 @@ body {
 
 .text-artikels {
 	position: absolute;
-	top: 70%;
-    left: 50%
-	font-size: 20px;
+	font-size: 15px;
 	text-transform:capitalize;
 	color:white;
 	background:rgb(0,0,0,0.5);
 	width: 95%;
-	height: 50px;
+	height: 92%;
 	padding-left: 3px;
-	padding-right: 3px;
+  padding-right: 3px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .gmbr-artikels {
@@ -501,7 +503,7 @@ samp {
 
 code {
   font-size: 87.5%;
-  color: #e83e8c;
+  color: #fef200;
   word-break: break-word; }
   a > code {
     color: inherit; }
@@ -8652,7 +8654,7 @@ textarea.form-control {
       .blog-entry .text .heading a {
         color: #404044; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
-          color: #ee76ad; }
+          color: var(--red); }
     .blog-entry .text .meta-chat {
       color: #a5a5ab; }
     .blog-entry .text .read {

@@ -4,7 +4,7 @@
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">PT. Citra Warna Jaya Abadi</h2>
-                    <p>Toko yang menyediakan berbagai macam kebutuhan pengecattan anda.</p>
+                    <p>Toko yang menyediakan berbagai macam kebutuhan pengecatan anda.</p>
                 </div>
             </div>
             <div class="col-md">

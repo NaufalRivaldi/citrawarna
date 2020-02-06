@@ -26,13 +26,13 @@
                                 <?php if ($toko['id_cabang'] == $no1): ?>
                                     <div class="row">
                                 <?php $no1 += 3; endif ?>
-                                <div class="col-md-4">
+                                <div class="col-md-4 ftco-animate">
                                     <strong><?= $toko['nm_cbg'] ?></strong>
                                     <br>
                                     <?= $toko['alamat'] ?> <br> Telp : <?= $toko['telp'] ?>
                                 </div>
                                 <?php if ($toko['id_cabang'] == $no2): ?>
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 ftco-animate">
                                         <hr>
                                     </div>
                                     </div>
@@ -73,7 +73,9 @@
                         ['Citra Warna Waturenggong', -8.678151, 115.224420],
                         ['Citra Warna Mataram', -8.587264, 116.126844],
                         ['Citra Warna Ahmad Yani', -8.626979, 115.207801],
-                        ['Citra Warna Hayam Wuruk', -8.656681, 115.223152]
+                        ['Citra Warna Hayam Wuruk', -8.656681, 115.223152],
+                        ['Citra Warna Palembang', -2.941286, 104.767345],
+                        ['Citra Warna Makassar', -5.140920, 119.479929],
                     ];
 
                     var map = new google.maps.Map(document.getElementById('map'), {
@@ -114,6 +116,7 @@
                 <div class="col-md-6">
                     <img style="max-width: 100%; height: auto;" src="<?= base_url('assets/newtemplate2020/images/cs.png')?>" alt="">
                 </div>
+					<?php echo validation_errors(); ?>
                 <div class="col-md-6 pr-md-5">
                     <form action="<?= base_url('send_email'); ?>" method="post" class="contact-form">
                     <div class="form-group">

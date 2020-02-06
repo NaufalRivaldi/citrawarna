@@ -24,6 +24,10 @@ class Product extends CI_Controller
 					$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk like '$kd_merk' and harga != 0 and kd_gudang like '%CS%' group by nm_barang")->result_array();
 					break;
 
+				case 'palembang':
+					$data['raw'] = $this->db->query("SELECT * FROM raw WHERE kd_merk like '$kd_merk' and harga != 0 and kd_gudang like '%CM%' group by nm_barang")->result_array();
+					break;
+
 				default:
 					# code...
 					break;
@@ -79,6 +83,11 @@ class Product extends CI_Controller
 
 			case 'makassar':
 				$query = $this->db->query("SELECT * FROM raw WHERE nm_barang='".$namaBarang. "' AND kd_gudang != 'GUDANG' AND kd_gudang like '%CS%' ");
+				break;
+			
+			case 'palembang':
+				$query = $this->db->query("SELECT * FROM raw WHERE nm_barang='".$namaBarang. "' AND kd_gudang != 'GUDANG' AND kd_gudang like '%CM%' ");
+				
 				break;
 
 			default:
@@ -153,7 +162,7 @@ class Product extends CI_Controller
 		$data['keywords'] = "";
 		$data['description'] = " ";
 		$data['img'] = 'assets/img/cwa_banner.jpg';
-		$this->load->view('template', $data);
+		$this->load->view('frontend/new/product/index_search', $data);
 	}
 
 	

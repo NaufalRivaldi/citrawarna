@@ -47,13 +47,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link <?php if($menu == 8) echo "active" ?>" href="<?= base_url('admin/testimoni') ?>">
-              <i class="fa fa-globe"></i>&nbsp; 
+              <i class="fa fa-comments"></i>&nbsp; 
               Testimoni
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link <?php if($menu == 9) echo "active" ?>" href="<?= base_url('admin/lowongan') ?>">
-              <i class="fa fa-globe"></i>&nbsp; 
+            <i class="fa fa-user"></i>&nbsp; 
               Lowongan
             </a>
           </li>
