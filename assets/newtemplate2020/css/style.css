@@ -84,6 +84,65 @@ body {
   font-size: .8em;
 }
 
+.my-page-link a {
+  position: relative;
+   display: block;
+   padding: .5rem .75rem;
+   margin-left: -1px;
+   line-height: 1.25;
+   color: black;
+   background-color: #fff;
+   border: 1px solid #dee2e6;
+ text-decoration: none;
+}
+
+.my-page-link a:hover {
+ background-color: #F1F1F1;
+}
+
+.page-item.active .my-page-link {
+  z-index: 1;
+  color: red;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  background-color: yellow;
+  border: 1px solid #dee2e6;
+}
+
+.artikels {
+	width: 100%;
+	background-color: white;
+	padding: 8px;
+	position: relative;
+}
+
+.text-artikels {
+	position: absolute;
+	font-size: 15px;
+	text-transform:capitalize;
+	color:white;
+	background:rgb(0,0,0,0.5);
+	width: 95%;
+	height: 92%;
+	padding-left: 3px;
+  padding-right: 3px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.gmbr-artikels {
+  width: 100%;
+  height: 180px;
+  transition: 0.5s;
+}
+
+.img-artikel {
+  width: 80%;
+  padding:20px;
+}
 /* mystyle */
 
 hr {
@@ -444,7 +503,7 @@ samp {
 
 code {
   font-size: 87.5%;
-  color: #e83e8c;
+  color: #fef200;
   word-break: break-word; }
   a > code {
     color: inherit; }
@@ -7631,8 +7690,9 @@ h1, h2, h3, h4, h5,
     background-attachment: fixed;
     /* background: rgb(59,59,59); */
     /* background: linear-gradient(180deg, rgba(59,59,59,1) 0%, rgba(142,142,142,1) 22%, rgba(255,255,255,0) 100%); */
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.43461134453781514) 23%, rgba(0,0,0,0.3533788515406162) 40%, rgba(255,255,255,0) 100%), url('../images/bg1.jpg');
     
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.43461134453781514) 23%, rgba(0,0,0,0.3533788515406162) 40%, rgba(255,255,255,0) 100%), url('../images/depan.jpg');
+    
 
     /* background: #ee76ad;
     background: -moz-linear-gradient(45deg, #ee76ad 0%, #efac78 100%);
@@ -8594,7 +8654,7 @@ textarea.form-control {
       .blog-entry .text .heading a {
         color: #404044; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
-          color: #ee76ad; }
+          color: var(--red); }
     .blog-entry .text .meta-chat {
       color: #a5a5ab; }
     .blog-entry .text .read {

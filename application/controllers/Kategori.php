@@ -8,13 +8,13 @@ class Kategori extends CI_Controller
 			redirect('kategori');
 		} else {
 			$data['kategori'] = $this->db->where('id_kategori', $param)->get('kategori')->row_array();
-			$data['artikels'] = $this->db->join('kategori', 'kategori.id_kategori=artikel.id_kategori')->where('artikel.id_kategori', $param)->get('artikel')->result_array();
+			$data['artikels'] = $this->db->join('kategori', 'kategori.id_kategori=artikel.id_kategori')->where('artikel.id_kategori', $param)->order_by('id_artikel', 'desc')->get('artikel')->result_array();
 			$data['content'] = 'frontend/grup_kategori';
 			$data['title'] = "Kategori " . $data['kategori']['nama_kategori'];
 			$data['description'] = "Ini adalah list artikel dari kategori ".$data['kategori']['nama_kategori'];
 			$data['keywords'] = $data['kategori']['nama_kategori']. ", artikel ". $data['kategori']['nama_kategori'];
 			$data['img'] = 'assets/img/kategori.jpg';
-			$this->load->view('template', $data);
+			$this->load->view('frontend/new/artikel/grup_kategori', $data);
 		}  
 	}
 }

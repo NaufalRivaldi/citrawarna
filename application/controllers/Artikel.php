@@ -23,8 +23,8 @@ class Artikel extends CI_Controller
 		$data['keywords'] = "Artikel Citra Warna, cwa artikel";
 		$data['description'] = "Berikut adalah artikel dari kami";
 		$data['img'] = 'assets/img/cwa_banner.jpg';
-		$data['content'] = 'frontend/index_artikel';
-		$this->load->view('template', $data);
+		$data['content'] = 'frontend/new/artikel/index_artikel';
+		$this->load->view('frontend/new/artikel/index_artikel', $data);
 	}
 
 	public function read($link){
@@ -37,7 +37,7 @@ class Artikel extends CI_Controller
 		//update jumlah klik pada record
 		$this->home_model->updateClick('artikel', 'link', $link);
 
-		$this->load->view('template', $data); 
+		$this->load->view('frontend/new/artikel/read_artikel', $data); 
 	}
 }
 

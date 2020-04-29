@@ -12,7 +12,7 @@
         <section class="ftco-section contact-section ftco-degree-bg mt-5">
             <div class="container mt-5">
                 <div class="row no-gutters justify-content-center">
-                    <div class="col-md-7 text-center heading-section">
+                    <div class="col-md-7 text-center heading-section ftco-animate">
                         <h2>Lokasi Kami</h2>
                         <p class="mb-4">
                         "Temukan toko cat Citra Warna terdekat anda"
@@ -24,15 +24,15 @@
                             $last_cabang = $this->home_model->getLast_cabang();
                             foreach($cabang as $toko) {	?>
                                 <?php if ($toko['id_cabang'] == $no1): ?>
-                                    <div class="row ftco-animate">
+                                    <div class="row">
                                 <?php $no1 += 3; endif ?>
-                                <div class="col-md-4">
+                                <div class="col-md-4 ftco-animate">
                                     <strong><?= $toko['nm_cbg'] ?></strong>
                                     <br>
                                     <?= $toko['alamat'] ?> <br> Telp : <?= $toko['telp'] ?>
                                 </div>
                                 <?php if ($toko['id_cabang'] == $no2): ?>
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 ftco-animate">
                                         <hr>
                                     </div>
                                     </div>
@@ -73,7 +73,9 @@
                         ['Citra Warna Waturenggong', -8.678151, 115.224420],
                         ['Citra Warna Mataram', -8.587264, 116.126844],
                         ['Citra Warna Ahmad Yani', -8.626979, 115.207801],
-                        ['Citra Warna Hayam Wuruk', -8.656681, 115.223152]
+                        ['Citra Warna Hayam Wuruk', -8.656681, 115.223152],
+                        ['Citra Warna Palembang', -2.941286, 104.767345],
+                        ['Citra Warna Makassar', -5.140920, 119.479929],
                     ];
 
                     var map = new google.maps.Map(document.getElementById('map'), {
