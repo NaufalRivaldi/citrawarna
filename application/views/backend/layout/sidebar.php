@@ -57,6 +57,12 @@
               Lowongan
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link <?php if($menu == 10) echo "active" ?>" href="<?= base_url('admin/bagan') ?>">
+              <i class="fa fa-globe"></i>&nbsp; 
+              Bagan
+            </a>
+          </li>
         </ul>
       </div>
       <p style="font-size:12px;" align="center">Copyright 2018 - Refo Junior</p>

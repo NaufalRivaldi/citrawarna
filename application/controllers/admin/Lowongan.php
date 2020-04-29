@@ -18,7 +18,7 @@ class Lowongan extends CI_Controller
 		$laman = [
 			'content' => 'backend/lowongan/index',
 			'title' => 'Lowongan',
-			'menu' => 8,
+			'menu' => 9,
 			'lowongan' => $lowongan
 		];
 
@@ -39,9 +39,10 @@ class Lowongan extends CI_Controller
 
 	public function store(){
 		$lowongan = $this->lowongan;
+		// print_r($lowongan);
 		$validation = $this->form_validation;
 		$validation->set_rules($lowongan->validation());
-
+		
 		if($validation->run()){
 			$lowongan->save();
 			$this->session->set_flashdata('success', 'Simpan data berhasil');

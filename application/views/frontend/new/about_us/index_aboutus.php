@@ -65,6 +65,23 @@
               </div>
           </div>
       </section>
+
+      <section class="ftco-section">
+        <div class="container">
+            <div class="row no-gutters justify-content-center ">
+              <div class="col-md-7 text-center heading-section ftco-animate">
+                <!-- <span class="subheading">Works</span> -->
+                <h2 class="mb-4">Struktur Organisasi</h2>
+                <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p> -->
+              </div>
+            </div>
+              <div class="row no-gutters justify-content-center">
+                <div class="col-md-8 ftco-animate mb-4">
+                  <img style="max-width: 100%; height: auto;" src="<?= base_url('upload/bagan/').$bagan->bagan?>" alt="">
+                </div>
+              </div>
+          </div>
+      </section>
         <!-- content -->
 
         <!-- footer -->
