@@ -13,7 +13,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item  <?= ($this->uri->segment(1)=='')?"active":"" ?>" ><a href="<?= site_url('/') ?>"class="nav-link">Home</a></li>
             <li class="nav-item dropdown <?= ($this->uri->segment(1)=='product')?"active":"" ?>">
-                <a class="nav-link" href="produk.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</a>
+                <a class="nav-link" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <?php $nav = $this->db->order_by('parent_of', 'asc')->get('kat_barang')->result_array(); ?>
                 <?php foreach($nav as $link) { ?>	

@@ -37,6 +37,10 @@ class Testimoni_model extends CI_Model
         return $this->db->insert('testimoni', $this);
     }
 
+    public function show($id){
+        return $this->db->get_where('testimoni', array('id' => $id))->row();
+    }
+
     public function delete($id){
         return $this->db->where('id', $id)->delete('testimoni');
     }

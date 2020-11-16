@@ -31,8 +31,30 @@ class Testimoni extends CI_Controller
 		$laman = [
 			'content' => 'backend/testimoni/form',
 			'title' => 'Testimoni - Form',
-			'menu' => 8
+			'menu' => 8,
+			'form_action' => 'admin/testimoni/store'
 		];
+
+		$this->load->view('backend/template', $laman);
+	}
+
+	public function edit($id){
+		$this->login_model->cek_login();
+
+		$laman = [
+			'content' => 'backend/testimoni/form',
+			'title' => 'Testimoni - Form',
+			'menu' => 8,
+			'testimoni' => $this->testi->show($id),
+			'form_action' => 'admin/testimoni/edit/'.$id,
+		];
+
+		if($_POST){
+			$laman['testimoni'] = (array) $this->input->post();
+			$this->db->where('id', $id)->update('testimoni', $laman['testimoni']);
+			$this->session->set_flashdata('success', 'Data berhasil diedit');
+			redirect('admin/testimoni');
+		}
 
 		$this->load->view('backend/template', $laman);
 	}
@@ -59,4 +81,4 @@ class Testimoni extends CI_Controller
 	}
 }
 
- ?>
+?>

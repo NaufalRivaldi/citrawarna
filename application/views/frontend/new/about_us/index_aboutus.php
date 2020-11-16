@@ -18,7 +18,7 @@
               <div class="text">
                 <h4 class="subheading"></h4>
                 <h2 class="heading"><a href="#">Toko Cat <strong>Citra Warna</strong></a></h2>
-                <p>Toko Cat Citra Warna</strong> merupakan toko cat di Bali yang menyediakan berbagai kebutuhan pengecatan anda, Citra Warna memiliki berbagai macam produk berkualitas dengan harga yang kompetitif. Saat ini Citra Warna memiliki 23 cabang yang terletak di provinsi Bali, Lombok, Sulawesi Selatan, Sumatera Selatan dan akan terus berkembang ke provinsi lainnya. Dengan hadirnya toko cat kami dilingkungan anda, kami berharap dapat menjadi toko cat terdekat anda serta memudahkan dalam memenuhi kebutuhan pengecatan anda.</p>
+                <p class="text-justify"><strong class="ml-3">Toko Cat Citra Warna</strong> merupakan toko cat di Bali yang menyediakan berbagai kebutuhan pengecatan anda, Citra Warna memiliki berbagai macam produk berkualitas dengan harga yang kompetitif. Saat ini Citra Warna memiliki 25 cabang yang terletak di provinsi Bali, Lombok, Sulawesi Selatan, Sumatera Selatan dan akan terus berkembang ke provinsi lainnya. Dengan hadirnya toko cat kami dilingkungan anda, kami berharap dapat menjadi toko cat terdekat anda serta memudahkan dalam memenuhi kebutuhan pengecatan anda.</p>
               </div>
             </div>
           </div>
