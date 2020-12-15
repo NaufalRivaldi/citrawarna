@@ -40,7 +40,7 @@
 		</div>
 		<div class="col-md-6">
 			Foto
-			<input type="file" name="foto" class="form-control">
+			<input type="file" name="foto" class="form-control-file">
 		</div>
 		<div class="col-md-6">
 			<input type="hidden" name="stat" value="1">

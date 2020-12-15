@@ -26,7 +26,7 @@
 		</div>
 		<div class="col-md-6">
 			Cover 
-			<input type="file" class="form-control" name="img">
+			<input type="file" class="form-control-file" name="img">
 		</div>
 
 		<div class="col-md-12" align="right">

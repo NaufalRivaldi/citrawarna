@@ -20,7 +20,7 @@
 		</div>
 		<div class="col-md-6">
 			Img
-			<input type="file" name="img" class="form-control">
+			<input type="file" name="img" class="form-control-file">
 		</div>
 		
 		<div class="col-md-12">

@@ -63,6 +63,12 @@
               Bagan
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/') ?>">
+              <i class="fa fa-globe"></i>&nbsp; 
+              Ke Website
+            </a>
+          </li>
         </ul>
       </div>
       <p style="font-size:12px;" align="center">Copyright 2018 - Refo Junior</p>

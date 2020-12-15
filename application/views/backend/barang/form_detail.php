@@ -14,7 +14,7 @@
 		</div>
         <div class="col-md-12">
             Foto CC
-            <input type="file" class="form-control" name="cc" value="<?= $input['cc'] ?>">
+            <input type="file" class="form-control-file" name="cc" value="<?= $input['cc'] ?>">
         </div>
 		
 		<div class="col-md-12">
