@@ -15,7 +15,7 @@ class Raw_model extends CI_Model
 		$config['allowed_types'] = 'csv';
 		$config['remove_space'] = true;
 		$config['overwrite'] = true;
-		$config['max_size'] = 5000;
+		$config['max_size'] = 6000;
 		$config['file_name'] = date('YmdHis');
 
 		$this->load->library('upload', $config);
@@ -83,7 +83,6 @@ class Raw_model extends CI_Model
 			$query = "INSERT INTO raw VALUES";
 			$no = 1;
 			foreach($reader as $row){
-				
 				//row[0] = kd_gudang, row[1] = kd_barang dsbnya, looping value setelah query insert diatas
 				$kata = $this->db->escape($row[2]);
 				$split = str_replace('/','-',$kata);
@@ -92,7 +91,7 @@ class Raw_model extends CI_Model
 
 				$query .= "(NULL,
 				'$row[0]', '$row[1]', ".$split.", '$row[3]', 
-				'$row[4]', '$row[6]', '$row[7]', '$row[8]', '$row[9]'), ";
+				'$row[4]', '$row[6]', '$row[8]', '$row[9]', '$row[10]'), ";
 			}
 			$query = substr($query, 0, -2);
 			
@@ -123,7 +122,13 @@ class Raw_model extends CI_Model
 						"CL1",
 						"CS1",
 						"CM1",
-						"GUDANG"
+						"GUDANG",
+						"CB0",
+						"CM2",
+						"CM3",
+						"CM4",
+						"CS2",
+						"CS3"
 					);
 				$data_cabang = implode("','", $cabang);
 				$delete = $this->db->query("DELETE FROM raw WHERE kd_gudang NOT IN ('$data_cabang') OR nm_barang LIKE '%Tinter%' OR nm_barang LIKE '#%' OR nm_barang LIKE 'HAPUS%'");
