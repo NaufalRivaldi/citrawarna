@@ -30,6 +30,15 @@ class Home_model extends CI_Model
 		return $this->db->where('stat', 1)->get('cabang')->result_array();
 	}
 
+	public function get_cabang_by_lokasiId($lokasiId)
+	{
+		return $this->db->where('lokasiId', $lokasiId)->get('cabang')->result();
+	}
+
+	public function get_totalStore(){
+		return $this->db->count_all('cabang');
+	}
+
 	public function getLast_cabang(){
 		return $this->db->limit(1)->order_by('id_cabang', 'DESC')->where('stat', 1)->get('cabang')->row();
 	}
@@ -157,14 +166,32 @@ class Home_model extends CI_Model
 			case 'CB0' :
 				$lokasi = " Citra Warna Hayam Wuruk";
 				break;
+			case 'CB1' :
+				$lokasi = " Citra Warna Dalung 2";
+				break;
 			case 'CM1' :
-				$lokasi = " Citra Warna Palembang - Sumatera Selatan";
+				$lokasi = " Citra Warna Palembang - Kalidoni";
+				break;
+			case 'CM2' :
+				$lokasi = " Citra Warna Palembang - Plaju";
+				break;
+			case 'CM3' :
+				$lokasi = " Citra Warna Palembang - Sekip";
+				break;
+			case 'CM4' :
+				$lokasi = " Citra Warna Palembang - Dempo";
 				break;
 			case 'CL1' :
 				$lokasi = " Citra Warna Mataram - Lombok ";
 				break;
 			case 'CS1' :
-				$lokasi = " Citra Warna Makassar - Sulawesi Selatan ";
+				$lokasi = " Citra Warna Makassar - Tamanlanrea";
+				break;
+			case 'CS2' :
+				$lokasi = " Citra Warna Makassar - Manggala";
+				break;
+			case 'CS3' :
+				$lokasi = " Citra Warna Hasanuddin Gowa";
 				break;
 			default : 
 				$lokasi = "undefined";

@@ -50,7 +50,7 @@
                     <div class="col-md-6 text-center heading-section ftco-animate">
                         <!-- <span class="subheading">Our Services</span> -->
                         <!-- <h2 class="mb-4">Web &amp; Mobile app design, bring your ideas to life</h2> -->
-                        <h2>Servis Kami</h2>
+                        <h2>Servis Kamii</h2>
                     </div>
                 </div>
                 <div class="row">

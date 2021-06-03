@@ -18,30 +18,85 @@
                         "Temukan toko cat Citra Warna terdekat anda"
                         </p>
                     </div>
-                    
-                    <div class="cabang_pc">
-                        <?php $cabang = $this->home_model->get_cabang(); $no1 = 1; $no2 = 3;
-                            $last_cabang = $this->home_model->getLast_cabang();
-                            foreach($cabang as $toko) {	?>
-                                <?php if ($toko['id_cabang'] == $no1): ?>
-                                    <div class="row">
-                                <?php $no1 += 3; endif ?>
-                                <div class="col-md-4 ftco-animate">
-                                    <strong><?= $toko['nm_cbg'] ?></strong>
-                                    <br>
-                                    <?= $toko['alamat'] ?> <br> Telp : <?= $toko['telp'] ?>
-                                </div>
-                                <?php if ($toko['id_cabang'] == $no2): ?>
-                                    <div class="col-md-12 ftco-animate">
-                                        <hr>
-                                    </div>
-                                    </div>
-                                <?php $no2 += 3; endif ?>
-                                <?php if ($toko['id_cabang'] == $last_cabang->id_cabang): ?>
-                                    </div>
-                                <?php endif ?>
-                        <?php } ?>
+
+                    <div class="col-md-12 text-center">
+                    <nav>
+                    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Bali</a>
+                        <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Lombok</a>
+                        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Makassar</a>
+                        <a class="nav-link" id="nav-palembang-tab" data-toggle="tab" href="#nav-palembang" role="tab" aria-controls="nav-palembang" aria-selected="false">Palembang</a>
                     </div>
+                    </nav>
+                    <div class="tab-content mt-4" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="cabang_pc">
+                                <div class="row text-left">
+                                    <?php foreach($cabangBali as $bali) { ?>
+
+                                    <div class="col-md-4 ftco-animate fadeInUp ftco-animated mb-3">
+                                        <strong><?= $bali->nm_cbg; ?> </strong>
+                                        <br>
+                                        <?= $bali->alamat . '<br>' . $bali->telp ?><br>                                
+                                    </div>
+
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="cabang_pc">
+                                <div class="row text-left">
+                                    <?php foreach($cabangLombok as $bali) { ?>
+
+                                    <div class="col-md-4 ftco-animate fadeInUp ftco-animated mb-3">
+                                        <strong><?= $bali->nm_cbg; ?> </strong>
+                                        <br>
+                                        <?= $bali->alamat . '<br>' . $bali->telp ?><br>                                
+                                    </div>
+
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="cabang_pc">
+                                <div class="row text-left">
+                                    <?php foreach($cabangMakassar as $bali) { ?>
+
+                                    <div class="col-md-4 ftco-animate fadeInUp ftco-animated mb-3">
+                                        <strong><?= $bali->nm_cbg; ?> </strong>
+                                        <br>
+                                        <?= $bali->alamat . '<br>' . $bali->telp ?><br>                                
+                                    </div>
+
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-palembang" role="tabpanel" aria-labelledby="nav-palembang-tab">
+                            <div class="cabang_pc">
+                                <div class="row text-left">
+                                    <?php foreach($cabangPalembang as $bali) { ?>
+
+                                    <div class="col-md-4 ftco-animate fadeInUp ftco-animated mb-3">
+                                        <strong><?= $bali->nm_cbg; ?> </strong>
+                                        <br>
+                                        <?= $bali->alamat . '<br>' . $bali->telp ?><br>                                
+                                    </div>
+
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                    
+                    
                 </div>
             </div>
         </section>
